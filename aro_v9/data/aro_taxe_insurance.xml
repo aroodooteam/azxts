@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="aro_taxe_gar_1_r0" model="aro.taxe">
+            <!-- MISSING xml_id for field tax_terfisc_id (many2one to account.fiscal.position) for those ids: 1 (db: aroodoo_280617@localhost:8009) -->
+            <field name="product_id" ref="aro_v9.product_template_gar_1_r0"/>
+            <!-- MISSING xml_id for field tax_tva_id (many2one to account.tax) for those ids: 2 (db: aroodoo_280617@localhost:8009) -->
+            <!-- MISSING xml_id for field tax_te_id (many2one to account.tax) for those ids: 10 (db: aroodoo_280617@localhost:8009) -->
+            <field name="tax_tva">0.0</field>
+            <field name="tax_date">2017-07-25 15:00:26</field>
+            <field name="tax_te">0.0</field>
+        </record>
+        <record id="aro_taxe_gar_1_r1" model="aro.taxe">
+            <!-- MISSING xml_id for field tax_terfisc_id (many2one to account.fiscal.position) for those ids: 2 (db: aroodoo_280617@localhost:8009) -->
+            <field name="product_id" ref="aro_v9.product_template_gar_1_r0"/>
+            <!-- MISSING xml_id for field tax_tva_id (many2one to account.tax) for those ids: 2 (db: aroodoo_280617@localhost:8009) -->
+            <!-- MISSING xml_id for field tax_te_id (many2one to account.tax) for those ids: 11 (db: aroodoo_280617@localhost:8009) -->
+            <field name="tax_tva">0.0</field>
+            <field name="tax_date">2017-07-26 05:37:41</field>
+            <field name="tax_te">0.0</field>
+        </record>
+        <record id="aro_taxe_gar_1_r2" model="aro.taxe">
+            <!-- MISSING xml_id for field tax_terfisc_id (many2one to account.fiscal.position) for those ids: 3 (db: aroodoo_280617@localhost:8009) -->
+            <field name="product_id" ref="aro_v9.product_template_gar_1_r0"/>
+            <!-- MISSING xml_id for field tax_tva_id (many2one to account.tax) for those ids: 2 (db: aroodoo_280617@localhost:8009) -->
+            <!-- MISSING xml_id for field tax_te_id (many2one to account.tax) for those ids: 12 (db: aroodoo_280617@localhost:8009) -->
+            <field name="tax_tva">0.0</field>
+            <field name="tax_date">2017-07-26 12:59:10</field>
+            <field name="tax_te">0.0</field>
+        </record>
+    </data>
+</openerp>

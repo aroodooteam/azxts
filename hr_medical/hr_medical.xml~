@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <menuitem
+            id="menu_hr_medical_root"
+            name="Medical"
+            parent="hr.menu_hr_root"/>
+        
+        <record id="hr_medical_act" model="ir.actions.act_window">
+            <field name="name">Consultations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.medical</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem
+            id="menu_hr_medical_consultations"
+            name="Consultations"
+            action="hr_medical_act"
+            parent="menu_hr_medical_root"/>
+            
+        <record id="hr_medical_tree" model="ir.ui.view">
+            <field name="name">hr.medical.tree</field>
+            <field name="model">hr.medical</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Consultations">
+                    <field name="date" />
+                    <field name="name"/>
+                    <field name="employee_id" />
+                    <field name="user_id" />
+                    
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="hr_medical_form" model="ir.ui.view">
+            <field name="name">hr.medical.form</field>
+            <field name="model">hr.medical</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Consultations" version="7.0">
+                <header>
+                        <button name="validate" states="draft" string="Valider" groups="base.group_user" class="oe_highlight"/>
+                        <button name="print_prescription" string="Imprimer" type="object" states="open,done" class="oe_highlight" groups="base.group_user"/>
+                        <button name="cancel" states="draft" string="Annuler" groups="base.group_user"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,open,done,cancel" statusbar_colors='{"cancel":"red","open":"blue"}'/>
+                </header>
+                <sheet>
+                    <h1>
+                        <label string="Prescription " />
+                        <field name="name" class="oe_inline" readonly="1"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Medicaments">
+                            <field name="prescription_line">
+                                <form string="Medicaments" version="7.0">
+                                    <header groups="base.group_user">
+                                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done"/>
+                                    </header>
+                                    <group>
+                                        <group>
+                                            <field name="product_id"
+                                                groups="base.group_user"
+                                                on_change="product_id_change(product_id, product_uom_qty, False, name, context)"/>
+                                            <label for="product_uom_qty"/>
+                                            <div>
+                                                <field
+                                                    name="product_uom_qty" class="oe_inline"
+                                                    />
+                                                <field name="product_uom" groups="product.group_uom" class="oe_inline oe_no_button"
+                                                    />
+                                            </div>
+
+                                        </group>
+                                    </group>
+                                    <label for="name"/>
+                                    <field name="name"/>
+                                    <field name="state" invisible="1"/>
+
+                                </form>
+                                <tree string="Lignes de prescription" editable="bottom">
+                                    <field name="product_id"
+                                                groups="base.group_user"
+                                                on_change="product_id_change(product_id, product_uom_qty, False, name, context)"/>
+                                    <field name="name"/>
+                                    <field name="product_uom_qty"/>
+                                    <field name="product_uom"/>
+                                    <field name="state" invisible="1"/>
+                                    
+                                </tree>
+                            </field>
+                            <div class="oe_clear"/>
+                            <field name="diagnostique" class="oe_inline" placeholder="Diagnostique..."/>
+                        </page>
+                        <page string="Autre Informations" groups="base.group_user">
+                            <group>
+                                <group name="sales_person" groups="base.group_user">
+                                    <field name="user_id"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <!--<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="message_ids" widget="mail_thread"/>-->
+                </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_normal_form_view1" model="ir.ui.view">
+	        <field name="name">product.template.form1</field>
+	        <field name="model">product.product</field>
+			<field name="inherit_id" ref="product.product_template_form_view" />			
+			<field name="type">form</field>	        
+			<field name="arch" type="xml">
+				<field name="active" position="after">	               		
+					<field name="medicament"/>
+	           	</field>
+	        </field>
+    	</record>
+ 
+        <record id="hr_medical_product" model="ir.actions.act_window">
+            <field name="name">Médicament</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.product</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+			<!-- <field name="domain">[('medicament','=',True)]</field>-->  
+			<field name="domain">[('is_one_medicament','=',True)]</field>          
+        </record>
+
+        <menuitem
+            id="menu_hr_medical_product"
+            name="Medicaments"
+            action="hr_medical_product"
+            parent="menu_hr_medical_root"/>
+            
+       	    <record id="view_product_supplier_inherit" model="ir.ui.view">
+            <field name="name">product.template.form.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <div name="options" position="inside">
+                    <div>
+                        <field name="is_one_medicament"/>
+                        <label for="is_one_medicament"/>                   
+					</div>
+                </div>
+            </field>
+        </record>
+ 		       
+            
+  </data>
+</openerp>

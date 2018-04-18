@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Vue form Plan de Formation 3 -->
+
+        <record id="view_plan_formation_form_3" model="ir.ui.view">
+            <field name="name">hr.plan.formation.version_3.form</field>
+            <field name="model">hr.plan.formation.version_3</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <form string="Plan de formation" colspan="2">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for ="name" class="oe_edit_only"/>
+                                <h1>
+                                    <field name="name"/>
+                                </h1>
+                        </div>
+                            <group>
+                                <separator string ="Général" colspan="2"/>
+                                    <field name="objectif_id"/>
+                                    <field name="branche_id"/>
+                                    <field name="module_id"/>
+                            </group>
+                            <group col="4" colspan="2">
+                                <separator string ="Prévision" colspan="4"/>
+                                    <field name="date_start"/>
+                                    <field name="date_end"/>
+                            </group>
+                            <group col="6" colspan="4">
+                                <separator string ="Ressources" colspan="6"/>
+                                    <field name="intervenant"/>
+                                    <!--field name="test_besoin"/-->
+                                    <field name="total_besoin"/>
+                                    <field name="besoin_accorde"/>
+                                    <field name="beneficiaire"/>
+                                    <field name="taken_seats" widget="progressbar"/>
+                            </group>
+                            <group col="4" colspan="2">
+                                <separator string ="Budget" colspan="4"/>
+                                    <field name="budget_ariary"/>
+                                    <field name="cout"/>
+                            </group>
+                            <field name="session_plan_ids" colspan="4" nolabel="1" context="{'default_plan_formation_id': active_id}">
+                                        <tree string="Planification">
+                                            <!--field name="plan_formation_id"/>
+                                            <field name="objectif_id"/>
+                                            <field name="branche_id"/>
+                                            <field name="module_id"/-->
+                                            <field name="date_session"/>
+                                            <field name="date_fin_session"/>
+                                            <field name="session_place"/>
+                                            <field name="instructor_id"/>
+                                        </tree>
+                                        <form>
+                                            <group col="2" colspan="4">
+                                                <field name="plan_formation_id"/>
+                                                <!--field name="objectif_id"/-->
+                                                <field name="plan_formation_objectif_id"/>
+                                                <field name="plan_formation_branche_id"/>
+                                                <field name="plan_formation_module_id"/>
+                                                <!--field name="branche_id"/>
+                                                <field name="module_id"/-->
+                                                <field name="date_session"/>
+                                                <field name="date_fin_session"/>
+                                                <field name="session_place"/>
+                                                <field name="instructor_id"/>
+                                            </group>
+                                        </form>
+                            </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree du Plan de formation 3 -->
+
+        <record id="view_plan_formation_tree_3" model="ir.ui.view">
+            <field name="name">hr.plan.formation.version_3.tree</field>
+            <field name="model">hr.plan.formation.version_3</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <tree string="Module">
+                    <field name="name"/>
+                    <field name="objectif_id"/>
+                    <field name="branche_id"/>
+                    <field name="module_id"/>
+                    <field name="intervenant"/>
+                    <!--field name="date_start"/>
+                    <field name="date_end"/-->
+                    <!--field name="test_besoin"/-->
+                    <field name="total_besoin"/>
+                    <field name="budget_ariary"/>
+                    <field name="beneficiaire"/>
+                    <field name="taken_seats"/>
+                    <field name="cout"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vue Recherche Plan de Formation 3 -->
+
+        <record id="view_plan_formation_search_3" model="ir.ui.view">
+            <field name="name">hr.plan.formation.version_3.search</field>
+            <field name="model">hr.plan.formation.version_3</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Formation">
+                    <field name="name"/>
+                    <field name="objectif_id"/>
+                    <field name="branche_id"/>
+                    <field name="module_id"/>
+                        <group string="Group By…">
+                        <filter string="Plan" name="group_plan" icon="terp-personal" domain="[]"
+                            context="{'group_by':'name'}"/>
+                        <filter string="Objectif" name="group_objectif" icon="terp-personal" domain="[]"
+                            context="{'group_by':'objectif_id'}"/>
+                        </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Vue Calendar Plan de Formation 3-->
+
+        <record id="view_plan_formation_calendar_3" model="ir.ui.view">
+            <field name="name">hr.plan.formation.version_3.calendar</field>
+            <field name="model">hr.plan.formation.version_3</field>
+            <field name="arch" type="xml">
+                <calendar string="Plan Calendar" date_start="date_start" date_stop="date_end" color="intervenant">
+                    <field name="module_id"/>
+                </calendar>
+            </field>
+        </record>
+
+        <!-- Vue Gantt Plan de Formation 3-->
+
+        <record id="view_plan_formation_gantt_3" model="ir.ui.view">
+            <field name="name">hr.plan.formation.version_3.gantt</field>
+            <field name="model">hr.plan.formation.version_3</field>
+            <field name="arch" type="xml">
+                <gantt string="Plan Gantt" date_start="date_start" date_stop="date_end" default_group_by="name">
+                    <!--field name="module_id"/-->
+                </gantt>
+            </field>
+        </record>
+
+        <!-- Action du menu plan de formation -->
+
+        <record model="ir.actions.act_window" id="action_gestion_plan">
+            <field name="name">Plan</field>
+            <field name="res_model">hr.plan.formation.version_3</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar,gantt</field>
+            <field name="search_view_id" ref="view_plan_formation_search_3"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Créer un plan de formation
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_plan_formation_view_tree">
+            <field name="act_window_id" ref="action_gestion_plan"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_plan_formation_tree_3"/>
+        </record>
+
+        <!-- Menu plan formation-->
+
+        <menuitem id="menu_action_gestion_plan" name="Plan de formation" parent="menu_hr_formation_detail_root" action="action_gestion_plan"/>
+
+
+    </data>
+</openerp>

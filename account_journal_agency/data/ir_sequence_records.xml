@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+    <record id="ir_sequence_ecriture_exercice_n1_02_a_f_m__r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 02 A.F.M.</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN02/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_07_ascoma_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 07 ASCOMA</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN07/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_27_st_h__fraise_fils_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 27 Sté H. FRAISE Fils</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN27/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_28_cabinet_mitsinjo_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 28 Cabinet MITSINJO</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN28/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_19_socit_auximad_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 19 Société AUXIMAD</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN19/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_30_h__de_brugada_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 30 H. DE BRUGADA</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN30/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_41_manakara_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 41 MANAKARA</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN41/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_58_br_ambanja_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 58 BR Ambanja</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN58/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_59_br_nosy_be_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 59 BR Nosy Be</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN59/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_66_br_antalaha_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 66 BR Antalaha</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN66/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_74_rama_export_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 74 RAMA EXPORT</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN74/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_80_bsa_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 80 BSA</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN80/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_86_adema_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 86 ADEMA</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN86/%(year)s/</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="ir_sequence_ecriture_exercice_n1_93_aroriaka_r0" model="ir.sequence">
+      <field name="name">Ecriture exercice n-1 93 ARORIAKA</field>
+      <field name="number_next">1</field>
+      <field name="implementation">no_gap</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="padding">7</field>
+      <field name="number_increment">1</field>
+      <field name="prefix">AN93/%(year)s</field>
+      <field name="number_next_actual">1</field>
+      <field name="active" eval="True"/>
+    </record>
+  </data>
+</openerp>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="invoice_form_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//form[@string='Invoice']/sheet/notebook/page[@string='Payments']" position="after">
+                        <page string="Commissions" groups="base.group_user">
+                            <group colspan="4">
+                                <group cols="4">
+                                    <field name="final_customer_id" attrs="{'readonly': [('state','not in', ('draft'))]}"/>
+                                </group>
+                                <group cols="4">
+                                </group>
+                            </group>
+                            <separator string="Commissioned" colspan="4"/>
+                            <field name="commission_ids" nolabel="True">
+                                <tree string="Commissions" editable="bottom">
+                                    <field name="partner_commissioned" />
+                                    <field name="account_commission"/>
+                                    <field name="account_charge_commission"/>
+                                    <field name="account_amount"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+        <record id="view_commission_commission_tree" model="ir.ui.view">
+            <field name="name">commission.commission.tree</field>
+            <field name="model">commission.commission</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Label">
+                    <field name="commission_invoice"/>
+                    <field name="period_id"/>
+                    <field name="partner_commissioned"/>
+                    <field name="account_commission"/>
+                    <field name="account_charge_commission"/>
+                    <field name="type_invoice"/>
+                    <field name="comment"/>
+                    <field name="invoice_bd_id"/>
+                    <field name="invoice_mv_id"/>
+                    <field name="account_amount" sum="Total"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_hr_advantage_modify" model="ir.ui.view">
+            <field name="name">hr.advantage.modify.form</field>
+            <field name="model">hr.advantage.mod.wiz</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Mis à jour des avantages">
+                    <header>
+                        <button special="cancel"  string="Cancel" icon='gtk-cancel'/>
+                        <button name="generate" string="Generer" colspan="1" type="object" icon="gtk-yes"/>
+                    </header>
+                    <group col="4" colspan="6">
+                        <field name="date"/>
+                        <field name="start"/>
+                        <field name="period_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Employées">
+                            <group>
+                                <field name="employee_ids" nolabel="1" widget="many2many"/>
+                            </group>
+                        </page>
+                        <page string="Avantages">
+                            <group>
+                                <field name="advantage_ids" nolabel="1">
+                                    <tree string="" editable="Bottom">
+                                        <field name="name"/>
+                                        <field name="perc_increase"/>
+                                        <field name="amount_increase"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hr_advantage_modify_wizard" model="ir.actions.act_window">
+            <field name="name">Mise a jour des avantages</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.advantage.mod.wiz</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem
+            name="Modification Avantages"
+            parent="menu_hr_root_payroll_ma"
+            id="menu_hr_advantage_modify_wizard_root"
+            groups="base.group_hr_manager"
+            icon="STOCK_EXECUTE"/>
+
+        <menuitem
+            name="Modification Des Avantages"
+            parent="menu_hr_advantage_modify_wizard_root"
+            action="action_hr_advantage_modify_wizard"
+            id="menu_hr_advantage_modify_wizard"
+            groups="base.group_hr_manager"
+            icon="STOCK_EXECUTE"/>
+        
+        <!-- #################################################################### -->
+
+        <record id="action_hr_advantage_proposal" model="ir.actions.act_window">
+            <field name="name">Proposition avantage</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.advantage.proposal</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+        <record id="view_hr_advantage_proposal" model="ir.ui.view">
+            <field name="name">hr.advantage.proposal.form</field>
+            <field name="model">hr.advantage.proposal</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <sheet>
+                    <form string="Proposition Avantages">
+                        <header>
+                            <button special="cancel"  string="Cancel" icon='gtk-cancel'/>
+                            <button name="validate" string="Valider" colspan="1" type="object" icon="gtk-yes"/>
+                        </header>
+                        <group col="4" colspan="6">
+                            <field name="date"/>
+                            <field name="name"/>
+                            <field name="start"/>
+                        </group>
+                        <group string="Employées">
+                            <field name="advantage_line" nolabel="1">
+                                <tree>
+                                    <field name="name" />
+                                    <!-- <field name="amount_initial" />
+                                    <field name="amount_proposal"/>
+                                    <field name="perc_increase"/> -->
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="name" />
+                                        <!-- <field name="advantage_id" /> -->
+                                    </group>                        
+                                    <field name="advantages_ids">
+                                        <tree editable="top">
+                                            <field name="name" />
+                                            <field name="perc_increase" />   
+                                            <field name="amount_increase" /> 
+                                        </tree>
+                                        <!-- <form>
+                                            <group>
+                                                <field>
+                                                    <field name="name" />
+                                                    <field name="perc_increase" />
+                                                    <field name="amount_increase" />
+                                                </field>
+                                            </group>
+                                        </form> -->
+                                    </field>
+                                </form>                    
+                            </field>
+                        </group>
+                    </form>
+                </sheet>
+            </field>
+        </record>         
+
+        <menuitem
+            name="Proposition Avantages"
+            parent="menu_hr_advantage_modify_wizard_root"
+            action="action_hr_advantage_proposal"
+            id="menu_hr_advantage_proposal"
+            groups="base.group_hr_manager"
+            icon="STOCK_EXECUTE"/>    
+                    
+        <record id="action_hr_advantage_validation" model="ir.actions.act_window">
+            <field name="name">Validation des avantages</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">adv.update.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>   
+    
+        <record id="view_adv_update_line_tree" model="ir.ui.view">
+            <field name="name">view.adv.update.line.tree</field>
+            <field name="model">adv.update.line</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Lignes de proposition" editable="top">
+                    <field name="proposal_line_id"/>
+                    <field name="name"/>
+                    <field name="perc_increase"/>
+                    <field name="amount_increase"/>                
+                </tree>
+            </field>
+        </record>   
+              
+        <menuitem
+            name="Validation avantages"
+            parent="menu_hr_advantage_modify_wizard_root"
+            action="action_hr_advantage_validation"
+            id="menu_hr_advantage_validation"
+            groups="base.group_hr_manager"
+            icon="STOCK_EXECUTE"/>   
+    
+    <!--
+
+        <record id="view_hr_salary_proposal_validate" model="ir.ui.view">
+            <field name="name">Validation Majoration Salariale</field>
+            <field name="model">hr.salary.proposal.validate</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+               <form string="Validation Majoration Salariale">
+                    <separator string="" colspan="4" />
+                    <button special="cancel" string="Cancel" icon="gtk-cancel"/>
+                    <button name="validate_proposal" string="Valider" type="object" icon="gtk-convert"/>
+                </form>
+            </field>
+        </record>
+
+        <act_window name="Valider"            
+            res_model="hr.salary.proposal.validate"
+            src_model="rub.update.line"
+            view_mode="form"
+            target="new"
+            multi="True"        
+            key2="client_action_multi"    
+            groups="base.group_hr_manager"
+            id="action_view_hr_salary_proposal_validate"/>                                  
+ -->
+    </data>
+</openerp>

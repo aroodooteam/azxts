@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<templates id="template" xml:space="preserve">-->
+<templates id="template" name="account_move_reconcile" inherit_id="account.template">
+    <t t-name="AccountReconciliation" t-extend="AccountReconciliation">
+        <t t-jquery="button.oe_account_recon_next" t-operation="after">
+            <button class="oe_account_next_to oe_button" href="javascript:void(0)" name="to_page">GO TO</button>
+            <input type="text" class="oe_account_target_value" name="to_page" value="1"></input>
+        </t>
+    </t>
+</templates>

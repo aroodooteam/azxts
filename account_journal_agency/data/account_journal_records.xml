@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+    <record id="account_journal_ecriture_exercice_n1_02_a_f_m__r0" model="account.journal">
+      <field name="code">AN02</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_57"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_02_a_f_m__r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 02 A.F.M.</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_07_ascoma_r0" model="account.journal">
+      <field name="code">AN07</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_58"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_07_ascoma_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 07 ASCOMA</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_19_socit_auximad_r0" model="account.journal">
+      <field name="code">AN19</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_59"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_19_socit_auximad_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 19 Société AUXIMAD</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_27_st_h__fraise_fils_r0" model="account.journal">
+      <field name="code">AN27</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_63"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_27_st_h__fraise_fils_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 27 Sté H. FRAISE Fils</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_28_cabinet_mitsinjo_r0" model="account.journal">
+      <field name="code">AN28</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_64"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_28_cabinet_mitsinjo_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 28 Cabinet MITSINJO</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_30_h__de_brugada_r0" model="account.journal">
+      <field name="code">AN30</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_65"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_30_h__de_brugada_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 30 H. DE BRUGADA</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_41_manakara_r0" model="account.journal">
+      <field name="code">AN41</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_67"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_41_manakara_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 41 MANAKARA</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_58_br_ambanja_r0" model="account.journal">
+      <field name="code">AN58</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_69"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_58_br_ambanja_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 58 BR Ambanja</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_59_br_nosy_be_r0" model="account.journal">
+      <field name="code">AN59</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_70"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_59_br_nosy_be_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 59 BR Nosy Be</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_66_br_antalaha_r0" model="account.journal">
+      <field name="code">AN66</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_73"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_66_br_antalaha_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 66 BR Antalaha</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_74_rama_export_r0" model="account.journal">
+      <field name="code">AN74</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_74"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_74_rama_export_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 74 RAMA EXPORT</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_80_bsa_r0" model="account.journal">
+      <field name="code">AN80</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_75"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_80_bsa_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 80 BSA</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_86_adema_r0" model="account.journal">
+      <field name="code">AN86</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_78"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_86_adema_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 86 ADEMA</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+    <record id="account_journal_ecriture_exercice_n1_93_aroriaka_r0" model="account.journal">
+      <field name="code">AN93</field>
+      <field name="with_last_closing_balance" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="centralisation" eval="True"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="type">situation</field>
+      <field name="agency_id" ref="account_journal_agency.base_agency_80"/>
+      <field name="sequence_id" ref="account_journal_agency.ir_sequence_ecriture_exercice_n1_93_aroriaka_r0"/>
+      <field name="allow_date" eval="False"/>
+      <field name="update_posted" eval="False"/>
+      <field name="name">Ecriture exercice n-1 93 ARORIAKA</field>
+      <field name="cash_control" eval="False"/>
+      <field name="entry_posted" eval="False"/>
+      <field name="group_invoice_lines" eval="False"/>
+    </record>
+  </data>
+</openerp>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	<!-- Vue form session e-learning -->
+
+        <record id="view_session_elearning_form" model="ir.ui.view">
+            <field name="name">hr.session.elearning</field>
+            <field name="model">hr.session.elearning</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <form string="Session de formation" colspan="2">
+                        <group col="2" colspan="2">
+                            <separator string="Général" colspan="2"/>
+                                <field name="plan_formation_id"/>
+                                <field name="plan_formation_objectif_id"/>
+                                <field name="branche"/>
+                                <field name="plan_formation_module_id"/>
+                                <field name="instructor_id"/>
+                                <field name="date_debut_session"/>
+                                <field name="date_fin_session"/>
+                        </group>
+                            <separator string="Participants" colspan="2"/>
+                            <label for="attendee_ids"/>
+                            <field name="attendee_ids">
+                                <tree>
+                                    <field name="matricule"/>
+                                    <field name="name"/>
+                                    <field name="department_id"/>
+                                    <field name="job_id"/>
+                                </tree>
+                            </field>
+                </form>
+            </field>
+        </record>
+
+        <!--Vue tree session e-learning-->
+
+        <record id="view_session_elearning_tree" model="ir.ui.view">
+            <field name="name">hr.session.elearning.tree</field>
+            <field name="model">hr.session.elearning</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <tree string="Module">
+                    <field name="plan_formation_id"/>
+                    <field name="date_debut_session"/>
+                    <field name="date_fin_session"/>
+                    <field name="plan_formation_objectif_id"/>
+                    <field name="plan_formation_module_id"/>
+                    <field name="instructor_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action du menu session e-learning-->
+        <record model="ir.actions.act_window" id="action_gestion_session_elearning">
+            <field name="name">Session E-learning</field>
+            <field name="res_model">hr.session.elearning</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Créer une nouvelle session
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu session elearning -->
+        <menuitem id="menu_action_gestion_session_elearning" name="Session e-learning" parent="menu_hr_elearning_root" action="action_gestion_session_elearning"/>
+
+
+
+
+    </data>
+ </openerp>

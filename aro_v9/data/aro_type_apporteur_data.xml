@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="type_apporteur_nccial" model="aro.type.apporteur">
+            <field name="name">Non commercial</field>
+            <field name="code">NCCIAL</field>
+        </record>
+        <record id="type_apporteur_ccial" model="aro.type.apporteur">
+            <field name="name">Commercial</field>
+            <field name="code">CCIAL</field>
+        </record>
+        <record id="type_apporteur_agvoy" model="aro.type.apporteur">
+            <field name="name">Travel Agency</field>
+            <field name="code">AGVOY</field>
+        </record>
+        <record id="type_apporteur_inter" model="aro.type.apporteur">
+            <field name="name">Intermediaire</field>
+            <field name="code">INTER</field>
+        </record>
+    </data>
+</openerp>

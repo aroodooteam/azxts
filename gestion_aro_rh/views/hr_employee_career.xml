@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!--Vue Saisie Carrière -->
+
+        <record model="ir.ui.view" id="saisie_career_form">
+            <field name="name">saisie_career.form</field>
+            <field name="model">hr.employee.career</field>
+            <field name="arch" type="xml">
+                <form string="description">
+                    <sheet>
+                        <group col="2" colspan="4">
+                            <field name="employee_id"/>
+                            <field name="date"/>
+                            <field name="category_ids" widget="many2many_tags" placeholder="e.g. Part Time"/>
+                            <field name="department_id"/>
+                            <field name="job_id"/>
+                            <field name="commentaires"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Vue tree Carrière -->
+
+        <record model='ir.ui.view' id='saisie_career_tree'>
+            <field name='name'>saisie_career.tree</field>
+            <field name='model'>hr.employee.career</field>
+            <field name='arch' type='xml'>
+                <tree string='description'>
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="category_ids" widget="many2many_tags" placeholder="e.g. Part Time"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <field name="commentaires"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action du menu Saisie Carrière-->
+
+        <record id="action_saisie_career" model="ir.actions.act_window">
+            <field name="name">Saisie Carrière</field>
+            <field name="res_model">hr.employee.career</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_action_saisie_career" name="Saisie Carrière" parent="menu_hr_career_root" action="action_saisie_career"/>
+
+    </data>
+</openerp>

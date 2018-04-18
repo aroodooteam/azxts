@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Vue form plan de formation -->
+
+        <record id="view_plan_formation_form_2" model="ir.ui.view">
+            <field name="name">hr.plan.formation.form</field>
+            <field name="model">hr.plan.formation.version_2</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <form string="Plan de formation" colspan="2">
+                    <div class="oe_title">
+                        <label for ="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page string="Prévision">
+                            <field name="session_formation_ids" colspan="4" nolabel="1" context="{'default_plan_formation_id': active_id}">
+                                <tree string="Planification">
+                                    <field name="objectif_id"/>
+                                    <field name="branche_id"/>
+                                    <field name="name"/>
+                                    <field name="date_start"/>
+                                    <field name="date_end"/>
+                                    <field name="intervenant"/>
+                                    <field name="total_besoin" style="text-align: center"/>
+                                    <field name="budget_ariary"/>
+                                    <field name="besoin_accorde"/>
+                                    <field name="beneficiaire"/>
+                                    <field name="taken_seats"/>
+                                    <field name="cout" sum="Cout total"/>
+                                </tree>
+                                <form string ="Planification">
+                                    <group col="2" colspan="4">
+                                        <!--field name="plan_formation_id"/-->
+                                        <field name="objectif_id"/>
+                                        <field name="branche_id"/>
+                                        <field name="name"/>
+                                        <field name="date_start"/>
+                                        <field name="date_end"/>
+                                        <field name="intervenant"/>
+                                        <field name="total_besoin"/>
+                                        <field name="budget_ariary"/>
+                                        <field name="besoin_accorde"/>
+                                        <field name="beneficiaire"/>
+                                        <field name="taken_seats"/>
+                                        <field name="cout" sum="Cout total"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree du plan de formation -->
+
+        <record id="view_plan_formation_tree" model="ir.ui.view">
+            <field name="name">hr.plan.formation.tree</field>
+            <field name="model">hr.plan.formation.version_2</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <tree string="Module">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>

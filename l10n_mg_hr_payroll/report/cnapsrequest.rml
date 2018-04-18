@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(842.0,595.0)" title="Test" author="Martin Simon" allowSplitting="20">
+    <pageTemplate id="first">
+<pageGraphics>
+<!--<image file="/home/openerp/production/image/affiliation.png" x="0" y="0" width="842" height="595"/>-->
+<image file="/opt/openerp/server/openerp/addons/l10n_mg_hr_payroll/report/image/affiliation.png" x="0" y="0" width="842" height="595"/>
+</pageGraphics>
+      <frame id="first" x1="4.0" y1="8.0" width="829" height="576"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="Standard" fontName="Helvetica"/>
+    <paraStyle name="Heading" fontName="Helvetica" fontSize="14.0" leading="17" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="Text body" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Caption" fontName="Helvetica" fontSize="12.0" leading="15" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Helvetica"/>
+   
+  </stylesheet>
+  <story>
+<para  fontName="Helvetica" fontSize="8.0">[[ repeatIn(objects,'o') ]]</para>
+<illustration height="15" width="144">
+<setFont name="DejaVu Sans Bold" size="10" bold="1"/>
+<drawString x="460.0" y="-92.0" > 9  6   6   8   1   6</drawString>
+<drawString x="210.0" y="-105.0" >[[ company.partner_id.name ]] </drawString>
+<drawString x="210.0" y="-119.0" >[[ company.partner_id.address[0].street2 ]] [[ company.partner_id.address[0].city ]]</drawString>
+<drawString x="210.0" y="-134.0" >[[ company.partner_id.address[0].phone ]]</drawString>
+<!-- <drawString x="420.0" y="-134.0" >[[ company.partner_id.address[0].email ]]</drawString> -->
+<drawString x="419.0" y="-168.0" >[[ o.licenseno[0:1] ]]   [[ o.licenseno[1:2]  ]]   [[ o.licenseno[2:3]  ]]   [[ o.licenseno[3:4]  ]]  [[ o.licenseno[4:5]  ]]  [[ o.licenseno[5:6]  ]]   [[ o.licenseno[6:7]  ]]   [[ o.licenseno[7:8]  ]]   [[ o.licenseno[8:9]  ]]  [[ o.licenseno[9:10]  ]]   [[ o.licenseno[10:11]  ]]   [[ o.licenseno[11:12]  ]]</drawString>
+
+<drawString x="210.0" y="-190.0" >[[ o.name[0:o.name.find(' ')] ]] </drawString>
+<drawString x="210.0" y="-210.0" >[[ o.name[o.name.find(' ')+1:] ]] </drawString>
+<drawString x="202.0" y="-224.0" >[[ formatLang(o.birthday,date=True) ]] </drawString>
+<drawString x="360.0" y="-224.0" >[[ o.place_of_birth ]] </drawString>
+<drawString x="120.0" y="-247.0" >[[o.address_home ]]</drawString>
+<drawString x="78.0" y="-262.0" >[[ o.cin[0:1] ]]   [[ o.cin[1:2]  ]]   [[ o.cin[2:3]  ]]   [[ o.cin[3:4]  ]]  [[ o.cin[4:5]  ]]  [[ o.cin[5:6]  ]]   [[ o.cin[6:7]  ]]   [[ o.cin[7:8]  ]]   [[ o.cin[8:9]  ]]  [[ o.cin[9:10]  ]]   [[ o.cin[10:11]  ]]   [[ o.cin[11:12]  ]]</drawString>
+<drawString x="480.0" y="-260.0" >[[o.cin_place]]</drawString>
+<drawString x="370.0" y="-260.0" >[[formatLang(o.cin_date,date=True)]]</drawString>
+<drawString x="145.0" y="-274.0" >Malagasy</drawString>
+<drawString x="145.0" y="-287.0" >[[ o.father ]] </drawString>
+<drawString x="390.0" y="-287.0" >[[ o.mother ]] </drawString>
+<drawString x="245.0" y="-300.0" >[[ o.spouse ]] </drawString>
+<drawString x="390.0" y="-274.0" >[[ o.phone_home ]] </drawString>
+<drawString x="580.0" y="-300.0" >[[ o.children ]] </drawString>
+<drawString x="300.0" y="-315.0" >[[ formatLang(o.date,date=True) ]] </drawString>
+<drawString x="550.0" y="-315.0" >[[ formatLang((o.contract_ids[len(o.contract_ids)-1]).date_end,date=True)]] </drawString>
+<drawString x="200.0" y="-325.0" >[[ o.job_id.name ]] </drawString>
+
+<drawString x="300.0" y="-400.0" >Antananarivo </drawString>
+<drawString x="500.0" y="-400.0" >[[time.strftime("%d / %m / %Y", time.gmtime())]] </drawString>
+</illustration>
+  </story>
+</document>
+

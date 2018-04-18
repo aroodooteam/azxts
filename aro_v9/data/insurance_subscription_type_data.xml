@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="type_standard" model="insurance.subscription.type">
+            <field name="name">Standard</field>
+            <field name="code">STD</field>
+        </record>
+        <record id="type_terme" model="insurance.subscription.type">
+            <field name="name">Terme</field>
+            <field name="code">TRM</field>
+        </record>
+    </data>
+</openerp>

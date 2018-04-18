@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <function name='set_debit_credit_for_opening_journal' model='account.journal'/>
+        <record id="account_journal_agency" model="ir.ui.view">
+            <field name="name">account.journal_agency</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form" />
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="agency_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <delete id="DEV" model="aro.type.emission"/>
+        <record id="devis" model="aro.type.emission">
+            <field name="name">Devis</field>
+            <field name="code">DEV</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <delete id="AFN" model="aro.type.emission"/>
+        <record id="affaire_nouvelle" model="aro.type.emission">
+            <field name="name">Affaire nouvelle</field>
+            <field name="code">AFN</field>
+            <field name="sequence">20</field>
+        </record>
+        <delete id="REN" model="aro.type.emission"/>
+        <record id="renouvellement" model="aro.type.emission">
+            <field name="name">Renouvellement</field>
+            <field name="code">REN</field>
+            <field name="sequence">30</field>
+        </record>
+        <delete id="AVT" model="aro.type.emission"/>
+        <record id="avenant" model="aro.type.emission">
+            <field name="name">Avenant</field>
+            <field name="code">AVT</field>
+            <field name="sequence">40</field>
+        </record>
+        <delete id="TMP" model="aro.type.emission"/>
+        <record id="avenant_temporaire" model="aro.type.emission">
+            <field name="name">Avenant temporaire</field>
+            <field name="code">TMP</field>
+            <field name="sequence">50</field>
+        </record>
+        <delete id="REG" model="aro.type.emission"/>
+        <record id="regul_avenant_temporaire" model="aro.type.emission">
+            <field name="name">Régularisation avenant temporaire</field>
+            <field name="code">REG</field>
+            <field name="sequence">60</field>
+        </record>
+        <delete id="RES" model="aro.type.emission"/>
+        <record id="resiliation" model="aro.type.emission">
+            <field name="name">Résiliation</field>
+            <field name="code">RES</field>
+            <field name="sequence">70</field>
+        </record>
+        <delete id="SUS" model="aro.type.emission"/>
+        <record id="suspension" model="aro.type.emission">
+            <field name="name">Suspension</field>
+            <field name="code">SUS</field>
+            <field name="sequence">80</field>
+        </record>
+        <delete id="REV" model="aro.type.emission"/>
+        <record id="remise_en_vigueur" model="aro.type.emission">
+            <field name="name">Remise en vigueur</field>
+            <field name="code">REV</field>
+            <field name="sequence">90</field>
+        </record>
+        <delete id="PP" model="aro.type.emission"/>
+        <record id="prime_ponctuelle" model="aro.type.emission">
+            <field name="name">Prime ponctuelle</field>
+            <field name="code">PP</field>
+            <field name="sequence">100</field>
+        </record>
+        <delete id="TER" model="aro.type.emission"/>
+        <record id="terme" model="aro.type.emission">
+            <field name="name">Terme</field>
+            <field name="code">TER</field>
+            <field name="sequence">110</field>
+        </record>
+    </data>
+</openerp>

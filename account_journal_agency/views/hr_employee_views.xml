@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="hr_employee_agency" model="ir.ui.view">
+            <field name="name">Employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form" />
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="work_location" position="after">
+                    <field name="agency_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <menuitem id="menu_root_assurance"
+            name="Assurances"
+            sequence="10"/>
+
+        <menuitem id="menu_root_customer_assurance"
+            parent="aro_v9.menu_root_assurance"
+            name="Customers"
+            sequence="10"/>
+
+        <menuitem id="menu_customer_assurance"
+            parent="aro_v9.menu_root_customer_assurance"
+            action="base.action_partner_form"
+            name="Customers"
+            sequence="10"/>
+
+        <menuitem id="menu_root_operation_assurance"
+            parent="aro_v9.menu_root_assurance"
+            name="Insurance operations"
+            sequence="20"/>
+
+        <menuitem id="menu_quotation_operation_assurance"
+            parent="aro_v9.menu_root_operation_assurance"
+            action="sale.action_quotations"
+            name="Quotations"
+            sequence="10"/>
+
+        <menuitem id="menu_root_configuration_assurance"
+            parent="aro_v9.menu_root_assurance"
+            name="Configurations"
+            groups="base.group_no_one"
+            sequence="100"/>
+
+        <menuitem id="menu_root_product_assurance"
+            parent="aro_v9.menu_root_configuration_assurance"
+            name="Insurance Product"
+            sequence="40"/>
+
+        <menuitem id="menu_root_type_risque_assurance"
+            parent="aro_v9.menu_root_configuration_assurance"
+            name="Type risk"
+            sequence="60"/>
+
+        <menuitem id="menu_root_type_broker_assurance"
+            parent="aro_v9.menu_root_configuration_assurance"
+            name="Brokers"
+            sequence="70"/>
+
+    </data>
+</openerp>

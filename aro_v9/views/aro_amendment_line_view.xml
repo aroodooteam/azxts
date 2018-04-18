@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_aro_amendment_line_tree" model="ir.ui.view">
+            <field name="name">aro_amendment_line.tree</field>
+            <field name="model">aro.amendment.line</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Amendment Lines" name="Amendments" create="false">
+                    <field name="name"/>
+                    <field name="emission_id"/>
+                    <field name="starting_date"/>
+                    <field name="ending_date"/>
+                    <field name="is_validated"/>
+                    <field name="is_last_situation"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_aro_amendment_line_form" model="ir.ui.view">
+            <field name="name">aro_amendment_line.form</field>
+            <field name="model">aro.amendment.line</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Amendment Lines" create="false">
+                    <header>
+                        <button string="Confirm" type="object" name="confirm_quotation" attrs="{'invisible': [('emission_id','!=', %(aro_v9.devis)d)]}"/>
+                        <button string="Confirm" type="object" name="confirm_quotation" attrs="{'invisible': ['|',('emission_id','=', %(aro_v9.devis)d),('is_validated','=',True)]}" context="{'validate': True}"/>
+                        <field name="emission_id" widget="statusbar"/>
+                    </header>
+                    <sheet class="oe_form_sheet_full_screen">
+                        <div class="oe_left">
+                            <div class="oe_title">
+                                <label for="name" class="oe_edit_only"/>
+                                <h1>
+                                    <field name="name" required="True" attrs="{'readonly': [('is_validated', '=', True)]}"/>
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="oe_right oe_button_box" name="button_box">
+                            <button class="oe_stat_button" string="Invoices" icon="fa-book" type="object" name="generate_invoice" attrs="{'invisible': [('is_last_situation','=', False)]}"/>
+                        </div>
+                        <group colspan="12">
+                            <group cols="6">
+                                <field name="parent_id" attrs="{'invisible': [('parent_id','=', False)], 'readonly': True}"/>
+                                <field name="subscription_id" invisible="0" readonly="1"/>
+                                <field name="is_last_situation" groups="aro_v9.group_production_manager"/>
+                                <field name="is_validated" groups="aro_v9.group_production_manager"/>
+                                <field name="capital" attrs="{'readonly': [('is_validated', '=', True)]}"/>
+                                <field name="eml" attrs="{'readonly': [('is_validated', '=', True)]}"/>
+                                <field name="invoice_id" attrs="{'invisible': [('invoice_id','=', False)]}"/>
+                            </group>
+                            <group cols="6">
+                                <field name="starting_date" attrs="{'readonly': ['|',('is_validated', '=', True),('emission_id', '=', %(aro_v9.avenant)d)]}"/>
+                                <field name="ending_date" attrs="{'readonly': ['|',('is_validated', '=', True),('emission_id', '=', %(aro_v9.avenant)d)]}"/>
+                                <field name="creating_date" attrs="{'readonly': [('is_validated', '=', True)]}"/>
+                            </group>
+                        </group>
+                        <group colspan="12">
+                            <group cols="6">
+                                <field name="is_temporary" attrs="{'invisible': [('emission_id','not in', (%(aro_v9.avenant)d, %(aro_v9.avenant_temporaire)d))]}"/>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                            <page name="Risk Line" string="Risk Line">
+                                <field name="risk_line_ids" context="{'default_amendment_line_id': active_id, 'version_type': context.get('version_type')}" attrs="{'readonly': [('is_validated', '=', True)]}">
+                                    <tree string="Risk Line">
+                                        <field name="insured_id" invisible="1"/>
+                                        <field name="partner_id"/>
+                                        <field name="type_risk_id"/>
+                                        <field name="name"/>
+                                    </tree>
+                                    <form string="Risk Line">
+                                        <group colspan="4">
+                                            <field name="amendment_line_id" invisible="1"/>
+                                            <field name="subscription_id" invisible="1"/>
+                                            <field name="produit_assurance_id" invisible="1"/>
+                                            <field name="insured_id" invisible="1"/>
+                                            <field name="have_right_ids" invisible="1"/>
+                                            <!--<field name="partner_id" attrs="{'required': context.get('insurance_person', False)}"/>-->
+                                            <field name="partner_id" required="context.get('insurance_person', False)" invisible="not context.get('insurance_person', False)"/>
+                                            <field name="type_risk_id" string="Risk Type" attrs="{'invisible': [('partner_id', '=', False)]}"/>
+                                            <field name="name" attrs="{'invisible': [('partner_id', '=', False)]}"/>
+                                            <field name="risk_warranty_tmpl_id" string="Warranty Lines Template" attrs="{'invisible': ['|', ('partner_id', '=', False), ('type_risk_id','=', False)]}"/>
+                                        </group>
+                                        <notebook colspan="4" attrs="{'invisible': [('type_risk_id','=', False)]}">
+                                            <page string="Warranty" name="Warranty" attrs="{'invisible': [('type_risk_id','=', False)]}">
+                                                <field name="warranty_line_ids" context="{'type_risk_id': type_risk_id}">
+                                                    <tree string="warranty" name="warranty" editable="top" colors="red:types=='removed';green:types=='new'">
+                                                        <field name="warranty_id" required="1"/>
+                                                        <field name="name" required="1"/>
+                                                        <field name="types" required="1"/>
+                                                    </tree>
+                                                </field>
+                                            </page>
+                                            <page string="Descriptions" name="Descriptions" attrs="{'invisible': [('type_risk_id','=', False)]}">
+                                                <field name="risk_description_ids">
+                                                    <tree string="Descriptions" create="false" editable='top' delete="false">
+                                                        <field name="code" readonly="1"/>
+                                                        <field name="name" readonly="1"/>
+                                                        <field name="value"/>
+                                                    </tree>
+                                                </field>
+                                            </page>
+                                        </notebook>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                        <label string="Comments" for="comment"/>
+                        <field name="comment" placeholder="Notes..."/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_aro_amendment_line_search" model="ir.ui.view">
+            <field name="name">aro_amendment_line.search</field>
+            <field name="model">aro.amendment.line</field>
+            <field name="type">search</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Amendment Lines">
+                    <field name="name" select="True"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

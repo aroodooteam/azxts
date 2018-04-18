@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<!-- Vue form de hr.employee.last.jobs-->
+		<!--record model="ir.ui.view" id="view_employee_last_job_form">
+			<field name="name">view_employee_last_job.form</field>
+			<field name="model">hr.employee.last.job</field>
+			<field name="arch" type="xml">
+				<form string="Emplois antérieurs">
+					<sheet>
+						<h1>
+							<label string="Emplois antérieurs"/>
+						</h1>
+						<group col="2" colspan="4">
+							<field name="employee_id"/>
+							<field name="ordre"/>
+							<field name="annee"/>
+							<field name="date_start"/>
+							<field name="date_end"/>
+							<field name="employeur"/>
+							<field name="poste"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record-->
+
+		<record model="ir.ui.view" id="view_last_job_form">
+			<field name="name">view_last_job.form</field>
+			<field name="model">hr.employee.last.job</field>
+			<field name="arch" type="xml">
+				<form string="Emplois antérieurs">
+					<sheet>
+						<h1>
+							<label string="Emplois antérieurs"/>
+						</h1>
+						<group ol="2" colspan="4">
+							<field name="employee_id"/>
+							<field name="ordre"/>
+							<field name="annee"/>
+							<field name="date_start"/>
+							<field name="date_stop"/>
+							<field name="employeur"/>
+							<field name="poste"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Vue tree de hr.employee.last.jobs-->
+		<record model='ir.ui.view' id='view_employee_last_job_tree'>
+			<field name='name'>view_employee_last_job.tree</field>
+			<field name='model'>hr.employee.last.job</field>
+			<field name='arch' type='xml'>
+				<tree string='Emplois antérieurs'>
+					<field name="employee_id"/>
+					<field name="ordre"/>
+					<field name="annee"/>
+					<field name="employeur"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Action du menu hr.employee.last.jobs -->
+		<record id="action_gestion_emploi" model="ir.actions.act_window">
+			<field name="name">Emploi antérieurs</field>
+			<field name="res_model">hr.employee.last.job</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<!-- Menu de hr.employee.last.jobs -->
+		<menuitem id="menu_action_gestion_emploi" name="Emplois antérieurs" parent="menu_hr_career_root" action="action_gestion_emploi"/>
+	</data>
+</openerp>

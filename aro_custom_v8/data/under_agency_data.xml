@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="res_apporteur_ranaivosoa_charles_r0" model="res.apporteur">
+            <field name="ua_code">06</field>
+            <field name="name">RANAIVOSOA CHARLES</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41062000</field>
+        </record>
+        <record id="res_apporteur_rakotozoely_r0" model="res.apporteur">
+            <field name="ua_code">15</field>
+            <field name="name">RAKOTOZOELY</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+        </record>
+        <record id="res_apporteur_somacram_r0" model="res.apporteur">
+            <field name="ua_code">17</field>
+            <field name="name">SOMACRAM</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41172000</field>
+        </record>
+        <record id="res_apporteur_boa_siege_r0" model="res.apporteur">
+            <field name="ua_code">42</field>
+            <field name="name">BOA SIEGE</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41422000</field>
+        </record>
+        <record id="res_apporteur_fiaro_r0" model="res.apporteur">
+            <field name="ua_code">01</field>
+            <field name="name">FIARO</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_20"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41012000</field>
+        </record>
+        <record id="res_apporteur_tahora_ilias_r0" model="res.apporteur">
+            <field name="ua_code">38</field>
+            <field name="name">TAHORA ILIAS</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_22"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41382000</field>
+        </record>
+        <record id="res_apporteur_razafiharimisa_noeline_marie_r0" model="res.apporteur">
+            <field name="ua_code">43</field>
+            <field name="name">RAZAFIHARIMISA NOELINE MARIE</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_25"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41432000</field>
+        </record>
+        <record id="res_apporteur_imdadhoussen_adamdjee_r0" model="res.apporteur">
+            <field name="ua_code">45</field>
+            <field name="name">IMDADHOUSSEN ADAMDJEE</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_22"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+        </record>
+        <record id="res_apporteur_kamourhoudine_hassim_meraly_r0" model="res.apporteur">
+            <field name="ua_code">87</field>
+            <field name="name">Kamourhoudine Hassim Meraly</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_22"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+        </record>
+        <record id="res_apporteur_leung_hoi_suzanne_r0" model="res.apporteur">
+            <field name="ua_code">51</field>
+            <field name="name">LEUNG HOI SUZANNE</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41512000</field>
+        </record>
+        <record id="res_apporteur_r__dubosc_et_compagnie_r0" model="res.apporteur">
+            <field name="ua_code">52</field>
+            <field name="name">R. DUBOSC ET COMPAGNIE</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41522000</field>
+        </record>
+        <record id="res_apporteur_samkhi_r0" model="res.apporteur">
+            <field name="ua_code">71</field>
+            <field name="name">SAM-KHI</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_29"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41712000</field>
+        </record>
+        <record id="res_apporteur_andapa_r0" model="res.apporteur">
+            <field name="ua_code">55</field>
+            <field name="name">Andapa</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_27"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41552000</field>
+        </record>
+        <record id="res_apporteur_m_mong_kham_tim__ihosy_r0" model="res.apporteur">
+            <field name="ua_code">29</field>
+            <field name="name">M.MONG KHAM TIM - IHOSY</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41292000</field>
+        </record>
+        <record id="res_apporteur_ambohimahasoa_r0" model="res.apporteur">
+            <field name="ua_code">83</field>
+            <field name="name">AMBOHIMAHASOA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41832000</field>
+        </record>
+        <record id="res_apporteur_razafimahazo_bertrand_eugene_r0" model="res.apporteur">
+            <field name="ua_code">22</field>
+            <field name="name">RAZAFIMAHAZO Bertrand Eugene</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41222000</field>
+        </record>
+        <record id="res_apporteur_mamodaly_firoze_houssen_r0" model="res.apporteur">
+            <field name="ua_code">60</field>
+            <field name="name">MAMODALY FIROZE HOUSSEN</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41602000</field>
+        </record>
+        <record id="res_apporteur_bureau_regional_antsahavola_r0" model="res.apporteur">
+            <field name="ua_code">05</field>
+            <field name="name">BUREAU REGIONAL ANTSAHAVOLA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">42052000</field>
+        </record>
+        <record id="res_apporteur_stedic_s_a_r_l_r0" model="res.apporteur">
+            <field name="ua_code">04</field>
+            <field name="name">STEDIC S.A.R.L</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">42042000</field>
+        </record>
+        <record id="res_apporteur_agce_ambositra_r0" model="res.apporteur">
+            <field name="ua_code">21</field>
+            <field name="name">AGCE AMBOSITRA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41212000</field>
+        </record>
+        <record id="res_apporteur_marbour_r0" model="res.apporteur">
+            <field name="ua_code">33</field>
+            <field name="name">MARBOUR</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_17"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41332000</field>
+        </record>
+        <record id="res_apporteur_la_prevoyance_r0" model="res.apporteur">
+            <field name="ua_code">67</field>
+            <field name="name">LA PREVOYANCE</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_17"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41672000</field>
+        </record>
+        <record id="res_apporteur_tsimbina_r0" model="res.apporteur">
+            <field name="ua_code">69</field>
+            <field name="name">TSIMBINA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_17"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41692000</field>
+        </record>
+        <record id="res_apporteur_societe_kaiamba_r0" model="res.apporteur">
+            <field name="ua_code">13</field>
+            <field name="name">SOCIETE KAIAMBA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41132000</field>
+        </record>
+        <record id="res_apporteur_far_antananarivo_r0" model="res.apporteur">
+            <field name="ua_code">1T</field>
+            <field name="name">FAR ANTANANARIVO</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">411T2000</field>
+        </record>
+        <record id="res_apporteur_agrika_ambatolampy_r0" model="res.apporteur">
+            <field name="ua_code">31</field>
+            <field name="name">AGRIKA AMBATOLAMPY</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41312000</field>
+        </record>
+        <record id="res_apporteur_btm_tsiroanomandidy_r0" model="res.apporteur">
+            <field name="ua_code">34</field>
+            <field name="name">BTM TSIROANOMANDIDY</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41342000</field>
+        </record>
+        <record id="res_apporteur_trans_7_antananarivo_r0" model="res.apporteur">
+            <field name="ua_code">37</field>
+            <field name="name">TRANS 7 ANTANANARIVO</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41372000</field>
+        </record>
+        <record id="res_apporteur_so_mi_da_r0" model="res.apporteur">
+            <field name="ua_code">82</field>
+            <field name="name">SO.MI.DA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41822000</field>
+        </record>
+        <record id="res_apporteur_groupe_drt_r0" model="res.apporteur">
+            <field name="ua_code">98</field>
+            <field name="name">GROUPE DRT</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41982000</field>
+        </record>
+        <record id="res_apporteur_sodiat_r0" model="res.apporteur">
+            <field name="ua_code">72</field>
+            <field name="name">SODIAT</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_19"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41722000</field>
+        </record>
+        <record id="res_apporteur_assurances_generales_de_mcar_r0" model="res.apporteur">
+            <field name="ua_code">73</field>
+            <field name="name">ASSURANCES GENERALES DE M/CAR</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_19"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41732000</field>
+        </record>
+        <record id="res_apporteur_ste_de_cons_en_assur_r0" model="res.apporteur">
+            <field name="ua_code">65</field>
+            <field name="name">Ste de cons en assur</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_20"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41652000</field>
+        </record>
+        <record id="res_apporteur_groupe_andri_r0" model="res.apporteur">
+            <field name="ua_code">68</field>
+            <field name="name">GROUPE ANDRI</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_20"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41682000</field>
+        </record>
+        <record id="res_apporteur_difco_r0" model="res.apporteur">
+            <field name="ua_code">23</field>
+            <field name="name">DIFCO</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41232000</field>
+        </record>
+        <record id="res_apporteur_auximad_manakara_r0" model="res.apporteur">
+            <field name="ua_code">25</field>
+            <field name="name">AUXIMAD MANAKARA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41252000</field>
+        </record>
+        <record id="res_apporteur_scepag_mananjary_r0" model="res.apporteur">
+            <field name="ua_code">26</field>
+            <field name="name">SCEPAG MANANJARY</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41262000</field>
+        </record>
+        <record id="res_apporteur_bureau_regional_farafangana_r0" model="res.apporteur">
+            <field name="ua_code">39</field>
+            <field name="name">BUREAU REGIONAL FARAFANGANA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41392000</field>
+        </record>
+        <record id="res_apporteur_far_fianarantsoa_r0" model="res.apporteur">
+            <field name="ua_code">3F</field>
+            <field name="name">FAR FIANARANTSOA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">413F2000</field>
+        </record>
+        <record id="res_apporteur_far_toliary_r0" model="res.apporteur">
+            <field name="ua_code">6U</field>
+            <field name="name">FAR TOLIARY</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_22"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">416U2000</field>
+        </record>
+        <record id="res_apporteur_trans_7_mahajanga_r0" model="res.apporteur">
+            <field name="ua_code">44</field>
+            <field name="name">TRANS 7 MAHAJANGA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_25"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41442000</field>
+        </record>
+        <record id="res_apporteur_port_berge_moshinaly_mamodaly_r0" model="res.apporteur">
+            <field name="ua_code">46</field>
+            <field name="name">PORT BERGE MOSHINALY MAMODALY</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_25"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41462000</field>
+        </record>
+        <record id="res_apporteur_majunga_mme_raharivelo_ernould_r0" model="res.apporteur">
+            <field name="ua_code">49</field>
+            <field name="name">MAJUNGA (MME RAHARIVELO ERNOULD)</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_25"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41492000</field>
+        </record>
+        <record id="res_apporteur_far_mahajanga_r0" model="res.apporteur">
+            <field name="ua_code">4M</field>
+            <field name="name">FAR MAHAJANGA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_25"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">414M2000</field>
+        </record>
+        <record id="res_apporteur_marovoay_m_sabjaly_hassanaly_r0" model="res.apporteur">
+            <field name="ua_code">89</field>
+            <field name="name">MAROVOAY M.SABJALY HASSANALY</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_25"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41892000</field>
+        </record>
+        <record id="res_apporteur_far_antsiranana_r0" model="res.apporteur">
+            <field name="ua_code">2D</field>
+            <field name="name">FAR ANTSIRANANA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">412D2000</field>
+        </record>
+        <record id="res_apporteur_trans_7_sambava_r0" model="res.apporteur">
+            <field name="ua_code">47</field>
+            <field name="name">TRANS 7 SAMBAVA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41472000</field>
+        </record>
+        <record id="res_apporteur_trans_7_antsiranana_r0" model="res.apporteur">
+            <field name="ua_code">48</field>
+            <field name="name">TRANS 7 ANTSIRANANA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41482000</field>
+        </record>
+        <record id="res_apporteur_ambilobe_m_nourdine_p_r0" model="res.apporteur">
+            <field name="ua_code">56</field>
+            <field name="name">AMBILOBE M NOURDINE P</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41562000</field>
+        </record>
+        <record id="res_apporteur_ambanja_r0" model="res.apporteur">
+            <field name="ua_code">57  </field>
+            <field name="name">AMBANJA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41572000</field>
+        </record>
+        <record id="res_apporteur_ets_samica__antalaha_r0" model="res.apporteur">
+            <field name="ua_code">54</field>
+            <field name="name">ETS SAMICA - ANTALAHA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_27"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41542000</field>
+        </record>
+        <record id="res_apporteur_far_toamasina_r0" model="res.apporteur">
+            <field name="ua_code">5A</field>
+            <field name="name">FAR TOAMASINA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_28"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">415A2000</field>
+        </record>
+        <record id="res_apporteur_maroantsetra_m_akbaraly_a__r0" model="res.apporteur">
+            <field name="ua_code">62</field>
+            <field name="name">MAROANTSETRA M.AKBARALY A.</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_28"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41622000</field>
+        </record>
+        <record id="res_apporteur_trans_7_toamasina_r0" model="res.apporteur">
+            <field name="ua_code">63</field>
+            <field name="name">TRANS 7 TOAMASINA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_28"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41632000</field>
+        </record>
+        <record id="res_apporteur_m_liao_tze_kiang__vatomandry_r0" model="res.apporteur">
+            <field name="ua_code">64</field>
+            <field name="name">M.LIAO TZE KIANG - VATOMANDRY</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_28"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41642000</field>
+        </record>
+        <record id="res_apporteur_s_p_r_e_x_r0" model="res.apporteur">
+            <field name="ua_code">75</field>
+            <field name="name">S P R E X</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_29"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41752000</field>
+        </record>
+        <record id="res_apporteur_btm_antsirabe_r0" model="res.apporteur">
+            <field name="ua_code">76</field>
+            <field name="name">BTM ANTSIRABE</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_29"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41762000</field>
+        </record>
+        <record id="res_apporteur_redressement_r0" model="res.apporteur">
+            <field name="ua_code">09</field>
+            <field name="name">REDRESSEMENT</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_31"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41092000</field>
+        </record>
+        <record id="res_apporteur_siege_r0" model="res.apporteur">
+            <field name="ua_code">10</field>
+            <field name="name">SIEGE</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_31"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41102000</field>
+        </record>
+        <record id="res_apporteur_contentieux_aro_r0" model="res.apporteur">
+            <field name="ua_code">12</field>
+            <field name="name">CONTENTIEUX ARO</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_31"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41122000</field>
+        </record>
+        <record id="res_apporteur_redress_pool_r0" model="res.apporteur">
+            <field name="ua_code">88</field>
+            <field name="name">REDRESS POOL</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_31"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41882000</field>
+        </record>
+        <record id="res_apporteur_raoelina_loyola" model="res.apporteur">
+            <field name="ua_code">97</field>
+            <field name="name">RAOELINA LOYOLA</field>
+            <field name="is_under_agency" eval="True"/>
+            <field name="serial_identification">000</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="customer" eval="False"/>
+            <field name="ref_apporteur">41972000</field>
+        </record>
+    </data>
+</openerp>

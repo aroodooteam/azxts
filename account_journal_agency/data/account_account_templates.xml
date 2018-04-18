@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <function name="set_account_reconcile" model="account.account"/>
+        <!-- auxiliary - account -->
+        <record model="res.partner" id="partner_aux_251045">
+            <field name="name">NCA RE</field>
+            <field name="ref">251045</field>
+            <!--<field name="property_account_receivable" ref="__export__.account_account_31559"/>-->
+            <!--<field name="property_account_payable" ref="__export__.account_account_31559"/>-->
+        </record>
+
+        <record model="res.partner" id="partner_aux_400481">
+            <field name="name">SCOR VIA JB BODA</field>
+            <field name="ref">400481</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_400482">
+            <field name="name">AL DHARFA INSURANCE CO</field>
+            <field name="ref">400482</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_400487">
+            <field name="name">GENERALI VIA GLOBUS</field>
+            <field name="ref">400487</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_400494">
+            <field name="name">JLT SPECIALTY LTD</field>
+            <field name="ref">400494</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_400495">
+            <field name="name">TOKYO MARINE KILN EUROPE LTD</field>
+            <field name="ref">400495</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_400496">
+            <field name="name">XL CATLIN</field>
+            <field name="ref">400496</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_404492">
+            <field name="name">ACTIVA INTL INS VIA CK RE</field>
+            <field name="ref">404492</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_404498">
+            <field name="name">NECO INS VIA PIONEER</field>
+            <field name="ref">404498</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_404499">
+            <field name="name">NB INS VIA PIONEER</field>
+            <field name="ref">404499</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_404500">
+            <field name="name">METROPOLITAN INS VIA CK RE</field>
+            <field name="ref">404500</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_404501">
+            <field name="name">PRAGATI INS VIA JB BODA</field>
+            <field name="ref">404501</field>
+        </record>
+
+        <record model="res.partner" id="partner_aux_404502">
+            <field name="name">NICO INS ZAMBIA VIA AFRO ASIAN</field>
+            <field name="ref">404502</field>
+        </record>
+
+    </data>
+</openerp>

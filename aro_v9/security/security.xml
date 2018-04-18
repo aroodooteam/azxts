@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <!-- This file should contain only security objects -->
+        <record id="insurance_production_category" model="ir.module.category">
+            <field name="name">Insurance Production</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record model="res.groups" id="group_production_trainee">
+            <field name="name">Production / Trainee</field>
+            <field name="category_id" ref="insurance_production_category"/>
+        </record>
+
+        <record model="res.groups" id="group_production_user">
+            <field name="name">Production / User</field>
+            <field name="implied_ids" eval="[(4, ref('group_production_trainee'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="insurance_production_category"/>
+        </record>
+
+        <record model="res.groups" id="group_production_manager">
+            <field name="name">Production / Manager</field>
+            <field name="implied_ids" eval="[(4, ref('group_production_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="insurance_production_category"/>
+        </record>
+
+        <record id="production_users_access" model="ir.rule">
+            <field name="name">Access to Production for regular users</field>
+            <field name="model_id" ref="aro_v9.model_aro_insurance_subscription"/>
+            <!--<field name="domain_force" eval="[('status_id', '=', ref('aro_v9.status_resilie'))]"/>-->
+            <field name="domain_force"></field>
+            <field name="groups" eval="[(4, ref('aro_v9.group_production_user'))]"/>
+            <field eval="0" name="perm_unlink"/>
+            <field eval="0" name="perm_write"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_create"/>
+        </record>
+
+        <record id="production_user_role" model="ir.rule">
+            <field name="name">Amendment line User</field>
+            <field name="model_id" ref="model_aro_amendment_line"/>
+            <field name="groups" eval="[(4, ref('aro_v9.group_production_user')),(4, ref('aro_v9.group_production_manager'))]"/>
+        </record>
+
+
+    </data>
+</openerp>

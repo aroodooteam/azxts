@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="hr_loan_type_rate_act" model="ir.actions.act_window">
+            <field name="name">Taux des Types de prêts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.loan.request.type.rate</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="hr_loan_request_type_rate_tree_view" model="ir.ui.view">
+            <field name="name">hr.loan.request.type.rate.tree.view</field>
+            <field name="model">hr.loan.request.type.rate</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Taux Type Emprunt" editable="top"> 
+                    <field name="name"/> 
+                    <field name="amount_min"/>
+                    <field name="amount_max"/>
+                    <field name="rate"/> 
+                </tree>
+            </field>
+        </record>
+        
+        <menuitem id="id_hr_loan_type_rate" parent="hr.menu_hr_configuration"
+            name="Taux des Types de prêts" action="hr_loan_type_rate_act"/>
+    </data>
+</openerp>

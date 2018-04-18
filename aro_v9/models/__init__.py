@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+
+import aro_branche_assurance
+import aro_fraction_assurance
+import aro_produit_assurance
+import aro_trs_clause
+import aro_trs_description
+# import aro_trs_garantie
+import aro_type_risque
+import aro_taxe
+import product_template
+import aro_type_apporteur
+import aro_commission
+import aro_type_emission
+import aro_status
+import insurance_subscription_type
+import aro_insurance_subscription
+import subscription_risk_description
+import aro_insurance_subscription_risk_line
+import risk_warranty_line
+import aro_registration_fee
+import aro_amendment_line
+import type_risk_warranty_template
+import warranty_line_template
+import account_invoice
+import res_partner_family
+import res_partner

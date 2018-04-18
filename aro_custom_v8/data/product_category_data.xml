@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="product_category_3" model="product.category">
+            <field name="code">AVIATION</field>
+            <field name="name">Aviation</field>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_83" model="product.category">
+            <field name="code">AVIATION</field>
+            <field name="name">Aviation</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_3"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_271" model="product.category">
+            <field name="code">30001</field>
+            <field name="name">Aviation</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_83"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_84" model="product.category">
+            <field name="code">INDIVACC</field>
+            <field name="name">Individuelle Accident</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_3"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_273" model="product.category">
+            <field name="code">31001</field>
+            <field name="name">Individuelle Accident</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_84"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_272" model="product.category">
+            <field name="code">31000</field>
+            <field name="name">Objet Correspontant à la prime provisoire</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_84"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_4" model="product.category">
+            <field name="code">AUTOMOBILE</field>
+            <field name="name">Assurance Automobiles</field>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_81" model="product.category">
+            <field name="code">ASSISTANCE_AUTO</field>
+            <field name="name">Assistance Auto</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_4"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_321" model="product.category">
+            <field name="code">20001</field>
+            <field name="name">Assistance Auto</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_81"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_82" model="product.category">
+            <field name="code">ASSISTANCE_AUTOF</field>
+            <field name="name">Assistance Auto Flotte</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_4"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_323" model="product.category">
+            <field name="code">21001</field>
+            <field name="name">Assistance Auto Flotte</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_82"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_80" model="product.category">
+            <field name="code">CONGA</field>
+            <field name="name">Concessionnaire - Garage</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_4"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_79" model="product.category">
+            <field name="code">FLOTTES AFP</field>
+            <field name="name">Flottes AFP</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_4"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_296" model="product.category">
+            <field name="code">17001</field>
+            <field name="name">Flottes AFP</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_79"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_78" model="product.category">
+            <field name="code">FLOTTES AUTO</field>
+            <field name="name">Flottes Automobiles</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_4"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_295" model="product.category">
+            <field name="code">16001</field>
+            <field name="name">Flottes automobiles</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_78"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_77" model="product.category">
+            <field name="code">MONOVEHICULE</field>
+            <field name="name">Monovehicule</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_4"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_294" model="product.category">
+            <field name="code">18001</field>
+            <field name="name">Monovehicule</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_77"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_5" model="product.category">
+            <field name="code">IRD</field>
+            <field name="name">Incendies et risques divers</field>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_89" model="product.category">
+            <field name="code">BRISDEGLACES2</field>
+            <field name="name">Bris de Glaces</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_5"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_257" model="product.category">
+            <field name="code">33001</field>
+            <field name="name">Bris de Glaces</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_89"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_258" model="product.category">
+            <field name="code">33002</field>
+            <field name="name">OC de Bris de Glaces</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_89"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_87" model="product.category">
+            <field name="code">GLOBAL_BANQUE</field>
+            <field name="name">Globale de Banque</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_5"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_255" model="product.category">
+            <field name="code">28002</field>
+            <field name="name">Globale de banque</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_87"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_254" model="product.category">
+            <field name="code">28001</field>
+            <field name="name">OC Globale de banque</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_87"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_95" model="product.category">
+            <field name="code">MR_ENTREP</field>
+            <field name="name">Multirisque</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_5"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_267" model="product.category">
+            <field name="code">29007</field>
+            <field name="name">Appareil Electronique (sinistres)</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_324" model="product.category">
+            <field name="code">38000</field>
+            <field name="name">Bâtiment assuré</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_262" model="product.category">
+            <field name="code">29002</field>
+            <field name="name">Bâtiment (propriétaire)</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_264" model="product.category">
+            <field name="code">29004</field>
+            <field name="name">Bâtiment (risques locatifs)</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_268" model="product.category">
+            <field name="code">29008</field>
+            <field name="name">Bris de machines</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_263" model="product.category">
+            <field name="code">29003</field>
+            <field name="name">Contenu</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_269" model="product.category">
+            <field name="code">29009</field>
+            <field name="name">Machines de production (sinistres)</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_266" model="product.category">
+            <field name="code">29006</field>
+            <field name="name">Matériels Electroniques</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_270" model="product.category">
+            <field name="code">29010</field>
+            <field name="name">Objet déclaré</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_261" model="product.category">
+            <field name="code">29001</field>
+            <field name="name">OC Multirisque</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_265" model="product.category">
+            <field name="code">29005</field>
+            <field name="name">Responsabilité Civile</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_95"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_88" model="product.category">
+            <field name="code">MRSH</field>
+            <field name="name">Multirisque Simplifiee Habitation</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_5"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_256" model="product.category">
+            <field name="code">24001</field>
+            <field name="name">MRSH</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_88"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_90" model="product.category">
+            <field name="code">OBJETS_PRECIEUX</field>
+            <field name="name">Objets Precieux</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_5"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_259" model="product.category">
+            <field name="code">25001</field>
+            <field name="name">Objets Précieux</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_90"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_260" model="product.category">
+            <field name="code">25002</field>
+            <field name="name">OC de Objets Précieux</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_90"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_93" model="product.category">
+            <field name="code">RCCOLLECTIVITES</field>
+            <field name="name">RC Collectivites</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_5"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_276" model="product.category">
+            <field name="code">36002</field>
+            <field name="name">Assuré RC Collectivités</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_93"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_275" model="product.category">
+            <field name="code">36001</field>
+            <field name="name">OC RC Collectivités</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_93"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_94" model="product.category">
+            <field name="code">RCDIVERSES</field>
+            <field name="name">RC Diverses</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_5"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_277" model="product.category">
+            <field name="code">37001</field>
+            <field name="name">OC RC Diverses</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_280" model="product.category">
+            <field name="code">37004</field>
+            <field name="name">RC Coiffeurs</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_287" model="product.category">
+            <field name="code">37011</field>
+            <field name="name">RC Commerçants et artisans</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_282" model="product.category">
+            <field name="code">37006</field>
+            <field name="name">RC Distributeurs de carburant</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_283" model="product.category">
+            <field name="code">37007</field>
+            <field name="name">RC Exploitants agricoles</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_281" model="product.category">
+            <field name="code">37005</field>
+            <field name="name">RC Garagistes</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_291" model="product.category">
+            <field name="code">37015</field>
+            <field name="name">RC Guides touristiques indépendants</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_286" model="product.category">
+            <field name="code">37010</field>
+            <field name="name">RC Hôtels</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_293" model="product.category">
+            <field name="code">37017</field>
+            <field name="name">RC Ingenieurs</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_288" model="product.category">
+            <field name="code">37012</field>
+            <field name="name">RC Intermédiaire d'assurance</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_292" model="product.category">
+            <field name="code">37016</field>
+            <field name="name">RC Notaires / Avocats</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_284" model="product.category">
+            <field name="code">37008</field>
+            <field name="name">RC Pharmaciens et dépositaires</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_285" model="product.category">
+            <field name="code">37009</field>
+            <field name="name">RC Professions médicales et paramédicales</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_289" model="product.category">
+            <field name="code">37013</field>
+            <field name="name">RC Propriétaire d'immeuble</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_278" model="product.category">
+            <field name="code">37002</field>
+            <field name="name">RC Propriétaires d'animaux</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_290" model="product.category">
+            <field name="code">37014</field>
+            <field name="name">RC Tour Operator</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_279" model="product.category">
+            <field name="code">37003</field>
+            <field name="name">RC Véhicules non motorisés</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_92" model="product.category">
+            <field name="code">RCVP</field>
+            <field name="name">RC Vie Privee</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_5"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_274" model="product.category">
+            <field name="code">35001</field>
+            <field name="name">RC Vie Privée</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_92"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_6" model="product.category">
+            <field name="code">ENGINEERING</field>
+            <field name="name">Assurance Engineering</field>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_86" model="product.category">
+            <field name="code">RC_DECENNAL</field>
+            <field name="name">RC Decennale</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_6"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_319" model="product.category">
+            <field name="code">55001</field>
+            <field name="name">Objet assuré</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_86"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_320" model="product.category">
+            <field name="code">55002</field>
+            <field name="name">Objet Commun</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_86"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_85" model="product.category">
+            <field name="code">TRISQUE_C/M</field>
+            <field name="name">Tous Risques Chantier/Montage</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_6"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_317" model="product.category">
+            <field name="code">51001</field>
+            <field name="name">Chantier ou Montage</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_85"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_318" model="product.category">
+            <field name="code">51002</field>
+            <field name="name">Objet Commun</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_85"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_7" model="product.category">
+            <field name="code">MARITIME</field>
+            <field name="name">Assurance Maritime</field>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_98" model="product.category">
+            <field name="code">CORPS_NAVIRE</field>
+            <field name="name">Corps de Navire</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_7"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_309" model="product.category">
+            <field name="code">56003</field>
+            <field name="name">Corps FLUVIAL</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_98"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_307" model="product.category">
+            <field name="code">56001</field>
+            <field name="name">Corps MARITIME</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_98"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_311" model="product.category">
+            <field name="code">56005</field>
+            <field name="name">Corps MAT. PORT</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_98"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_310" model="product.category">
+            <field name="code">56004</field>
+            <field name="name">Corps PECHE</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_98"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_308" model="product.category">
+            <field name="code">56002</field>
+            <field name="name">OC Corps de Navire</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_98"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_101" model="product.category">
+            <field name="code">EMBARCATION DE PLAIS</field>
+            <field name="name">Embarcation de plaisance</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_7"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_315" model="product.category">
+            <field name="code">57001</field>
+            <field name="name">Embarcation de plaisance</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_101"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_316" model="product.category">
+            <field name="code">57002</field>
+            <field name="name">OC Embarcation de plaisance</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_101"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_96" model="product.category">
+            <field name="code">FACULTES</field>
+            <field name="name">Facultes</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_7"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_301" model="product.category">
+            <field name="code">50005</field>
+            <field name="name">Facultés AERIENNE</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_96"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_303" model="product.category">
+            <field name="code">50007</field>
+            <field name="name">Facultés AERIENNE Import/Export</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_96"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_300" model="product.category">
+            <field name="code">50004</field>
+            <field name="name">Facultés FLUVIALE</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_96"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_297" model="product.category">
+            <field name="code">50001</field>
+            <field name="name">Facultés MARITIME</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_96"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_304" model="product.category">
+            <field name="code">50008</field>
+            <field name="name">Facultés MARITIME Import/Ex</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_96"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_299" model="product.category">
+            <field name="code">50003</field>
+            <field name="name">Facultés TERRESTRE</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_96"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_298" model="product.category">
+            <field name="code">50002</field>
+            <field name="name">OC de Facultés</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_96"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_302" model="product.category">
+            <field name="code">50006</field>
+            <field name="name">Transport de fonds et valeur</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_96"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_100" model="product.category">
+            <field name="code">RCATC</field>
+            <field name="name">RC Accônier, Transitaire et Commissionnaire</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_7"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_314" model="product.category">
+            <field name="code">54001</field>
+            <field name="name">RCATC</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_100"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_99" model="product.category">
+            <field name="code">RCTM</field>
+            <field name="name">RC Transporteur Maritime</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_7"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_312" model="product.category">
+            <field name="code">53001</field>
+            <field name="name">RCTM</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_99"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_313" model="product.category">
+            <field name="code">53002</field>
+            <field name="name">RCTM Objets Communs</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_99"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_97" model="product.category">
+            <field name="code">RCTT</field>
+            <field name="name">RC Transporteur Terrestre</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_7"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_306" model="product.category">
+            <field name="code">52002</field>
+            <field name="name">RCTT Objets Commun</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_97"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_305" model="product.category">
+            <field name="code">52001</field>
+            <field name="name">RCTT Véhicule</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_97"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_8" model="product.category">
+            <field name="code">ASSPERS</field>
+            <field name="name">Assurance de Personnes</field>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_73" model="product.category">
+            <field name="code">APA_COL</field>
+            <field name="name">Accidents Collectif</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_8"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_250" model="product.category">
+            <field name="code">15001</field>
+            <field name="name">Assuré APA Collectif</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_73"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_251" model="product.category">
+            <field name="code">15002</field>
+            <field name="name">Collège APA Collectif</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_73"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_72" model="product.category">
+            <field name="code">APA_IND</field>
+            <field name="name">Accidents Individuel</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_8"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_249" model="product.category">
+            <field name="code">14001</field>
+            <field name="name">APA Individuel</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_72"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_71" model="product.category">
+            <field name="code">PERS_ASSIST</field>
+            <field name="name">Assistance</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_8"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_248" model="product.category">
+            <field name="code">11001</field>
+            <field name="name">ADH Assistance</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_71"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_76" model="product.category">
+            <field name="code">MAPFRE</field>
+            <field name="name">Assistance MAPFRE</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_8"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_322" model="product.category">
+            <field name="code">58001</field>
+            <field name="name">ADH Assistance MAPFRE</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_76"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_75" model="product.category">
+            <field name="code">SANTE_COL</field>
+            <field name="name">Sante collectif</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_8"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_253" model="product.category">
+            <field name="code">13001</field>
+            <field name="name">ADH santé collectif</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_75"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_74" model="product.category">
+            <field name="code">SANTE_IND</field>
+            <field name="name">Sante individuel</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_8"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_252" model="product.category">
+            <field name="code">12001</field>
+            <field name="name">ADH santé individuel</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_74"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_terrestre_r0" model="product.category">
+            <field name="code">T</field>
+            <field name="name">Terrestre</field>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_accessoire_terrestre_r0" model="product.category">
+            <field name="name">Accessoire Terrestre</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_terrestre_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_404" model="product.category">
+            <field name="code">T4</field>
+            <field name="name">Accidents de travail</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_terrestre_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_401" model="product.category">
+            <field name="code">T1</field>
+            <field name="name">Automobile</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_terrestre_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_405" model="product.category">
+            <field name="code">T5</field>
+            <field name="name">Aviation</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_terrestre_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_403" model="product.category">
+            <field name="code">T3</field>
+            <field name="name">Droit Commun</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_terrestre_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_402" model="product.category">
+            <field name="code">T2</field>
+            <field name="name">Incendie</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_terrestre_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_408" model="product.category">
+            <field name="code">T8</field>
+            <field name="name">Risques Agricoles</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_terrestre_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_406" model="product.category">
+            <field name="code">T6</field>
+            <field name="name">Risques Divers</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_terrestre_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_409" model="product.category">
+            <field name="code">T9</field>
+            <field name="name">Risques Financiers</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_terrestre_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_407" model="product.category">
+            <field name="code">T7</field>
+            <field name="name">Risques Speciaux</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_terrestre_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_maritime_r0" model="product.category">
+            <field name="code">M</field>
+            <field name="name">Maritime</field>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_accessoire_maritime_r0" model="product.category">
+            <field name="name">Accessoire Maritime</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_maritime_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_398" model="product.category">
+            <field name="code">M1</field>
+            <field name="name">Corps</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_maritime_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_400" model="product.category">
+            <field name="code">M3</field>
+            <field name="name">Facultes</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_maritime_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_399" model="product.category">
+            <field name="code">M2</field>
+            <field name="name">RC</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_maritime_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_vie_r0" model="product.category">
+            <field name="code">V</field>
+            <field name="name">Vie</field>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_accessoire_vie_r0" model="product.category">
+            <field name="name">Accessoire Vie</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_vie_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_intrt_sur_avance_r0" model="product.category">
+            <field name="name">Intérêt sur avance</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_vie_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_410" model="product.category">
+            <field name="code">V8</field>
+            <field name="name">Vie Grande Branche</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_vie_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_411" model="product.category">
+            <field name="code">V9</field>
+            <field name="name">Vie Groupe</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_vie_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_concessionnaire_et_garage_r0" model="product.category">
+            <field name="code">CONGA</field>
+            <field name="name">Concessionnaire et Garage</field>
+            <field name="sequence">0</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_80"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_rc_professions_mdicales_37010_r0" model="product.category">
+            <field name="code">37009</field>
+            <field name="name">RC Professions médicales 37010</field>
+            <field name="sequence">0</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_94"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_incendies__primes_modres_r0" model="product.category">
+            <field name="code">RCVP</field>
+            <field name="name">Incendies à primes modérées</field>
+            <field name="sequence">0</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_5"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_incendies__primes_modres_r1" model="product.category">
+            <field name="code">RCVP</field>
+            <field name="name">Incendies à primes modérées</field>
+            <field name="sequence">0</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_incendies__primes_modres_r0"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_assco_r0" model="product.category">
+            <field name="code">INDIVACC</field>
+            <field name="name">ASSCO</field>
+            <field name="sequence">0</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_84"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_rc_decennal_r0" model="product.category">
+            <field name="code">55001</field>
+            <field name="name">RC DECENNAL</field>
+            <field name="sequence">0</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_86"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_rc_transporteur_maritime_r0" model="product.category">
+            <field name="code">RCTM</field>
+            <field name="name">RC Transporteur Maritime</field>
+            <field name="sequence">0</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_99"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_rc_transporteur_terrestre_r0" model="product.category">
+            <field name="code">RCTT</field>
+            <field name="name">RC Transporteur Terrestre</field>
+            <field name="sequence">0</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_97"/>
+            <field name="type">normal</field>
+        </record>
+        <record id="product_category_test__1_r0" model="product.category">
+            <field name="code">50006</field>
+            <field name="name">Test - 1</field>
+            <field name="sequence">0</field>
+            <field name="parent_id" ref="aro_custom_v8.product_category_96"/>
+            <field name="type">normal</field>
+        </record>
+    </data>
+</openerp>

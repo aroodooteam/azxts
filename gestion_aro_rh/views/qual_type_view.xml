@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Vue form qual type -->
+
+        <record model="ir.ui.view" id="qual_type_form">
+            <field name="name">qual_type.form</field>
+            <field name="model">qual.type</field>
+            <field name="arch" type="xml">
+                <form string="Diplômes">
+                    <header>
+                    </header>
+                    <sheet>
+                        <h1>
+                            <label string="Diplômes"/>
+                        </h1>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="niveau_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree qual type-->
+
+        <record model='ir.ui.view' id='qual_type_tree'>
+            <field name='name'>qual_type.tree</field>
+            <field name='model'>qual.type</field>
+            <field name='arch' type='xml'>
+                <tree string='Diplômes'>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="niveau_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action du menu qual type -->
+
+        <record id="action_saisie_qual_type" model="ir.actions.act_window">
+            <field name="name">Diplômes</field>
+            <field name="res_model">qual.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="menu_action_gestion_diplome" name="Type de dipômes" parent="menu_hr_diplome_root" action="action_saisie_qual_type"/>
+    </data>
+</openerp>

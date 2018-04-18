@@ -1,0 +1,231 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* aro_custom_v8
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-01 05:14+0000\n"
+"PO-Revision-Date: 2017-02-01 05:14+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_as400_compte:0
+msgid "AS400 compte"
+msgstr "AS400 compte"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_as400_lig:0
+msgid "AS400 lig"
+msgstr "AS400 lig"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_as400_pie:0
+msgid "AS400 pie"
+msgstr "AS400 pie"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_as400_ses:0
+msgid "AS400 ses"
+msgstr "AS400 ses"
+
+#. module: aro_custom_v8
+#: help:product.template,commission_account_id:0
+msgid "Account reserved for commission"
+msgstr "Account reserved for commission"
+
+#. module: aro_custom_v8
+#: help:product.template,recours_account_id:0
+msgid "Account reserved for recours"
+msgstr "Account reserved for recours"
+
+#. module: aro_custom_v8
+#: help:product.template,sinistre_account_id:0
+msgid "Account reserved for sinister"
+msgstr "Account reserved for sinister"
+
+#. module: aro_custom_v8
+#: field:account.move.line,analytic1:0
+msgid "Analytique 1"
+msgstr "Analytique 1"
+
+#. module: aro_custom_v8
+#: field:account.move.line,analytic2:0
+msgid "Analytique 2"
+msgstr "Analytique 2"
+
+#. module: aro_custom_v8
+#: field:res.partner,cif:0
+msgid "CIF"
+msgstr "CIF"
+
+#. module: aro_custom_v8
+#: code:addons/aro_custom_v8/hr.py:101
+#: code:addons/aro_custom_v8/hr.py:139
+#, python-format
+msgid "Ce groupe n'existe pas"
+msgstr "Ce groupe n'existe pas"
+
+#. module: aro_custom_v8
+#: field:account.move.line,check_number:0
+msgid "Chèque"
+msgstr "Chèque"
+
+#. module: aro_custom_v8
+#: field:res.partner,v_neuf:0
+msgid "Client V9"
+msgstr "Client V9"
+
+#. module: aro_custom_v8
+#: field:product.category,code:0
+#: field:product.template,code:0
+msgid "Code"
+msgstr "Code"
+
+#. module: aro_custom_v8
+#: field:product.template,commission_account_id:0
+msgid "Commission Account"
+msgstr "Compte de Commission"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_contrat:0
+msgid "Contrat"
+msgstr "Contrat"
+
+#. module: aro_custom_v8
+#: view:res.partner:aro_custom_v8.res_partner_v9_button
+msgid "Creation V9"
+msgstr "Creation V9"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_datfact:0
+msgid "Date facture"
+msgstr "Date facture"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_datech:0
+msgid "Date échéance"
+msgstr "Date échéance"
+
+#. module: aro_custom_v8
+#: code:addons/aro_custom_v8/hr.py:99
+#: code:addons/aro_custom_v8/hr.py:137
+#, python-format
+msgid "Desole"
+msgstr "Desole"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_effet:0
+msgid "Effet"
+msgstr "Effet"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_emission:0
+msgid "Emission"
+msgstr "Emission"
+
+#. module: aro_custom_v8
+#: code:addons/aro_custom_v8/hr.py:101
+#: code:addons/aro_custom_v8/hr.py:139
+#, python-format
+msgid "Error"
+msgstr "Error"
+
+#. module: aro_custom_v8
+#: view:res.partner:aro_custom_v8.res_partner_v9_button
+msgid "Factures V9"
+msgstr "Factures V9"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_fluxtres:0
+msgid "Flux trésorerie"
+msgstr "Flux trésorerie"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_folio:0
+msgid "Folio"
+msgstr "Folio"
+
+#. module: aro_custom_v8
+#: model:ir.model,name:aro_custom_v8.model_account_move_line
+msgid "Journal Items"
+msgstr "Écritures comptables"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_libana:0
+msgid "Libellé analytique"
+msgstr "Libellé analytique"
+
+#. module: aro_custom_v8
+#: field:account.move.line,line:0
+msgid "Ligne"
+msgstr "Ligne"
+
+#. module: aro_custom_v8
+#: model:ir.model,name:aro_custom_v8.model_res_partner
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: aro_custom_v8
+#: code:addons/aro_custom_v8/hr.py:99
+#: code:addons/aro_custom_v8/hr.py:137
+#, python-format
+msgid "Pas d'employee dans ce groupe "
+msgstr "Pas d'employee dans ce groupe "
+
+#. module: aro_custom_v8
+#: field:account.move.line,piece:0
+msgid "Pièce"
+msgstr "Pièce"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_police:0
+msgid "Police"
+msgstr "Police"
+
+#. module: aro_custom_v8
+#: model:ir.model,name:aro_custom_v8.model_product_category
+msgid "Product Category"
+msgstr "Catégorie d'articles"
+
+#. module: aro_custom_v8
+#: model:ir.model,name:aro_custom_v8.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_quittance:0
+msgid "Quittance"
+msgstr "Quittance"
+
+#. module: aro_custom_v8
+#: field:product.template,recours_account_id:0
+msgid "Recours Account"
+msgstr "Compte de Recours"
+
+#. module: aro_custom_v8
+#: field:account.move.line,session:0
+msgid "Session"
+msgstr "Session"
+
+#. module: aro_custom_v8
+#: field:product.template,sinistre_account_id:0
+msgid "Claim Account"
+msgstr "Compte de Sinistre"
+
+#. module: aro_custom_v8
+#: field:res.partner,stat:0
+msgid "Stat"
+msgstr "Stat"
+
+#. module: aro_custom_v8
+#: field:account.move.line,emp_unite:0
+msgid "Unité"
+msgstr "Unité"
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<openerp>
+	<data>
+		<record id="new_menu" model="ir.ui.view">
+            <field name="name">new_menu.form</field>
+            <field name="model">new.menu</field>
+            <field name="arch" type="xml">
+            	<form string="New Menu">
+            		<field name="name"/>
+            	</form>
+            </field>
+        </record>
+
+        <record id="action_new_menu" model="ir.actions.act_window">
+            <field name="name">New Menu</field>
+            <field name="res_model">new.menu</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+              
+            </field>
+        </record>
+
+        <menuitem id="new_menu" action="action_new_menu" parent="account.menu_finance_configuration"/>
+        
+	</data>
+</openerp>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_aro_account_fiscalyear_close" model="ir.ui.view">
+            <field name="name">aro.account.fiscalyear.close.form</field>
+            <field name="model">aro.account.fiscalyear.close</field>
+            <field name="arch" type="xml">
+                <form string="Generate Fiscal Year Opening Entries">
+                    <separator string="Generate Fiscal Year Opening Entries"/>
+                    <label string="This wizard will generate the end of year journal entries of selected fiscal year. Note that you can run this wizard many times for the same fiscal year: it will simply replace the old opening entries with the new ones."/>
+                    <newline/>
+                    <group col="4">
+                        <field name="fy_to_close_id" domain = "[('state','=','draft')]"/>
+                        <field name="fy_to_open_id" domain = "[('state','=','draft')]"/>
+                        <field name="period_to_open_id" domain ="[('fiscalyear_id','=',fy_to_open_id),('special','=', True)]" />
+                        <field name="report_name"/>
+                    </group>
+                    <notebook colspan="4">
+                        <page string="Journals" name="Journals">
+                            <!--<field name="journal_ids" widget="one2many_list">-->
+                            <field name="journal_ids">
+                                <tree string="Journals" name="Journals">
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="agency_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Specified Accounts">
+                            <field name="restricted_acc_ids">
+                                <tree string="Restricted">
+                                    <field name="name"/>
+                                </tree>
+                                <form string="Restricted">
+                                    <field name="name" readonly="1"/>
+                                    <field name="account_ids" readonly="1">
+                                        <tree string="Accounts">
+                                            <field name="code"/>
+                                            <field name="name"/>
+                                        </tree>
+                                    </field>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="Account grouped by partner">
+                            <field name="account_gp_ids">
+                                <tree string="Accounts">
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="type"/>
+                                    <field name="user_type"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button string="Create" name="data_save" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_aro_account_fiscalyear_close" model="ir.actions.act_window">
+            <field name="name">Generate Opening Entries</field>
+            <field name="res_model">aro.account.fiscalyear.close</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_aro_account_fiscalyear_close"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem action="action_aro_account_fiscalyear_close"
+            id="menu_wizard_aro_fy_close"
+            parent="account.menu_account_end_year_treatments"/>
+
+    </data>
+</openerp>

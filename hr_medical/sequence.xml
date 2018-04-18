@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Sequences for sale.order -->
+        <record id="seq_type_hr_medical" model="ir.sequence.type">
+            <field name="name">Consultations</field>
+            <field name="code">hr.medical</field>
+        </record>
+
+        <record id="seq_hr_medical" model="ir.sequence">
+            <field name="name">Consultations</field>
+            <field name="code">hr.medical</field>
+            <field name="prefix">C</field>
+            <field name="padding">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</openerp>

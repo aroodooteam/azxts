@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Vue form session de formation -->
+
+        <!--record id="view_session_formation_form" model="ir.ui.view">
+            <field name="name">hr.session.formation.form</field>
+            <field name="model">hr.session.formation.version_2</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <form string="Session de formation" colspan="2">
+                    <group col="2" colspan="2">
+                            <separator string="Général" colspan="2"/>
+                                <field name="branche_id"/>
+                                <field name="name"/>
+                                <field name="intervenant"/>
+                                <field name="date_session"/>
+                    </group>
+                            <separator string="Participants" colspan="2"/>
+                    <label for="attendee_ids"/>
+                    <field name="attendee_ids">
+                        <tree string="Participants">
+                            <field name="matricule"/>
+                            <field name="name"/>
+                            <field name="work_email"/>
+                            <field name="department_id"/>
+                            <field name="job_id"/>
+                        </tree>
+                    </field>
+                        <notebook>
+                            <page string="Participants">
+                                <field name="formation_participant_ids" colspan="4"  nolabel="1" context="{'default_session_formation_id': active_id}">
+                                    <tree>
+                                        <field name="participant_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                </form>
+            </field>
+        </record-->
+
+        <!-- Vue tree session de formation-->
+
+        <!--record id="view_session_formation_tree" model="ir.ui.view">
+            <field name="name">hr.session.formation.tree</field>
+            <field name="model">hr.session.formation.version_2</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <tree string="Module">
+                    <field name="branche_id"/>
+                    <field name="name"/>
+                    <field name="intervenant"/>
+                </tree>
+            </field>
+        </record-->
+    </data>
+</openerp>

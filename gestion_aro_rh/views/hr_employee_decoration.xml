@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--Vue form hr.employee.decoration-->
+        <record model="ir.ui.view" id="view_decoration_form">
+            <field name="name">view_decoration.form</field>
+            <field name="model">hr.employee.decoration</field>
+            <field name="arch" type="xml">
+                <form string="Distinction honorifique">
+                    <sheet>
+                        <h1>
+                            <label string="Distinction honorifique"/>
+                        </h1>
+                        <group col="2" colspan="4">
+                            <field name="employee_id"/>
+                            <field name="annee"/>
+                            <field name="decoration_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree de hr.employee.decoration -->
+        <record model='ir.ui.view' id='view_decoration_tree'>
+            <field name='name'>view_decoration.tree</field>
+            <field name='model'>hr.employee.decoration</field>
+            <field name='arch' type='xml'>
+                <tree string='Distinction honorifique'>
+                    <field name='employee_id'/>
+                    <field name="annee"/>
+                    <field name="decoration_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action du menu hr.employee.decoration-->
+        <record id="action_gestion_decoration" model="ir.actions.act_window">
+            <field name="name">Décoration</field>
+            <field name="res_model">hr.employee.decoration</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_action_gestion_decoration" name="Saisie décoration" parent="menu_hr_career_root" action="action_gestion_decoration"/>
+
+    </data>
+</openerp>

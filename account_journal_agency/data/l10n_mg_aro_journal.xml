@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!--
+            journaux caisse agence
+        -->
+        <record id="caisse_toamasina" model="account.journal">
+            <field name="code">CA61</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_28"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Toamasina</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_fianarantsoa" model="account.journal">
+            <field name="code">CA20</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Fianarantsoa</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_ampefiloha" model="account.journal">
+            <field name="code">CA18</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_20"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Ampefiloha</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_daa" model="account.journal">
+            <field name="code">CA11</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse DAA</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_independance" model="account.journal">
+            <field name="code">CA16</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_19"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Independance</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_toliary" model="account.journal">
+            <field name="code">CA32</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_22"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Toliary</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_taolagnaro" model="account.journal">
+            <field name="code">CA35</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_23"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Taolagnaro</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_mahajanga" model="account.journal">
+            <field name="code">CA40</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_25"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Mahajanga</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_antsirabe" model="account.journal">
+            <field name="code">CA70</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_29"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Antsirabe</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_sambava" model="account.journal">
+            <field name="code">CA53</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_27"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Sambava</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_antsiranana" model="account.journal">
+            <field name="code">CA50</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Antsiranana</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_ankorondrano" model="account.journal">
+            <field name="code">CA81</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_30"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Ankorondrano</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_morondava" model="account.journal">
+            <field name="code">CA36</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_24"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Morondava</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_atop" model="account.journal">
+            <field name="code">CA03</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_17"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Grands Comptes</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="caisse_ambatondrazaka" model="account.journal">
+            <field name="code">CA14</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_18"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Ambatondrazaka</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <!-- Journal de Banque -->
+        <record id="banque_toamasina" model="account.journal">
+            <field name="code">BQ61</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_28"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Toamasina</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_fianarantsoa" model="account.journal">
+            <field name="code">BQ20</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Fianarantsoa</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_ampefiloha" model="account.journal">
+            <field name="code">BQ18</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_20"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Ampefiloha</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_daa" model="account.journal">
+            <field name="code">BQ11</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque DAA</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_independance" model="account.journal">
+            <field name="code">BQ16</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_19"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Independance</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_toliary" model="account.journal">
+            <field name="code">BQ32</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_22"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Toliary</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_taolagnaro" model="account.journal">
+            <field name="code">BQ35</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_23"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Taolagnaro</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_mahajanga" model="account.journal">
+            <field name="code">BQ40</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_25"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Mahajanga</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_antsirabe" model="account.journal">
+            <field name="code">BQ70</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_29"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Antsirabe</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_sambava" model="account.journal">
+            <field name="code">BQ53</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_27"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Sambava</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_antsiranana" model="account.journal">
+            <field name="code">BQ50</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Antsiranana</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_ankorondrano" model="account.journal">
+            <field name="code">BQ81</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_30"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Ankorondrano</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_morondava" model="account.journal">
+            <field name="code">BQ36</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_24"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Morondava</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_atop" model="account.journal">
+            <field name="code">BQ03</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_17"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Grands Comptes</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <record id="banque_ambatondrazaka" model="account.journal">
+            <field name="code">BQ14</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_18"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Ambatondrazaka</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
+        <!-- Journal des Operations Diverses -->
+        <record id="operations_diverse_toamasina" model="account.journal">
+            <field name="name">Operations Diverse Toamasina</field>
+            <field name="code">OD61</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_28"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_fianarantsoa" model="account.journal">
+            <field name="name">Operations Diverse Fianarantsoa</field>
+            <field name="code">OD20</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_21"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_ampefiloha" model="account.journal">
+            <field name="name">Operations Diverse Ampefiloha</field>
+            <field name="code">OD18</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_20"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_daa" model="account.journal">
+            <field name="name">Operations Diverse DAA</field>
+            <field name="code">OD11</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_1"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_independance" model="account.journal">
+            <field name="name">Operations Diverse Independance</field>
+            <field name="code">OD16</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_19"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_toliary" model="account.journal">
+            <field name="name">Operations Diverse Toliary</field>
+            <field name="code">OD32</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_22"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_taolagnaro" model="account.journal">
+            <field name="name">Operations Diverse Taolagnaro</field>
+            <field name="code">OD35</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_23"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_mahajanga" model="account.journal">
+            <field name="name">Operations Diverse Mahajanga</field>
+            <field name="code">OD40</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_25"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_antsirabe" model="account.journal">
+            <field name="name">Operations Diverse Antsirabe</field>
+            <field name="code">OD70</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_29"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_sambava" model="account.journal">
+            <field name="name">Operations Diverse Sambava</field>
+            <field name="code">OD53</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_27"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_antsiranana" model="account.journal">
+            <field name="name">Operations Diverse Antsiranana</field>
+            <field name="code">OD50</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_26"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_ankorondrano" model="account.journal">
+            <field name="name">Operations Diverse Ankorondrano</field>
+            <field name="code">OD81</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_30"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_morondava" model="account.journal">
+            <field name="name">Operations Diverse Morondava</field>
+            <field name="code">OD36</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_24"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_atop" model="account.journal">
+            <field name="name">Operations Diverse Grands Comptes</field>
+            <field name="code">OD03</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_17"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_ambatondrazaka" model="account.journal">
+            <field name="name">Operations Diverse Ambatondrazaka</field>
+            <field name="code">OD14</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_18"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <!--
+        <record id="journal_achat" model="account.journal">
+            <field name="name">Journal des Achats</field>
+            <field name="code">JAC</field>
+            <field name="type">purchase</field>
+            <field name="view_id" ref="account.account_journal_view"/>
+            <field name="sequence_id" ref="account.sequence_journal"/>
+        </record>
+
+        <record id="journal_banque" model="account.journal">
+            <field name="name">Journal de Banque</field>
+            <field name="code">JBQ</field>
+            <field name="type">cash</field>
+            <field name="view_id" ref="account.account_journal_view"/>
+            <field name="sequence_id" ref="account.sequence_journal"/>
+        </record>
+
+        <record id="journal_caisse" model="account.journal">
+            <field name="name">Journal de Caisse</field>
+            <field name="code">JCS</field>
+            <field name="type">cash</field>
+            <field name="view_id" ref="account.account_journal_view"/>
+            <field name="sequence_id" ref="account.sequence_journal"/>
+        </record>
+
+        <record id="journal_divers" model="account.journal">
+            <field name="name">Journal des Opérations Diverses</field>
+            <field name="code">JOD</field>
+            <field name="type">general</field>
+            <field name="view_id" ref="account.account_journal_view"/>
+            <field name="sequence_id" ref="account.sequence_journal"/>
+        </record>
+        -->
+  </data>
+</openerp>

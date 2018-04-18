@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Vue form souhait de formation -->
+
+        <record id="view_souhait_formation_form" model="ir.ui.view">
+            <field name="name">hr.souhait.formation.form</field>
+            <field name="model">hr.souhait.formation</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <form string="Souhait de formation" colspan="2">
+                    <group col="2" colspan="2">
+                        <!--field name="employee_id"/-->
+                        <field name="name"/>
+                        <field name="employee_department_id"/>
+                        <field name="employee_job_id"/>
+                        <field name="anciennete"/>
+                    </group>
+                    <field name="souhait_detail_ids" nolabel="1" context="{'default_employee_id': active_id}">
+                        <tree>
+                            <!--field name="employee_id"/-->
+                            <field name="competence"/>
+                            <field name="formation_souhaitee"/>
+                            <field name="date_envisagee"/>
+                        </tree>
+                            <form>
+                                <group col="2" colspan="4">
+                                    <field name="employee_id"/>
+                                    <field name="competence"/>
+                                    <field name="formation_souhaitee"/>
+                                    <field name="date_envisagee"/>
+                                    <field name="duree"/>
+                                    <field name="animateur"/>
+                                    <field name="avis_superieur"/>
+                                </group>
+                            </form>
+                    </field>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree souhait de formation -->
+
+        <record id="view_souhait_formation_tree" model="ir.ui.view">
+            <field name="name">hr.souhait.formation.tree</field>
+            <field name="model">hr.souhait.formation</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <tree string="Souhait de formation">
+                    <!--field name="employee_id"/-->
+                    <field name="name"/>
+                    <field name="employee_department_id"/>
+                    <field name="employee_job_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Action du menu souhait de formation-->
+
+        <record model="ir.actions.act_window" id="action_gestion_souhait">
+            <field name="name">Besoin de formation</field>
+            <field name="res_model">hr.souhait.formation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Créer un nouveau souhait de formation
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu souhait formation -->
+
+        <menuitem id="menu_action_gestion_souhait" name="Souhait de formation" parent="menu_hr_formation_detail_root" action="action_gestion_souhait"/>
+
+    </data>
+</openerp>

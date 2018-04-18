@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<!-- inherit f_prime -->	
+        <record id="f_prime_form_inherit" model="ir.ui.view">
+            <field name="name">Prime</field>
+            <field name="model">f.prime</field>
+            <field name="inherit_id" ref="gestion_assurance.f_prime_form"/>           
+            <field name="arch" type="xml">
+				<data>											
+					<xpath expr="//form[@string='Prime']/header/button[@name='generate_invoice']" position="replace">					
+						<button name="generate_invoice" type="object"  string="Génerer la facture" groups="base.group_user" attrs="{'invisible': [('is_invoiced', '=', True)]}"  class="oe_highlight" />															
+						<button name="open_invoice_prime" type="object"  string="Afficher la facture" attrs="{'invisible': [('is_invoiced', '=', False)]}"  groups="base.group_user" />
+					</xpath>						
+					<xpath expr="//form[@string='Prime']/sheet/group/group/field[@name='POL_SOUSCRIPTEUR']" position="replace">						
+						<field name="POL_CLIENT" readonly="1" />
+					</xpath>
+					<xpath expr="//form[@string='Prime']/sheet/group/group/field[@name='PRM_PRNTOTMT']" position="replace">						
+						<field name="PRM_PRNTOTMT" string="Montant Total HT" />
+					</xpath>			
+					<xpath expr="//form[@string='Prime']/sheet/group/group/field[@name='PRM_TTCCLIENT']" position="replace">						
+						<field name="PRM_TTCCLIENT" string="Montant Total TTC" />
+					</xpath>
+					<xpath expr="//form[@string='Prime']/sheet/group/group/field[@name='PRM_TAXTOTMT']" position="replace">						
+						<field name="PRM_TAXTOTMT" invisible="1" />
+						<field name="is_invoiced" invisible="1"/>
+					</xpath>					
+				</data>
+            </field>
+        </record>
+		<!-- inherit f_prime -->	
+
+		<!-- inherit account invoice -->
+		<record id="invoice_form_inherit_id" model="ir.ui.view">
+            <field name="name">account.invoice.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="gestion_assurance.invoice_form_inherit"/>           
+            <field name="arch" type="xml">
+				<data>				
+					<xpath expr="//form[@string='Invoice']/sheet/notebook/page[@string='Invoice Lines']/group/field[@name='tva_assurance']" position="replace">					
+						
+					</xpath>					
+				</data>
+            </field>
+        </record>
+		<!-- inherit account invoice -->
+		
+		<!-- inherit -->
+		<record  model="ir.ui.view" id="f_sit_objet_risque_view_tree_form_inherit">
+			<field name="name">Risque</field>
+			<field name="model">f.sit.objet.risque</field>
+			<field name="inherit_id" ref="gestion_assurance.f_sit_objet_risque_view_tree_form"/>           
+			<field name="arch" type="xml">
+				<xpath expr="//form[@string='Objet Risque']/sheet/notebook/page[@string='Desc Stat 100']" position="before">	
+					<page string="Maladie adher">
+						<field name="SOR_AD_IDENT">
+							<tree string="Maladie adher">
+								<field name="AD_NOMAPPEL" />
+								<field name="AD_TITRE" />
+								<field name="AD_DATNAISS" />
+								<field name="AD_SEXE" />
+								<field name="AD_TELEPHONE" />								
+								<field name="AD_COMMENT" />								
+							</tree>
+						</field>
+					</page>
+					<page string="Clause">
+						<field name="SOR_CLD_IDENT">
+								<tree string="Clause">
+									<field name="CLD_CODE"/>					
+									<field name="CLD_TEXTE" />								
+								</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+		<!-- end inherit -->
+		
+		<!-- F Maladie Adher Form -->
+		<record  model="ir.ui.view" id="f_maladie_adher_form">
+	    <field name="name">Maladie adherent</field>
+	    <field name="model">f.maladie.adher</field>
+	    <field name="arch" type="xml">
+	      <form string="Maladie adherent">
+		  <sheet>
+				<group>
+					<group>
+							<field name="AD_NOMAPPEL" />
+							<field name="AD_TITRE" />
+							<field name="AD_DATNAISS" />
+							<field name="AD_SEXE" />
+							<field name="AD_TELEPHONE" />							
+							<field name="AD_COMMENT" />	
+					</group>
+					<group>
+					</group>
+				</group>			
+			<notebook>
+				<page string="Maladie ayant droit">
+					<field name="AY_AD_IDENT" >
+							<tree>
+								<field name="AY_NOM" />
+								<field name="AY_PRENOM" />
+								<field name="AY_NOMAPPEL" />
+								<field name="AY_NUM_SS" />
+								<field name="AY_CLE_NUM_SS" />
+								<field name="AY_DATE_NAISS" />
+								<field name="AY_REGIME_SALARIE" />
+								<field name="AY_DATEDEBUT" />
+								<field name="AY_DATEFIN" />
+							</tree>
+					</field>
+				</page>
+			</notebook>
+			</sheet>
+		  </form>
+		</field>
+		</record>
+		<!-- End F Maladie Adher Form -->
+		
+		<!-- F Maladie ayant droit Form -->
+		<record  model="ir.ui.view" id="f_maladie_ay_dr_form">
+	    <field name="name">Maladie ayant droit</field>
+	    <field name="model">f.maladie.ay.dr</field>
+	    <field name="arch" type="xml">
+	      <form string="Maladie ayant droit">
+		  <sheet>
+				<group>
+					<group>
+							<field name="AY_NOM" />
+							<field name="AY_PRENOM" />
+							<field name="AY_NOMAPPEL" />
+							<field name="AY_NUM_SS" />
+							<field name="AY_CLE_NUM_SS" />
+							<field name="AY_DATE_NAISS" />
+							<field name="AY_REGIME_SALARIE" />
+							<field name="AY_DATEDEBUT" />
+							<field name="AY_DATEFIN" />	
+					</group>
+					<group>
+					</group>
+				</group>
+				<notebook>
+					<page string="Garantie Maladie ayant droit">
+						<field name="AY_GADIDENT">
+							<tree>
+								<field name="GAD_CODE" />
+								<field name="GAD_SOUSCRIPTION" />
+								<field name="GAD_TAXES" />
+								<field name="GAD_PRIME_NETTE" />
+							</tree>
+						</field>
+					</page>
+				</notebook>
+			</sheet>
+		  </form>
+		</field>
+		</record>		
+		<!-- End F Maladie ayant droit Form -->
+		
+		<!-- inherit f_mouvement -->
+		<!--
+		<record  model="ir.ui.view" id="f_mouvement_tree_inherit_3">
+			<field name="name">Mouvement Inherit</field>
+			<field name="model">f.mouvement</field>
+			<field name="inherit_id" ref="gestion_assurance.f_mouvement_tree"/>           
+			<field name="arch" type="xml">
+				<data>
+					<xpath expr="//tree[@string='Mouvement']/field[@name='MVT_PTRSOR_OBJET']" position="after">	
+						<field name="state" />
+					</xpath>
+				</data>
+			</field>
+		</record>
+		-->
+		<record model="ir.ui.view" id="f_version_police_form_inherit">
+		  <field name="name">Version Police</field>
+		  <field name="model">f.version.police</field>
+		  <field name="inherit_id" ref="gestion_assurance. f_version_police_form"/> 
+		  <field name="arch" type="xml">
+				<xpath expr="//form[@string='Version Police']/sheet/notebook/page[@string='Mouvement']" position="replace">
+					<page string="Mouvement">
+						<field name="VER_MVT_IDENT" >
+							<tree string="Mouvement">
+								<field name="MVT_CODETYPE"/>
+								<field name="MVT_ZONEMODIFIEE" />
+								<field name="MVT_DATEDEFFET"/>
+								<field name="MVT_PTRSOR_OBJET" />
+								<field name="state" />
+							</tree>
+						</field>
+					</page>
+				</xpath>				 
+		  </field>
+		</record>
+		
+		<!-- end f_mouvement -->
+		</data>
+</openerp>

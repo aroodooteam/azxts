@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+	<record id="view_hr_employee_overtime" model="ir.ui.view">
+            <field name="name">hr.employee.overtime.form</field>
+            <field name="model">hr.employee.overtime.wiz</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+			<form string="Heures Supplementaires Department" version="7.0">
+			<header>
+	            		<button special="cancel"  string="Cancel" icon='gtk-cancel'/>
+				<button name="generate_leaves" string="Generer" colspan="1" type="object" icon="gtk-yes"/>
+			</header>
+			    <group col="4" colspan="6">
+				    <field name="date"/>
+				    <field name="hours"/>
+				    <field name="period_id"/>
+                                    <field name="type"/>
+
+				</group>
+			<group string="Employées">
+				<field name="employee_ids" nolabel="1"/>
+			</group>
+		    	<group string="Departements">
+			    <field name="depts" nolabel="1"/>
+		    	</group>
+			</form>
+            </field>
+        </record>
+
+        <record id="action_hr_employee_overtime_wizard" model="ir.actions.act_window">
+            <field name="name">Heures Supplementaires</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.overtime.wiz</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_hr_attendance" parent="hr.menu_hr_root" name="Presences" sequence="0"/>
+	<menuitem
+	        name="Generer Les Heures Supplementaires"
+	        parent="menu_hr_attendance"
+	        action="action_hr_employee_overtime_wizard"
+	        id="menu_hr_employee_overtime_wizard"
+		groups="base.group_hr_manager"
+	        icon="STOCK_EXECUTE"/>
+
+	</data>
+</openerp>

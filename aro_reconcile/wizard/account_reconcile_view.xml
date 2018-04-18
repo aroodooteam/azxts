@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_account_move_line_reconcile_form" model="ir.ui.view">
+            <field name="name">account.move.line.reconcile.form</field>
+            <field name="model">account.move.line.reconcile</field>
+            <field name="inherit_id" ref="account.view_account_move_line_reconcile_full"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//footer/button[@name='trans_rec_addendum_writeoff']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//footer/button[@name='trans_rec_reconcile_partial_reconcile']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

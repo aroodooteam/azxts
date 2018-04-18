@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_type_risk_warranty_template_tree" model="ir.ui.view">
+            <field name="name">type_risk_warranty.template.tree</field>
+            <field name="model">type.risk.warranty.template</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Risk warranty template">
+                    <field name="name"/>
+                    <field name="type_risk_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_type_risk_warranty_template_form" model="ir.ui.view">
+            <field name="name">type_risk_warranty.template.form</field>
+            <field name="model">type.risk.warranty.template</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Risk warranty template">
+                    <group colspan="4">
+                        <field name="name"/>
+                        <field name="type_risk_id"/>
+                        <field name="is_default"/>
+                    </group>
+                    <notebook colspan="4">
+                        <page string="Warranty Lines">
+                            <field name="warranty_line_tmpl_ids" context="{'type_risk_id': type_risk_id}">
+                                <tree string="Warranty lines" editable="top">
+                                    <field name="name"/>
+                                    <field name="warranty_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_type_risk_warranty_template_search" model="ir.ui.view">
+            <field name="name">type.risk.warranty.template.search</field>
+            <field name="model">type.risk.warranty.template</field>
+            <field name="type">search</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Risk warranty template">
+                    <field name="name" select="True"/>
+                    <field name="type_risk_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_type_risk_warranty_template_view">
+            <field name="name">Risk warranty template</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">type.risk.warranty.template</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_type_risk_warranty_template_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_type_risk_warranty_template_view_form">
+            <field name="act_window_id" ref="act_open_type_risk_warranty_template_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_type_risk_warranty_template_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_type_risk_warranty_template_view_tree">
+            <field name="act_window_id" ref="act_open_type_risk_warranty_template_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_type_risk_warranty_template_tree"/>
+        </record>
+
+        <menuitem id="menu_type_risk_warranty_template"
+            parent="aro_v9.menu_root_configuration_assurance"
+            sequence="200"
+            action="act_open_type_risk_warranty_template_view"/>
+    </data>
+</openerp>

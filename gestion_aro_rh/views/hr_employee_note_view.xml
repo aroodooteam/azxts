@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- Vue form hr.employee.note -->
+        <record model="ir.ui.view" id="view_employee_note_form">
+            <field name="name">view_employee_note.form</field>
+            <field name="model">hr.employee.note</field>
+            <field name="arch" type="xml">
+                <form string="Notations">
+                    <sheet>
+                        <h1>
+                            <label string="Notations"/>
+                        </h1>
+                        <group col="2" colspan="4">
+                            <field name="employee_id"/>
+                            <field name="annee"/>
+                            <field name="note"/>
+                            <field name="mois"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree hr.employee.note-->
+        <record model='ir.ui.view' id='view_employee_note_tree'>
+            <field name='name'>view_employee_note.tree</field>
+            <field name='model'>hr.employee.note</field>
+            <field name='arch' type='xml'>
+                <tree string='Notations'>
+                    <field name="employee_id"/>
+                    <field name="annee"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action du menu hr.employee.note-->
+        <record id="action_gestion_note" model="ir.actions.act_window">
+            <field name="name">Notations</field>
+            <field name="res_model">hr.employee.note</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_action_gestion_note" name="Notations" parent="menu_hr_career_root" action="action_gestion_note"/>
+
+    </data>
+</openerp>

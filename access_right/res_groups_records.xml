@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="group_account_manager_compta" model="res.groups">
+            <field name="menu_access" eval="[(4, ref('account.menu_action_account_entries_report_all')), (4, ref('account.menu_action_account_treasury_report_all')), (4, ref('account.menu_tax_report')), (4, ref('account.menu_finance_bank_and_cash')), (4, ref('account.menu_finance_entries')), (4, ref('account.menu_journals_report')), (4, ref('account.account_template_folder')), (4, ref('account.menu_account_print_journal')), (4, ref('account.menu_general_ledger')), (4, ref('account.menu_account_partner_balance_report')), (4, ref('account.menu_general_Balance_report')), (4, ref('account.menu_aged_trial_balance')), (4, ref('account.menu_account_partner_ledger')), (4, ref('account_financial_report_webkit.menu_account_open_invoices')), (4, ref('account_financial_report_webkit.menu_account_aged_open_invoices')), (4, ref('account.menu_action_tax_code_tree')), (4, ref('account.menu_finance_periodical_processing')), (4, ref('account.menu_finance_reports')), (4, ref('account.menu_finance_configuration')), (4, ref('account.menu_journals')), (4, ref('account.menu_finance')), (4, ref('account.menu_action_move_journal_line_form')), (4, ref('account.menu_action_account_invoice_report_all'))]"/>
+            <field name="name">Responsable des finances commissaire</field>
+            <field name="is_portal" eval="False"/>
+            <!--<field name="implied_ids" eval="[(4, ref('account.group_account_user'))]"/>-->
+            <field name="implied_ids" eval="False"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="base.module_category_accounting_and_finance"/>
+            <!-- one2many field 'model_access' managed on the ir.model.access side -->
+        </record>
+        <record id="group_account_manager_special_reconciliator_compta" model="res.groups">
+            <field name="name">Authorize for Reconciliation</field>
+            <field name="is_portal" eval="False"/>
+            <field name="implied_ids" eval="[(4, ref('group_account_manager_compta'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="base.module_category_accounting_and_finance"/>
+        </record>
+    </data>
+</openerp>

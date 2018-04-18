@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_hr_cnaps_wiz" model="ir.ui.view">
+            <field name="name">hr.cnaps.wiz.form</field>
+            <field name="model">hr.cnaps.wiz</field>
+            <field name="arch" type="xml">
+                <form string="Leaves Summary" version="7.0">
+                        <separator colspan="4" string="Employées" />
+
+                    <group col="4" colspan="6">
+            <field name="employee_ids" nolabel="1"/>
+                    </group>
+                    <footer>
+                        <button name="check_report" string="Imprimer" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hr_cnaps" model="ir.actions.act_window">
+            <field name="name">Liste Cnaps</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.cnaps.wiz</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+	<menuitem
+                name="Liste pour CNaPS"
+	        parent="hr.menu_hr_main"
+	        action="action_hr_cnaps"
+	        id="menu_hr_cnaps_wiz"
+	        groups="base.group_hr_manager"
+	        icon="STOCK_PRINT"/>
+
+	</data>
+</openerp>

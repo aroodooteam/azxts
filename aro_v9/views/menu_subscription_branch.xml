@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <menuitem id="subscription_by_branch_menu"
+            parent="aro_v9.menu_root_operation_assurance"
+            sequence="20"
+            name="Subscription Branch"/>
+
+        <!-- Subscription Automobile -->
+        <record model="ir.actions.act_window" id="action_subcription_automobile">
+            <field name="name">Motor</field>
+            <field name="res_model">aro.insurance.subscription</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'default_branch_id': ref('aro_v9.aro_branche_assurance_automobile_r0'), 'branch_id': ref('aro_v9.aro_branche_assurance_automobile_r0'), 'insurance_type': 'N', 'insurance_categ': 'T'}"/>
+            <field name="domain" eval="[('branch_id', '=', ref('aro_v9.aro_branche_assurance_automobile_r0'))]"/>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="subscription_branch_auto_menu"
+            parent="aro_v9.subscription_by_branch_menu"
+            sequence="20"
+            name="Motor"
+            action="aro_v9.action_subcription_automobile"/>
+
+        <!-- Subscription IRD -->
+        <record model="ir.actions.act_window" id="action_subcription_ird_r0">
+            <field name="name">Incendies et Risques Divers</field>
+            <field name="res_model">aro.insurance.subscription</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'default_branch_id': ref('aro_v9.aro_branche_assurance_incendies_et_risques_divers_r0'), 'branch_id': ref('aro_v9.aro_branche_assurance_incendies_et_risques_divers_r0'), 'insurance_type': 'N', 'insurance_categ': 'T'}"/>
+            <field name="domain" eval="[('branch_id', '=', ref('aro_v9.aro_branche_assurance_incendies_et_risques_divers_r0'))]"/>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="subscription_branch_ird_menu"
+            parent="aro_v9.subscription_by_branch_menu"
+            sequence="20"
+            name="Incendies et Risques Divers"
+            action="aro_v9.action_subcription_ird_r0"/>
+
+        <!-- Subscription Aviation -->
+        <record model="ir.actions.act_window" id="action_subcription_aviation_r0">
+            <field name="name">Aviation</field>
+            <field name="res_model">aro.insurance.subscription</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'default_branch_id': ref('aro_v9.aro_branche_assurance_aviation'), 'branch_id': ref('aro_v9.aro_branche_assurance_aviation'), 'insurance_type': 'N', 'insurance_categ': 'T'}"/>
+            <field name="domain" eval="[('branch_id', '=', ref('aro_v9.aro_branche_assurance_aviation'))]"/>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="subscription_branch_aviation_menu"
+            parent="aro_v9.subscription_by_branch_menu"
+            sequence="20"
+            name="Aviation"
+            action="aro_v9.action_subcription_aviation_r0"/>
+
+        <!-- Subscription Assurance de personne-->
+        <record model="ir.actions.act_window" id="action_subcription_asspers_r0">
+            <field name="name">Assurance de personne</field>
+            <field name="res_model">aro.insurance.subscription</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'default_branch_id': ref('aro_v9.aro_branche_assurance_personnes'), 'branch_id': ref('aro_v9.aro_branche_assurance_personnes'), 'insurance_type': 'N', 'insurance_categ': 'T', 'insurance_person': True}"/>
+            <field name="domain" eval="[('branch_id', '=', ref('aro_v9.aro_branche_assurance_personnes'))]"/>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="subscription_branch_aviation_menu"
+            parent="aro_v9.subscription_by_branch_menu"
+            sequence="20"
+            name="Insurance of Person"
+            action="aro_v9.action_subcription_asspers_r0"/>
+
+        <!-- Subscription Engineering -->
+        <record model="ir.actions.act_window" id="action_subcription_engineering_r0">
+            <field name="name">Engeneering</field>
+            <field name="res_model">aro.insurance.subscription</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'default_branch_id': ref('aro_v9.aro_branche_assurance_engineering'), 'branch_id': ref('aro_v9.aro_branche_assurance_engineering'), 'insurance_type': 'N', 'insurance_categ': 'T'}"/>
+            <field name="domain" eval="[('branch_id', '=', ref('aro_v9.aro_branche_assurance_engineering'))]"/>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="subscription_branch_engineering_menu"
+            parent="aro_v9.subscription_by_branch_menu"
+            sequence="20"
+            name="Engineering"
+            action="aro_v9.action_subcription_engineering_r0"/>
+
+        <!-- Subscription Maritime -->
+        <record model="ir.actions.act_window" id="action_subcription_maritime_r0">
+            <field name="name">Maritime</field>
+            <field name="res_model">aro.insurance.subscription</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'default_branch_id': ref('aro_v9.aro_branche_assurance_maritime'), 'branch_id': ref('aro_v9.aro_branche_assurance_maritime'), 'insurance_type': 'N', 'insurance_categ': 'M'}"/>
+            <field name="domain" eval="[('branch_id', '=', ref('aro_v9.aro_branche_assurance_maritime'))]"/>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="subscription_branch_maritime_menu"
+            parent="aro_v9.subscription_by_branch_menu"
+            sequence="20"
+            name="Maritime"
+            action="aro_v9.action_subcription_maritime_r0"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_base_agency_inherit_form" model="ir.ui.view">
+            <field name="name">base_agency.inherit.form</field>
+            <field name="model">base.agency</field>
+            <field name="inherit_id" ref="account_journal_agency.view_base_agency_form_h0"/>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button string="Import account" icon="gtk-ok" type="object" name="import_account" attrs="{'invisible': [('have_opening_journal', '=', False)]}"/>
+                    </header>
+                </xpath>
+                <xpath expr="//group[@name='References']" position="after">
+                    <notebook colspan="4">
+                        <page string="Accounts" attrs="{'invisible': [('have_opening_journal', '=', False)]}">
+                            <field name="account_ids" nolabel="1">
+                                <tree string="Accounts" editable="bottom">
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<openerp>
+        <data>
+                <report
+                        id="report_hr_employee_attestation"
+                        string="Attestation de travail"
+                        model="hr.employee"
+                        name="hr.employee.attestation"
+                        rml="l10n_mg_hr_payroll/report/attestation.rml"
+                        report_type="sxw"
+                        auto="False"/>
+                        header="external"/>
+                <report
+                        id="report_hr_employee_cancelbankletter"
+                        string="Depart (banque)"
+                        model="hr.employee"
+                        name="hr.employee.cancelbankletter"
+                        rml="l10n_mg_hr_payroll/report/cancelbankletter.rml"
+                        auto="False"/>
+                        header="external"/>
+                <report
+                        id="report_hr_employee_departfunhece"
+                        string="Depart (funhece)"
+                        model="hr.employee"
+                        name="hr.employee.departfunhece"
+                        rml="l10n_mg_hr_payroll/report/departfunhece.rml"
+                        auto="False"/>
+                        header="external"/>
+                <report
+                        id="report_hr_employee_cnapsrequest"
+                        string="Requete CNaPS"
+                        model="hr.employee"
+                        name="hr.employee.cnapsrequest"
+                        rml="l10n_mg_hr_payroll/report/cnapsrequest.rml"
+                        auto="False"/>
+                        header="external"/>
+                <report
+                        id="report_hr_employee_groupedcnapsrequest"
+                        string="Requete CNaPS (Groupe)"
+                        model="hr.employee"
+                        name="hr.employee.groupedcnapsrequest"
+                        rml="l10n_mg_hr_payroll/report/groupedcnapsrequest.rml"
+                        auto="False"/>
+                        header="external"/>
+                <report
+                        id="report_hr_conract_avenant"
+                        string="Avenant au contrat"
+                        model="hr.contract"
+                        name="hr.contract.avenant"
+                        report_type="sxw"
+                        rml="l10n_mg_hr_payroll/report/avenant.rml"
+                        auto="False"/>
+                        header="external"/>
+                <report
+                        id="report_hr_conract_frenchcontract"
+                        string="Contrat de travail"
+                        model="hr.contract"
+                        name="hr.contract.frenchcontract"
+                        rml="l10n_mg_hr_payroll/report/frenchcontract.rml"
+                        report_type="sxw"
+                        auto="False"/>
+                        header="external"/>
+                <report
+                        id="report_hr_conract_malagasyconract"
+                        string="Contrat Malgache"
+                        model="hr.contract"
+                        name="hr.contract.malagasycontract"
+                        rml="l10n_mg_hr_payroll/report/malagasycontract.rml"
+                        report_type="sxw"
+                        auto="False"/>
+                        header="external"/>
+                <report
+                        id="report_hr_conract_ficheembauche"
+                        string="Fiche embauche"
+                        model="hr.contract"
+                        name="hr.contract.ficheembauche"
+                        report_type="sxw"
+                        rml="l10n_mg_hr_payroll/report/ficheembauche.rml"
+                        auto="False"/>
+                        header="external"/>
+                <report
+                        id="report_hr_conract_certificate"
+                        string="Certificat de travail"
+                        model="hr.contract"
+                        name="hr.contract.certificate"
+                        report_type="sxw"
+                        rml="l10n_mg_hr_payroll/report/certificate.rml"
+                        auto="False"/>
+                        header="external"/>
+
+                <report
+                        id="report_hr_employee_sanction"
+                        string="Sanction"
+                        model="hr.employee.sanction"
+                        name="hr.employee.sanction"
+                        report_type="sxw"
+                        rml="l10n_mg_hr_payroll/report/sanction.rml"
+                        auto="False"/>
+                        header="external"/>
+                <report
+                        id="report_hr_medical_ticket"
+                        string="Billet Medical"
+                        model="hr.employee.medical.ticket"
+                        name="hr.employee.medical.ticket"
+                        rml="l10n_mg_hr_payroll/report/medicalticket.rml"
+                        auto="False"/>
+                        header="external"/>
+
+        </data>
+</openerp>
+
+
+

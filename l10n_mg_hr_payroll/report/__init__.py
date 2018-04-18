@@ -1,0 +1,3 @@
+import bulletin
+import hr_salary_report
+import l10n_mg_hr_payroll

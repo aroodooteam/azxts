@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Top menu item -->
+        <menuitem
+            id="menu_hr_career_root"
+            name="Gestion Carrière"
+            parent="hr.menu_hr_root"
+            groups="base.group_hr_manager,base.group_hr_user,base.group_user"
+            sequence ="1"/>
+
+        <menuitem
+            id="menu_hr_formation_root"
+            name="Gestion de la formation"
+            parent="hr.menu_hr_root"
+            sequence ="2"/>
+
+        <menuitem
+            id="menu_hr_formation_detail_root"
+            name="Formation"
+            parent="menu_hr_formation_root"
+            sequence ="3"/>
+
+        <menuitem
+            id="menu_hr_elearning_root"
+            name="E-learning"
+            parent="menu_hr_formation_root"
+            sequence ="4"/>
+
+        <menuitem
+            id="menu_hr_diplome_root"
+            name="Formation externe"
+            parent="menu_hr_formation_root"
+            sequence="5"/>
+
+        <menuitem
+            id="menu_hr_foramtion_instructor_root"
+            name="Formateur"
+            parent="menu_hr_formation_root"
+            sequence="6"/>
+
+    </data>
+</openerp>

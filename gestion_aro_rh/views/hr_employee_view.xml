@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Career form view -->
+
+        <record id="view_career_form" model="ir.ui.view">
+            <field name="name">hr.career.form</field>
+            <field name="model">hr.employee</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <form string="Career">
+                    <sheet>
+                        <field name="image_medium" widget='image' class="oe_left oe_avatar"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                                <field name="matricule"/>
+                            </h1>
+                            <label for="category_ids" class="oe_edit_only" groups="base.group_hr_user"/>
+                            <field name="category_ids" widget="many2many_tags" placeholder="e.g. Part Time" groups="base.group_hr_user"/>
+                            <label for="job_id" class="oe_edit_only"/>
+                            <field name="job_id"/>
+                            <label for="department_id" class="oe_edit_only"/>
+                            <field name="department_id"/>
+                            <label for="work_email" class="oe_edit_only"/>
+                            <field name="work_email" widget="email"/>
+                            <label for="work_phone" class="oe_edit_only"/>
+                            <field name="work_phone"/>
+                        </div>
+                        <notebook colspan="4">
+                            <page string="Carrière" groups="base.group_hr_manager">
+                                <field name="career_ids" colspan="4" nolabel="1" context="{'default_employee_id': active_id}">
+                                    <tree>
+                                        <field name="date" colspan="4"/>
+                                        <field name="category_ids" colspan="4"/>
+                                        <field name="department_id" colspan="4"/>
+                                        <field name="job_id" colspan="4"/>
+                                    </tree>
+                                    <form string="hr.employee.career">
+                                        <group col="2" colspan="4">
+                                            <field name="employee_id"/>
+                                            <field name="date"/>
+                                            <field name="category_ids" widget="many2many_tags" placeholder="e.g. Part Time"/>
+                                            <field name="department_id"/>
+                                            <field name="job_id"/>
+                                            <field name="commentaires"/>
+                                            <field name="active"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Formation">
+                                <label for="session_plan_formation_3_ids"/>
+                                <field name="session_plan_formation_3_ids">
+                                    <tree>
+                                        <field name="date_session"/>
+                                        <field name="plan_formation_branche_id"/>
+                                        <field name="plan_formation_module_id"/>
+                                        <field name="instructor_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="E-learning">
+                                <label for="session_elearning_ids"/>
+                                <field name="session_elearning_ids">
+                                    <tree>
+                                        <field name="date_debut_session"/>
+                                        <field name="date_fin_session"/>
+                                        <field name="plan_formation_module_id"/>
+                                        <field name="instructor_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Diplômes" groups="base.group_hr_manager">
+                                <field name="diplome_ids" nolabel="1" context="{'default_employee_id': active_id}">
+                                    <tree>
+                                        <field name="ordre" colspan="4"/>
+                                        <field name="annee" colspan="4"/>
+                                        <field name="diplome_id" colspan="4"/>
+                                        <field name="branche_id" colspan="4"/>
+                                        <field name="niveau" colspan="4"/>
+                                        <field name="specialite" colspan="4"/>
+                                        <field name="lieu" colspan="4"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Sanctions" groups="base.group_hr_manager">
+                                <field colspan="4" name="sanction_ids" nolabel="1" context="{'default_name': active_id}">
+                                    <tree>
+                                        <field colspan="4" name="date" />
+                                        <field colspan="4" name="type"/>
+                                        <field colspan="4" name="description" />
+                                        <!--button name="Imprimer" string="Imprimer" type="action" icon="gtk-print"/-->
+                                    </tree>
+                                    <form string="hr.employee.sanction">
+                                        <group col="2" colspan="4">
+                                            <field name="name" readonly="True"/>
+                                            <field name="date" select="2"/>
+                                            <field name="type" select="1"/>
+                                            <field name="motif" select="1"/>
+                                            <field name="description" select="0"/>
+                                            <field name="date_interview" select="0"/>
+                                            <field name="date_start" select="0"/>
+                                            <field name="date_end" select="0"/>
+                                            <field name="suite" select="0"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Distinction" groups="base.group_hr_manager">
+                                <field name="decoration_ids" colspan="4" nolabel="1" context="{'default_employee_id': active_id}">
+                                    <tree>
+                                        <field name="annee"/>
+                                        <field name="decoration_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Notations" groups="base.group_hr_manager">
+                                <field name="note_ids" nolabel="1" context="{'default_employee_id': active_id}">
+                                    <tree>
+                                        <field name="annee" />
+                                        <field name="note" />
+                                        <field name="mois" />
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Emplois antérieurs" groups="base.group_hr_manager">
+                                <field name="lastjob_ids" nolabel="1" context="{'default_employee_id': active_id}">
+                                    <tree>
+                                        <field name="annee"/>
+                                        <!--field name="date_start"/>
+                                        <field name="date_stop"/-->
+                                        <field name="employeur"/>
+                                        <field name="poste"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Career tree view -->
+
+        <record id="view_career_tree" model="ir.ui.view">
+            <field name="name">hr.career.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <tree string="Career">
+                    <field name="name"/>
+                    <field name="work_phone"/>
+                    <field name="work_email"/>
+                    <!--field name="company_id" groups="base.group_multi_company"/-->
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <!--field name="parent_id"/-->
+                    <!--field name="coach_id" invisible="1"/-->
+                </tree>
+            </field>
+        </record>
+
+        <!--Career kanban view -->
+
+        <record model="ir.ui.view" id="hr_kanban_view_career">
+            <field name="name">HR -Careers Kanban</field>
+            <field name="model">hr.employee</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="last_login"/>
+                    <field name="message_is_follower"/>
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_employee_vignette">
+                                <div class="oe_employee_image">
+                                    <a type="open"><img t-att-src="kanban_image('hr.employee', 'image_medium', record.id.value)" class="oe_employee_picture"/></a>
+                                </div>
+                                <div class="oe_employee_details">
+                                    <h4>
+                                        <a type="open"><field name="name"/><t t-if="record.login.raw_value"> (<field name="login"/>)</t></a>
+                                    </h4>
+                                    <ul>
+                                        <li id="last_login">
+                                            <span t-if="record.last_login.raw_value &amp;&amp; record.last_login.raw_value.is().today()" class="oe_kanban_button" style="font-size: 100%%">
+                                                <t t-esc="record.last_login.raw_value.toString('HH:mm')"/>
+                                            </span>
+                                        </li>
+                                        <li t-if="record.job_id.raw_value"><field name="job_id"/></li>
+                                        <li t-if="record.work_location.raw_value"><field name="work_location"/></li>
+                                        <li t-if="record.work_email.raw_value"><a t-attf-href="mailto:#{record.work_email.value}"><field name="work_email"/></a></li>
+                                    </ul>
+                                    <div class="oe_kanban_footer_left">
+                                        <span title='Messages'><span class='oe_e'>9</span><t t-esc="record.message_ids.raw_value.length"/></span>
+                                        <span title='Followers'><span class='oe_e'>+</span><t t-esc="record.message_follower_ids.raw_value.length"/></span>
+                                    </div>
+                                    <div class="oe_followers" groups="base.group_user">
+                                        <button t-if="record.message_is_follower.raw_value" name="action_unfollow" type="object" class="oe_follower oe_following">
+                                            <span class="oe_unfollow">Unfollow</span>
+                                            <span class="oe_following">Following</span>
+                                        </button>
+                                        <button t-if="! record.message_is_follower.raw_value" name="action_follow" type="object" class="oe_follower oe_notfollow">Follow</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                $('.oe_employee_picture').load(function() { if($(this).width() > $(this).height()) { $(this).addClass('oe_employee_picture_wide') } });
+                            </script>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</openerp>

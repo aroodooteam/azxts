@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+        <data>
+            <record id="invoice_form_inherit_recompute_residual_btn" model="ir.ui.view">
+            <field name="name">account.invoice.form.inherit.residual_btn</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <!--<xpath expr="//form[@string='Invoice']/sheet/group/group/field[@name='partner_id']" position="after">-->
+                    <xpath expr="//header/field[@name='state']" position="before">
+                        <button string="Recompute residual" icon="gtk-ok" states="open" type="object" name="recompute_residual"/>
+                    </xpath>
+                </data>
+            </field>
+            </record>
+        </data>
+</openerp>
+

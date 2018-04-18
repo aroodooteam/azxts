@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!--access record commission-->
+        <record id="ir_rule_commission_agency_user" model="ir.rule">
+            <field name="name">Commissions: See only own agency commissions</field>
+            <field name="model_id" ref="commission.model_commission_commission"/>
+            <!--<field name="groups" eval="[(4, ref('base.group_user'))]"/>-->
+            <field name="groups" eval="[(4, ref('account_journal_agency.group_journal_restricted'))]"/>
+            <field name="domain_force">[('commission_invoice.journal_id.agency_id', 'in', (user.agency_id.id,))]</field>
+        </record>
+        <record id="ir_rule_commission_agency_unlimited" model="ir.rule">
+            <field name="name">Commissions: See all agency commissions</field>
+            <field name="model_id" ref="commission.model_commission_commission"/>
+            <field name="groups" eval="[(4, ref('account_journal_agency.group_journal_unlimited'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
+    </data>
+</openerp>

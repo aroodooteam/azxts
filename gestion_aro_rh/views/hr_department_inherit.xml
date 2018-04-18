@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- inherit view_department_form -->
+        <record id="view_department_form_inherit" model="ir.ui.view">
+            <field name="name">update.hr.view.department.form</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_form"/>    <!-- Vue héritée -->
+            <field name="arch" type="xml">
+                <xpath expr="//form[@string='department']/sheet/group/field[@name='name']" position="before">    <!-- Placer le champ avant name -->
+                        <field name="code_service"/>
+                </xpath>
+                <xpath expr="//form[@string='department']/sheet/group/field[@name='parent_id']" position="after">
+                        <field name="date"/>
+                </xpath>
+                <xpath expr="//form[@string='department']/sheet/group/field[@name='date']" position="after">
+                        <field name="service_gestion"/>
+                </xpath>
+                <xpath expr="//form[@string='department']/sheet/group/field[@name='service_gestion']" position="after">
+                        <field name="code_analytique"/>
+                </xpath>
+                <xpath expr="//form[@string='department']/sheet/group/field[@name='code_analytique']" position="after">
+                        <field name="compte_passage" string="Compte de passage"/>
+                </xpath>
+                <xpath expr="//form[@string='department']/sheet/group/field[@name='compte_passage']" position="after">
+                        <field name="compte_agence"/>
+                </xpath>
+                <xpath expr="//form[@string='department']/sheet/group/field[@name='compte_agence']" position="after">
+                        <field name="service_param_paye"/>
+                </xpath>
+                <xpath expr="//form[@string='department']/sheet/group/field[@name='service_param_paye']" position="after">
+                        <field name="active"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Rajout d un filtre dans la vue filter de hr.department -->
+        <record id="view_department_filter_inherit" model="ir.ui.view">
+            <field name="name">update.hr.view.department.filter</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_filter"/>    <!-- Vue héritée -->
+            <field name="arch" type="xml">
+                <search string="Departments">
+                    <filter name="filter_see_all" string="All" domain="['|',('active','=',True),('active','=',False)]"/>
+                    <filter name="filter_see_active" string="Active" domain="[('active','=',True)]"/>
+                    <filter name="filter_see_inactive" string="Inactive" domain="[('active','=',False)]" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Rajout d un champ code service dans la vue tree de hr.department-->
+
+        <record model='ir.ui.view' id='view_department_tree_inherit'>
+            <field name='name'>update.hr.view.department.tree</field>
+            <field name='model'>hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_tree"/>
+            <field name='arch' type='xml'>
+                <field name="complete_name" position="before">
+                    <field name="code_service"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

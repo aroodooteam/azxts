@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Email template for reset password -->
+        <record id="aro_reset_password_email" model="email.template">
+            <field name="name">Reset Password</field>
+            <field name="model_id" ref="base.model_res_users"/>
+            <field name="email_from"><![CDATA[${object.company_id.name} <${(object.company_id.email or user.email)|safe}>]]></field>
+            <field name="email_to">${object.email|safe}</field>
+            <field name="subject">Password reset</field>
+            <field name="body_html">
+                <![CDATA[
+                    <div id="body" style="background-color: #41a62a; margin: 5px; padding: 5px; width: 760px; link= red;">
+                        <div id="header">
+                        </div>
+                        <div id="body_content" style="font-size: 16px;">
+                            <p>A password reset was requested for the Odoo account linked to this email.</p>
+
+                            <p>You may change your password by following <a href="${object.signup_url}" style="color: #ffffff;">this link</a>.</p>
+
+                            <p>Note: If you do not expect this, you can safely ignore this email.</p>
+                        </div>
+                        <div id="footer" style="max-heigth: 50px;>
+                            <div style="heigth: 25px;>
+                                <img src="/aro_mail_templates/static/src/img/aro_logo.jpg" alt="Assurance Aro" style="width: 20% !important; heigth: 20% !important;"/>
+                            </div>
+                        </div>
+                    </div>
+                ]]>
+            </field>
+        </record>
+
+        <!-- Email template for new users -->
+        <record id="aro_set_password_email" model="email.template">
+            <field name="name">Aro Odoo Connection</field>
+            <field name="model_id" ref="base.model_res_users"/>
+            <field name="email_from"><![CDATA[${object.company_id.name} <${(object.company_id.email or user.email)|safe}>]]></field>
+            <field name="email_to">${object.email|safe}</field>
+            <field name="subject"><![CDATA[${object.company_id.name} invitation to connect on Odoo]]></field>
+            <field name="body_html">
+                <![CDATA[
+                    <div id="body" class="col-sm-12" style="background-color: #41a62a; margin: 5px; padding: 5px; width: 760px; link= red;">
+                        <div id="header" class="col-sm-12">
+                        </div>
+                        <div id="body_content"  class="col-sm-12" style="font-size: 16px;">
+                            <p>
+                                ${object.name},
+                            </p>
+                            <p>
+                                You have been invited to connect to "${object.company_id.name}" in order to get access to your documents in Odoo.
+                            </p>
+                            <p>
+                                To accept the invitation, click on the following link:
+                            </p>
+                            <ul>
+                                <li><a href="${object.signup_url}" style="color: #ffffff;">Accept invitation to "${object.company_id.name}"</a></li>
+                            </ul>
+                            <p>
+                                Thanks,
+                            </p>
+                        </div>
+                        <div id="footer"  class="col-sm-12" style="background-color: #41a62a; max-heigth: 150px;">
+                            <div class="col-sm-4">
+                                <img src="/aro_mail_templates/static/src/img/aro_logo.jpg" alt="Assurance Aro" style="width: 50% !important; heigth: 50% !important;"/>
+                            </div>
+                            <div class="col-sm-8">
+                                <span style="text-align: left;">
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <ul class="pull-left">
+                                        <li>${object.company_id.name or ''}</li>
+                                        <li>${object.company_id.email or ''}</li>
+                                        <li>${object.company_id.phone or ''}</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                ]]>
+            </field>
+        </record>
+        <!--
+                            <div class="col-sm-4" style="heigth: 100px;">
+        -->
+
+    </data>
+</openerp>

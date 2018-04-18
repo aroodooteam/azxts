@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="aro_branche_assurance_automobile_r0" model="aro.branche.assurance">
+            <field name="code">AUTO</field>
+            <field name="name">Automobile</field>
+            <field name="type">N</field>
+            <field name="category">T</field>
+        </record>
+        <record id="aro_branche_assurance_incendies_et_risques_divers_r0" model="aro.branche.assurance">
+            <field name="code">IRD</field>
+            <field name="name">Incendies et Risques Divers</field>
+            <field name="type">N</field>
+            <field name="category">T</field>
+        </record>
+        <record id="aro_branche_assurance_aviation" model="aro.branche.assurance">
+            <field name="code">AVIATION</field>
+            <field name="name">Aviation</field>
+            <field name="type">N</field>
+            <field name="category">T</field>
+        </record>
+        <record id="aro_branche_assurance_personnes" model="aro.branche.assurance">
+            <field name="code">ASSPERS</field>
+            <field name="name">Assurance de Personnes</field>
+            <field name="type">N</field>
+            <field name="category">T</field>
+        </record>
+        <record id="aro_branche_assurance_engineering" model="aro.branche.assurance">
+            <field name="code">ENGINEERING</field>
+            <field name="name">Assurance Engineering</field>
+            <field name="type">N</field>
+            <field name="category">T</field>
+        </record>
+        <record id="aro_branche_assurance_maritime" model="aro.branche.assurance">
+            <field name="code">MARITIME</field>
+            <field name="name">Assurance Maritime</field>
+            <field name="type">N</field>
+            <field name="category">M</field>
+        </record>
+    </data>
+</openerp>

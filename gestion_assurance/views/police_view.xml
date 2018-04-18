@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    	<!-- tree view and form view for f_polices--> 
+		 <record model="ir.ui.view" id="f_police_view_tree">
+			  <field name="name">polices.tree</field>
+			  <field name="model">f.polices</field>
+			  <field name="arch" type="xml">
+				  <tree string="Polices">
+					<field name="POL_NUMPOL"/>
+					<field name="POL_ASSURE"/>
+					<field name="POL_PTRPASID" />					
+					<field name="POL_PTRAPID"/>	
+					<field name="POL_PTRINID" />
+					<field name="POL_DATE_HEURE_EFFET"/>
+					<field name="POL_CODETAT" />
+					<field name="state"/>
+				  </tree>
+			  </field>
+		</record>	         
+		
+	  <record  model="ir.ui.view" id="police_view_form">
+	    <field name="name">police.form</field>
+	    <field name="model">f.polices</field>
+	    <field name="arch" type="xml">
+	      <form string="Polices">
+		   <header> 					
+					<button name="police_confirmed" type="object" states="brouillon" string="Confirmer le devis" groups="base.group_user"/>
+					<button name="police_cancel" states="brouillon,encours,suspension" string="Annuler le devis" type="object" class="oe_highlight" groups="base.group_user"/>									
+					<field name="state" widget="statusbar" statusbar_visible="brouillon,encours,suspension,termine,annule" statusbar_colors='{"order_confirmed":"blue"}'/>					
+            </header>
+	        <sheet>
+				<!-- visible seulement pour le devis -->				
+				<h1>
+                    <label string="Devis " attrs="{'invisible': [('state','in',('encours','annule','termine'))]}"/>
+					<label string="Contrat " attrs="{'invisible': [('state','in',('brouillon','annule','termine'))]}"/>					 
+				</h1>
+				
+				
+				<!-- Inf police en contrat -->
+				<group>
+					<group>
+					    <separator colspan="4" string="Client"/>
+						<field name="POL_PTRCLID" />
+						<field name="POL_BPCL_CODE_AUXIL"  />
+						<field name="POL_BPCL_COTE" />
+						<field name="POL_CODE_SOCIETE" />						
+						<field name="POL_CODE_ETABL" />	
+						<separator colspan="2" />
+						<separator colspan="2"/>
+							
+						<!-- Affichage intermediaire -->
+						<separator colspan="4" string="Intermediare - Apporteur"/>
+						<field name="POL_PTRINID" />
+						<field name="POL_PTRAPID"/>						
+						<!-- fields liaison Apporteur -->
+						<separator colspan="2" />
+						<separator colspan="2"/>
+						<separator colspan="4" string="Police"/>						
+						<field name="POL_NUMPOL" invisible="1"/>
+						<field name="POL_NUM_DOSSIER" />
+						<field name="POL_DATE_HEURE_EFFET" />
+						<field name="POL_FRACTION" />
+						<field name="POL_CODECHPRIN" />
+						<field name="POL_DUREE" />
+						<field name="POL_DATFIN" />
+						<field name="POL_COEF_COMM" />
+						<field name="POL_TAUX_APPEL" />
+						<field name="POL_DATEFIN_GRATUIT" />
+						<field name="POL_CARENCE" />
+						<field name="POL_UNITE_CARENCE" />						
+					</group>
+					
+					<group>
+					    <separator colspan="4" string="Souscripteur - Produit" />
+						<field name="POL_ASSURE"/>
+						<field name="POL_PTRPASID" />
+						<field name="POL_NUMPOL" invisible="1"/>
+						<separator colspan="2" />
+						<separator colspan="2"/>
+							
+						<field name="POL_TERFISC" />
+						<field name="POL_CODINDICE"  />
+						<field name="POL_INDICEACTU" />						
+						<field name="POL_JOUR_PRELEVEMENT" />
+						<field name="POL_CHARGECLIENT" />
+						
+						<separator colspan="4"  />
+						<separator colspan="4"  />
+						<field name="POL_SANTE_NONRESP" />
+						<field name="POL_OPTION" />
+						<field name="POL_PTRCONVID_IJ" />
+						
+						<separator colspan="4" string="Coassurance" />
+						<field name="POL_COAREP_PRM" />
+						<field name="POL_COMAPETX" />
+						<field name="POL_COAREP_SIN" />
+					</group>				
+				</group>
+				
+				
+			  <notebook>
+					<page string="Version Police" >
+						<field name="POL_VER_IDENT" >
+							<tree>
+								<field name="VER_TYPEMISSION" />
+								<field name="VER_DATEDEB" />
+								<field name="VER_DATEFIN" />
+							</tree>
+						</field>
+					  </page>					  					  					
+			  </notebook>
+			  <group>
+					<field name="POL_COMMENTAIRES" />
+			  </group>
+			  
+	        </sheet>
+	      </form>
+	    </field>
+	  </record>
+	  <!-- End tree view and form view for f_polices-->
+	  
+	  <!-- tree view and form view for f_sit_objet_risque --> 
+		<record model="ir.ui.view" id="f_sit_objet_risque_view_tree">
+			  <field name="name">f_sit_objet_risque_tree</field>
+			  <field name="model">f.sit.objet.risque</field>
+			  <field name="arch" type="xml">
+				  <tree string="Objet Risque">
+					<field name="SOR_CODE_PRODUCT"/>
+					<field name="SOR_VA_FORCEE" />
+					<field name="SOR_SERVICES"/>										
+				  </tree>
+			  </field>
+		</record>	         
+		
+	  <record  model="ir.ui.view" id="f_sit_objet_risque_view_tree_form">
+	    <field name="name">f_sit_objet_risque_form</field>
+	    <field name="model">f.sit.objet.risque</field>
+	    <field name="arch" type="xml">
+	      <form string="Objet Risque">
+	        <sheet>
+	          <group>
+	            <field name="SOR_CODE_PRODUCT"/>
+				<field name="SOR_TABLE" />
+				<field name="SOR_FORMULE"/>
+	            <field name="SOR_SERVICES" invisible="1"/>
+				<field name="SOR_PTRSOROBJETID" />
+				<!--
+				<field name="SOR_PTRPOLID" />
+				-->
+	          </group>
+			  <!-- Affichage des garanties dans l'objet risque -->
+			   <notebook>	
+						 <page string="Desc Stat 100">
+                            <field name="SOR_D100_IDENT">
+									<tree string="Desc Stat 100">
+										<field name="D100_DESC_00"/>					
+										<field name="D100_DESC_01" />					
+										<field name="D100_DESC_02"/>
+										<field name="D100_DESC_03"/>
+										<field name="D100_DESC_04"/>
+										<field name="D100_DESC_22" />
+								   </tree>
+							</field>
+						</page>
+						
+                        <page string="Garanties">
+                            <field name="SOR_GAD_IDENT" >
+								<tree string="Garantie">
+									<field name="name"  />
+									<field name="GAD_CODE" />									
+									<field name="GAD_TAXES"  />
+									<field name="GAD_PRIME_NETTE" />									
+								</tree>
+							</field>
+						</page>
+						<!--
+						<page string="Desc Stat 25">
+                            <field name="SOR_DST_IDENT">
+								<tree string="Desc Stat 25">
+									<field name="name"/>									
+								</tree>
+							</field>
+						</page>
+						-->
+				</notebook>
+	        </sheet>
+	      </form>
+	    </field>
+	  </record>
+	<!-- End tree view and form view for f_sit_objet_risque -->
+
+
+
+	<!-- tree view and form view for f_produitass--> 
+		 <record model="ir.ui.view" id="polices_view_tree">
+			  <field name="name">Produit Assurance</field>
+			  <field name="model">f.produitass</field>
+			  <field name="arch" type="xml">
+				  <tree string="Produit assurance">
+					<field name="name"/>
+					<field name="PAS_CODE_PRODUIT"/>
+					<field name="PAS_FRACT_POSSIBLE"/>
+					<field name="PAS_ITN01"/>
+					<field name="PAS_PTRBASID" />					
+				  </tree>
+			  </field>
+		</record>
+		
+		<record model="ir.ui.view" id="polices_view_form">
+			  <field name="name">Produit Assurance</field>
+			  <field name="model">f.produitass</field>
+			  <field name="arch" type="xml">
+					<form string="Produit assurance">
+					  <sheet>
+						<group>
+							<field name="name"/>
+							<field name="PAS_CODE_PRODUIT"/>
+							<field name="PAS_FRACT_POSSIBLE"/>
+							<field name="PAS_ITN01"/>
+							<field name="PAS_PTRBASID" />
+						</group>
+						 <notebook>
+							<!-- affichage de Police dans Produit Assurance -->
+							<page string="Police">
+								<field name="PAS_POL_IDENT">
+									<tree string="Polices">
+										<field name="POL_NUMPOL"/>
+										<field name="POL_ASSURE"/>
+										<field name="POL_DATE_HEURE_EFFET"/>					
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					  </sheet>					  
+					</form>
+			  </field>
+		</record>
+		
+		
+	<!-- tree view and form view for f_brancheass--> 
+		 <record model="ir.ui.view" id="branche_view_tree">
+			  <field name="name">Branche</field>
+			  <field name="model">f.brancheass</field>
+			  <field name="arch" type="xml">
+				  <tree string="Branche">
+					<field name="BAS_LIBELLE_BRANCHE"/>
+					<field name="BAS_REF_EXTERNE" />
+					<field name="BAS_CODE_BRANCHE"/>									
+				  </tree>
+			  </field>
+		</record>
+		
+		<record model="ir.ui.view" id="branche_view_form">
+			  <field name="name">Branche</field>
+			  <field name="model">f.brancheass</field>
+			  <field name="arch" type="xml">
+					<form string="Branche">
+					  <sheet>
+						<group>
+							<field name="BAS_LIBELLE_BRANCHE"/>
+							<field name="BAS_REF_EXTERNE" />
+							<field name="BAS_CODE_BRANCHE"/>
+						</group>
+						<notebook>
+							<!-- affichage de produit assurance dans Branche -->
+							<page string="Produit assurance">
+								<field name="BAS_PAS_IDENT">
+									<tree string="Produit assurance">
+										<field name="name"/>
+										<field name="PAS_CODE_PRODUIT"/>
+										<field name="PAS_FRACT_POSSIBLE"/>
+										<field name="PAS_ITN01"/>										
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					  </sheet>					  
+					</form>
+			  </field>
+		</record>
+		
+	<!-- tree view and form view for f_apporteur--> 
+		 <record model="ir.ui.view" id="f_apporteur_view_tree">
+			  <field name="name">Apporteur</field>
+			  <field name="model">f.apporteur</field>
+			  <field name="arch" type="xml">
+				  <tree string="Apporteur">
+					<field name="name"/>
+					<field name="AP_CODE" />
+					<field name="AP_VILLE"/>
+					<field name="AP_PAYS"/>					
+				  </tree>
+			  </field>
+		</record>
+		
+	<!-- tree view and form view for f_intermediaire--> 
+		 <record model="ir.ui.view" id="f_intermediaire_view_tree">
+			  <field name="name">Intermediaire</field>
+			  <field name="model">f.intermediaire</field>
+			  <field name="arch" type="xml">
+				  <tree string="Intermediaire">
+					<field name="name"/>
+					<field name="IN_SL_CODE" />
+					<field name="IN_TYPE"/>
+					<field name="IN_VILLE"/>					
+				  </tree>
+			  </field>
+		</record>
+		
+	<!-- form view for f.p.personne -->
+	<record model="ir.ui.view" id="f_p_personne_form_tree">
+			  <field name="name">Personne</field>
+			  <field name="model">f.p.personne</field>
+			  <field name="arch" type="xml">
+				  <form string="Personne">
+						<sheet>
+							<group>
+								<field name="PHYSIQUE" />
+								<field name="MORALE" />
+							</group>
+							<notebook>
+								<page string="Informations génerales">
+									<group>								
+										 <group>
+											 <separator colspan="2" string="Identite"/>
+											<field name="BPP_TITRE" />
+											 <field name="name"/>
+											 <field name="BPP_NOM_2"/>
+											 <field name="BPP_NOM_3"/>
+											 <field name="BPP_NOM_APPEL"/>
+											 <field name="BPP_NOM_ALIAS"/>
+										</group>
+										<group>
+											<separator colspan="2" string="Cordonnees bancaires"/>
+											<field name="BPB_BPP_ISO_PAYS" />
+											<field name="BPB_BPP_IBAN" />
+											<field name="BPB_BPP_RIBF_COMPTE" />
+											<field name="BPB_BPP_SWIFT" />
+											<separator colspan="2" string="Compte au format Fr"/>
+											<field name="BPB_BPP_RIBF_BANQUE" />
+											<field name="BPB_BPP_RIBF_GUICHET" />
+											<field name="BPB_BPP_RIBF_COMPTE" />
+											<field name="BPB_BPP_RIBF_TITULAIRE" />
+											<field name="BPB_BPP_RIBF_LIBELLE" />									
+										</group>
+									</group>
+									<group>
+										<group>
+											<separator colspan="4" string="Adresse principale"/>									
+											<field name="BPA_BPP_PAYS_CODE" />
+											<field name="BPA_BPP_PAYS_LIBEL" />											
+											<field name="BPA_PP_LIG1" />
+											<field name="BPA_PP_LOCALITE" />
+											<field name="BPA_PP_CODPOST" />
+											<field name="BPA_PP_VILLE" />
+											<field name="BPA_PP_CEDEX" />
+											<field name="BPA_PP_TYPE" />
+										</group>
+										<group>
+											<separator colspan="4" string="Autres Informations"/>
+											<field name="BPP_FISC_TERR" />
+											<field name="BPP_LANGUE_LIBEL" />
+											<field name="BPP_COMMENTAIRE" />
+											<field name="BPP_REF_EXTERNE" />									
+										</group>
+									</group>
+									<group>
+										<group>
+											<separator colspan="4" string="Points de contact"/>
+											<field name="BPP_TEL_1" />
+											<field name="BPP_TEL_2" />
+											<field name="BPP_TEL_3" />
+											<field name="BPP_TEL_3_POSTE" />
+											<field name="BPP_TEL_FAX" />
+											<field name="BPP_TEL_TELEX" />
+											<field name="BPP_EMAIL" />
+											<field name="BPP_EMAIL_2" />
+											<field name="BPP_SITE_WEB" />
+											
+										</group>
+										<group>
+											<separator colspan="4" string="Roles / informations complementaires"/>											
+											<field name="EST_CLIENT" />
+										</group>
+									</group>
+								</page>
+								<page string="Autres informations" attrs="{'invisible': [('PHYSIQUE', '=', False)]}">
+									<group>
+										<group>
+											<separator colspan="4"/>
+											
+											<field name="BPP_PP_SEXE" />
+											<field name="BPP_PP_SITMATR" />
+											<field name="BPP_PP_NO_SOCIAL" />
+											
+											<separator colspan="4"/>
+											<separator colspan="4"/>
+											
+											<field name="BPP_NOM_APPEL" />
+											<field name="BPP_PP_NAIS_DATE" />
+											<field name="BPP_PP_RANG_NAISS" />
+											<field name="BPP_PP_NAIS_VIL_INSEE" />
+											<field name="BPP_PP_NAIS_VILLE" />
+											<field name="BPP_PP_NAIS_DPT" />
+											<field name="BPP_PP_NAIS_PAY_CODE" />
+																			
+											<separator colspan="4"/>
+											<separator colspan="4"/>
+											
+											<field name="BPP_PP_R_CATPROF" />
+											<field name="BPP_PP_R_PROF_CODE" />
+											<field name="BPP_PP_SIGNALEMENT" />
+										</group>
+										<group>
+											<field name="BPP_PP_REV_TRANCHE" />
+											<field name="BPP_PP_REV_VALEUR" />
+											<field name="BPP_PP_NB_ENFANTS" />
+											<field name="BPP_PP_DECES_DATE" />
+										</group>
+									</group>																		
+								</page>
+								<page string="Autres informations" attrs="{'invisible': [('MORALE', '=', False)]}">
+									<group>
+										<group>
+											<separator colspan="4" string="Identite"/>
+											
+											<field name="BPP_PM_CA_VALEUR" />
+											<field name="BPP_PM_EFF_NOMBRE" />
+											<field name="BPP_PM_NOTATION" />
+											
+											<separator colspan="4"/>
+											<separator colspan="4"/>
+											<field name="BPP_PM_CODE_NAF" />
+											<field name="BPP_PM_NO_SIREN" />
+											<field name="BPP_PM_NO_SIRET" />
+											<field name="BPP_PM_NO_NACE" />
+											
+											<separator colspan="4"/>
+											<field name="BPP_MAJ_INFO" />
+											<separator colspan="4" string="Personne à contacter"/>
+											<field name="BPP_PM_NO_APE" />
+											<field name="BPP_PM_DEST1_FONCT" />
+											<field name="BPP_PM_DEST1_TEL" />
+											<field name="BPP_PM_DEST1_EMAIL" />
+											<field name="BPP_PM_DEST2" />
+											<field name="BPP_PM_DEST3" />
+										</group>
+										
+										<group>
+											<field name="BPP_PM_FORMJUR" />
+											<field name="BPP_PM_CAPITAL" />
+											<field name="BPP_PM_CA_TRANCHE" />
+											<field name="BPP_PM_EFF_TRANCHE" />
+										</group>
+									</group>									
+								</page>
+								<page string="Informations si client" attrs="{'invisible': [('EST_CLIENT', '=', False)]}" >
+									<group>
+										<group>
+											<separator colspan="4" string="Identite"/>
+											<field name="BPCL_BPP_CODE_AUXIL" />
+											<field name="BPCL_BPP_COTE" />
+											<field name="BPCL_BPP_R_FAMILLE" />
+											<field name="BPCL_BPP_R_SS_FAM" />
+											<field name="BPCL_BPP_R_REGROUP1" />
+											<field name="BPCL_BPP_R_REGROUP2" />
+											<field name="BPCL_BPP_R_REGROUP3" />
+											<separator colspan="4" />
+											<separator colspan="4" />
+											<field name="BPCL_BPP_R_SECTEUR" />
+											<field name="BPCL_BPP_DATE_OUV_CPT" />
+											<field name="BPCL_BPP_DATE_CLO_CPT" />
+											<field name="BPCL_BPP_G_MODEREGL" />
+										</group>
+										<group>
+											<separator colspan="4" string="Informations libres"/>
+											<field name="BPCL_BPP_G_TYPE_PREL" />
+											<field name="BPCL_BPP_CODE_PERSONNEL" />
+										</group>
+									</group>									
+																		
+								</page>
+						</notebook>
+					 </sheet>
+				  </form>
+			  </field>
+	</record>
+	
+	<!-- End Form for f.p.personne -->
+		
+	<!-- tree view and form view for f_p_personne--> 
+		 <record model="ir.ui.view" id="f_p_personne_view_tree">
+			  <field name="name">Personne</field>
+			  <field name="model">f.p.personne</field>
+			  <field name="arch" type="xml">
+				  <tree string="Personne">
+					<field name="name"/>
+					<field name="BPP_PP_NB_ENFANTS" />
+					<field name="BPP_TITRE"/>
+					<field name="BPP_PP_NAIS_DATE"/>
+					<field name="BPP_CRT_DATE"/>					
+				  </tree>
+			  </field>
+		</record>
+		
+	<!-- tree view and form view for t_etabliss--> 
+		 <record model="ir.ui.view" id="t_etabliss_view_tree">
+			  <field name="name">Etablissement</field>
+			  <field name="model">t.etabliss</field>
+			  <field name="arch" type="xml">
+				  <tree string="Etablissement">
+					<field name="name"/>
+					<field name="TA_CLE" />
+					<field name="TA_CODESOCIETE"/>
+					<field name="TA_SOCIE_VILLE"/>									
+				  </tree>
+			  </field>
+		</record>
+		
+	<!-- tree view and form view for t_societe--> 
+		 <record model="ir.ui.view" id="t_societe_view_tree">
+			  <field name="name">Societe</field>
+			  <field name="model">t.societe</field>
+			  <field name="arch" type="xml">
+				  <tree string="Societe">
+					<field name="name"/>
+					<field name="TA_CODE" />
+					<field name="TA_SOCIE_ADRES1"/>
+					<field name="TA_SOCIE_TELECO"/>	
+					<field name="TA_SOCIE_VILLE"/>						
+				  </tree>
+			  </field>
+		</record>
+		
+	<!-- tree view and form view for f_compagnies--> 
+		 <record model="ir.ui.view" id="f_compagnies_view_tree">
+			  <field name="name">Compagnie</field>
+			  <field name="model">f.compagnies</field>
+			  <field name="arch" type="xml">
+				  <tree string="Compagnie">
+					<field name="name"/>
+					<field name="CO_CODEAUXIL" />											
+				  </tree>
+			  </field>
+		</record>
+		
+		
+		<!-- Tree form Client view -->
+		<record model="ir.ui.view" id="f_p_c_client_view_tree">
+			  <field name="name">Client</field>
+			  <field name="model">f.p.c.client</field>
+			  <field name="arch" type="xml">
+				  <tree string="Client">
+					<field name="BPCL_CODE_AUXIL"/>
+					<field name="BPCL_COTE"	/>
+					<field name="BPCL_PTRBPPIDENT" />					
+				  </tree>
+			  </field>
+		</record>
+		
+		<record model="ir.ui.view" id="f_p_c_client_form_tree">
+			  <field name="name">Client</field>
+			  <field name="model">f.p.c.client</field>
+			  <field name="arch" type="xml">
+				  <form string="Client">
+					<sheet>
+						<group>							  
+							  <group>								
+									<separator colspan="4" string="Identite" />
+									<field name="BPCL_BPP_NOM_APPEL" />
+									<field name="BPCL_CODE_AUXIL" />
+									<field name="BPCL_COTE" />
+									<field name="BPCL_R_FAMILLE" />
+									<field name="BPCL_R_SS_FAM" />
+									<field name="BPCL_R_REGROUP1" />
+									<field name="BPCL_R_REGROUP2" />
+									<field name="BPCL_R_REGROUP3" />
+									<separator colspan="4" />
+									<separator colspan="4" />
+									<field name="BPCL_R_SECTEUR" />
+									<field name="BPCL_DATE_OUV_CPT" />
+									<field name="BPCL_DATE_CLO_CPT" />
+									<field name="BPCL_G_MODEREGL" />										
+									<separator colspan="4" string="Informations libres" />
+									<field name="BPCL_G_TYPE_PREL" />
+									<field name="BPCL_CODE_PERSONNEL" />										
+							  </group>
+							  <group>	
+								 <separator colspan="4" string="Personne liée" />
+								 <field name="BPCL_PTRBPPIDENT" />
+							  </group>
+						</group>						
+					</sheet>
+				  </form>
+			  </field>
+		</record>
+		<!-- tree form client view -->	
+		
+		<!-- Vue form de res_partner -->
+        
+		
+	<!-- tree view and form view for f_prime -->
+<!--	
+		 <record model="ir.ui.view" id=" f_prime_view_tree">
+			  <field name="name">Prime</field>
+			  <field name="model">f.prime</field>
+			  <field name="arch" type="xml">
+				  <tree string="Prime">
+					<field name="PRM_TEXTE"/>
+					<field name="PRM_NATURE" />
+					<field name="PRM_POLNUMERO"/>
+					<field name="PRM_ENCSOLDE" />
+					<field name="PRM_DATE" />
+				  </tree>
+			  </field>
+		</record>
+-->
+		  
+	<!-- tree view f_version_police -->
+	<record model="ir.ui.view" id=" f_version_police_tree">
+			  <field name="name">Version Police</field>
+			  <field name="model">f.version.police</field>
+			  <field name="arch" type="xml">
+				  <tree string="Version Police">				  
+						<field name="VER_TYPEMISSION"/>
+						<field name="VER_DATEDEB" />
+						<field name="VER_DATEFIN"/>					
+				  </tree>
+			  </field>
+	</record>
+	<!-- end tree view -->
+	<!-- view form version police -->
+	<record model="ir.ui.view" id=" f_version_police_form">
+			  <field name="name">Version Police</field>
+			  <field name="model">f.version.police</field>
+			  <field name="arch" type="xml">
+				  <form string="Version Police">					    
+						<sheet>
+							<group>
+								<group>
+									<field name="VER_TYPEMISSION"/>
+									<field name="VER_DATEDEB" />
+									<field name="VER_DATEFIN"/>	
+									<field name="VER_PTRPRMID" />
+								</group>
+								<group>
+								</group>
+							</group>
+							<notebook>
+								<page string="Mouvement">
+									<field name="VER_MVT_IDENT" />
+								</page>
+							</notebook>
+						</sheet>
+				  </form>
+			  </field>
+	</record>
+	
+	
+	<!-- end view form version police -->	
+	
+	
+	<!-- tree view f_mouvement -->
+	<record model="ir.ui.view" id=" f_mouvement_tree">
+			  <field name="name">Mouvement</field>
+			  <field name="model">f.mouvement</field>
+			  <field name="arch" type="xml">
+				  <tree string="Mouvement">
+						<field name="MVT_CODETYPE"/>
+						<field name="MVT_ZONEMODIFIEE" />
+						<field name="MVT_DATEDEFFET"/>
+						<field name="MVT_PTRSOR_OBJET" />						
+				  </tree>
+			  </field>
+	</record>
+	<!-- end tree view -->
+	<!-- Form f_mouvement -->
+	<record model="ir.ui.view" id=" f_mouvement_form">
+			  <field name="name">Mouvement</field>
+			  <field name="model">f.mouvement</field>
+			  <field name="arch" type="xml">
+				  <form string="Mouvement">
+					<sheet>
+						<group>
+							<group>
+								<field name="MVT_CODETYPE"/>
+								<field name="MVT_ZONEMODIFIEE" />
+								<field name="MVT_DATEDEFFET"/>
+								<!-- Risque dans Mouvement -->
+								<field name="MVT_PTRSOR_OBJET" />									
+							</group>
+							<group>
+							</group>
+						</group>
+					</sheet>
+				  </form>
+			  </field>
+	</record>
+	
+	
+	<!-- end form f_mouvement -->	
+	
+	<!-- tree view f_prime -->
+	<record model="ir.ui.view" id="f_prime_tree">
+		  <field name="name">Prime</field>
+		  <field name="model">f.prime</field>
+		  <field name="arch" type="xml">
+			  <tree string="Prime">
+					<field name="PRM_POLNUMERO"/>					
+					<field name="PRM_NATURE" />					
+					<field name="PRM_ENCSOLDE"/>
+					<field name="PRM_TEXTE"/>
+					<field name="PRM_DATE"/>
+			  </tree>
+		  </field>
+	</record>
+	<!-- end tree view -->
+	
+	<!-- form view f_prime -->
+	<record model="ir.ui.view" id="f_prime_form">
+		  <field name="name">Prime</field>
+		  <field name="model">f.prime</field>
+		  <field name="arch" type="xml">
+			  <form string="Prime">
+				<header> 					
+					<button name="generate_invoice" type="object"  string="Génerer et afficher la facture" groups="base.group_user" class="oe_highlight"/>						
+				</header>
+				<sheet>
+					<h1>
+                        <label string="PRIME N°"/>                        
+                        <field name="PRM_POLNUMERO" class="oe_inline" readonly="1"/>
+                    </h1>
+					<group>
+						<group>	
+							<field name="POL_SOUSCRIPTEUR" readonly="1"/>
+							<field name="PRM_NATURE" />					
+							<field name="PRM_ENCSOLDE"/>
+							<field name="PRM_TEXTE"/>
+							<field name="PRM_DATDEBPER" />
+							<field name="PRM_DATFINPER" />							
+							<field name="PRM_PRNTOTMT" />
+							<field name="PRM_TAXTOTMT" />
+							<field name="PRM_TTCCLIENT" />
+							
+						</group>
+						<group>
+						</group>
+					</group>
+					<notebook>
+						<page string="Ligne de prime">							
+							<field name="PRM_LPRIDENT">
+								<tree string="Ligne de prime">	
+									<field name="LPR_ASSCODCPT" />									
+									<field name="LPR_PRIMENETTE" />
+									<field name="LPR_REVTOTAL" />																	
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+			  </form>
+		  </field>
+	</record>
+	<!-- end form view -->
+	
+	<!-- view tree f.prime -->
+	<record model="ir.ui.view" id="f_prime_ligne_tree">
+		<field name="name">Ligne de prime</field>
+		<field name="model">f.prime.ligne</field>
+		<field name="arch" type="xml">
+			<tree string="Ligne de prime">
+				<field name="LPR_ASSCODCPT" />
+				<field name="LPR_REVTYP" />
+				<field name="LPR_PRIMENETTE" />
+				<field name="LPR_REVTOTAL" />
+			</tree>
+		</field>
+	</record>
+	
+	<!-- Desc stat 100 -->
+	<record model="ir.ui.view" id="f_desc_stat_100_tree">
+		 <field name="name">Desc Stat 100</field>
+		 <field name="model">f.desc.stat.100</field>
+		 <field name="arch" type="xml">
+			  <tree string="Desc Stat 100">
+					<field name="D100_DESC_00"/>					
+					<field name="D100_DESC_01" />					
+					<field name="D100_DESC_02"/>
+					<field name="D100_DESC_03"/>
+					<field name="D100_DESC_04"/>
+					<field name="D100_DESC_22" />
+			  </tree>
+		  </field>		
+	</record>
+	<!-- end desc stat 100 -->
+	
+	<!-- Desc stat 100 form -->
+	<record model="ir.ui.view" id="f_desc_stat_100_form">
+		 <field name="name">Desc Stat 100</field>
+		 <field name="model">f.desc.stat.100</field>
+		 <field name="arch" type="xml">
+			  <form string="Desc Stat 100">
+				  <sheet>
+						  <group>
+								<group>
+									<field name="D100_DESC_00"/>					
+									<field name="D100_DESC_01" />					
+									<field name="D100_DESC_02"/>
+									<field name="D100_DESC_03"/>
+									<field name="D100_DESC_04"/>
+									<field name="D100_DESC_05" />
+									<field name="D100_DESC_06" />
+									<field name="D100_DESC_07" />
+									<field name="D100_DESC_08" />
+									<field name="D100_DESC_09" />
+									<field name="D100_DESC_10" />
+									<field name="D100_DESC_11" />									
+									
+									<separator  colspan="4" />
+									<separator  colspan="4" />
+									
+									<field name="D100_DESC_12" />
+									<field name="D100_DESC_13"/>					
+									<field name="D100_DESC_14" />					
+									<field name="D100_DESC_15"/>
+									<field name="D100_DESC_16"/>
+									<field name="D100_DESC_17"/>
+									<field name="D100_DESC_18" />
+									<field name="D100_DESC_19" />
+									<field name="D100_DESC_20" />
+									<field name="D100_DESC_21" />
+									<field name="D100_DESC_22" />	
+								</group>
+						  </group>
+					</sheet>
+			  </form>
+		  </field>		
+	</record>
+	<!-- end desc stat 100 form-->
+	
+	<!-- tree view for f_garantie_dyn -->
+	<record model="ir.ui.view" id="f_garantie_dyn_tree">
+		 <field name="name">Garantie</field>
+		 <field name="model">f.garantie.dyn</field>		 
+		 <field name="arch" type="xml">
+			  <tree string="Garantie">
+				<field name="name" />
+				<field name="GAD_CODE" />
+				<field name="GAD_SOUSCRIPTION" />
+				<field name="GAD_TAXES" />
+				<field name="GAD_PRIME_NETTE" />
+			  </tree>
+		</field>
+	</record>
+	<!-- end tree view -->
+	
+		  
+  <!-- action for polices -->
+	<record model="ir.actions.act_window" id="aro_menu_action_police">
+		<field name="name">Polices</field>
+		<field name="res_model">f.polices</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('state', '=', 'brouillon')]</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre police</p>
+		</field>		
+	</record>
+	
+	<!-- action for polices -->
+	<record model="ir.actions.act_window" id="aro_menu_action_police_contrat">
+		<field name="name">Polices</field>
+		<field name="res_model">f.polices</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('state', '=', 'encours')]</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre police</p>
+		</field>
+	</record>
+	
+	<!-- action for polices -->
+	<record model="ir.actions.act_window" id="aro_menu_action_police_suspension">
+		<field name="name">Polices</field>
+		<field name="res_model">f.polices</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('state', '=', 'suspension')]</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre police</p>
+		</field>
+	</record>
+	
+	<!-- action for polices annule -->
+	<record model="ir.actions.act_window" id="aro_menu_action_police_annule">
+		<field name="name">Polices</field>
+		<field name="res_model">f.polices</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('state', '=', 'annule')]</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre police</p>
+		</field>
+	</record>
+	
+	<!-- action for f_sit_objet_risque -->
+	<record model="ir.actions.act_window" id="aro_menu_action_f_sit_objet_risque">
+		<field name="name">Objet Risque</field>
+		<field name="res_model">f.sit.objet.risque</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer un Objet Risque</p>
+		</field>
+	</record>
+	
+	
+	<!-- action for garantie -->
+	<record model="ir.actions.act_window" id="aro_menu_action_product_garantie">
+		<field name="name">Garantie</field>
+		<field name="res_model">product.template</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre article</p>
+		</field>
+	</record>
+	
+	<!-- action for produit assurance -->
+	<record model="ir.actions.act_window" id="aro_menu_action_f_produitass">
+		<field name="name">Produit Assurance</field>
+		<field name="res_model">f.produitass</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre article</p>
+		</field>
+	</record>
+	
+	<!-- action for branches -->
+	<record model="ir.actions.act_window" id="aro_menu_action_f_brancheass">
+		<field name="name">Branches</field>
+		<field name="res_model">f.brancheass</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre branche</p>
+		</field>
+	</record>
+	
+	<!-- action for Apporteur -->
+	<record model="ir.actions.act_window" id="aro_menu_action_f_apporteur">
+		<field name="name">Apporteur</field>
+		<field name="res_model">f.apporteur</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre apporteur</p>
+		</field>
+	</record>
+	<!-- action for Intermediaire -->
+	<record model="ir.actions.act_window" id="aro_menu_action_f_intermediaire">
+		<field name="name">Intermediaire</field>
+		<field name="res_model">f.intermediaire</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer un intermediaire</p>
+		</field>
+	</record>
+	
+	<!-- action for personne -->
+	<record model="ir.actions.act_window" id="aro_menu_action_f_p_personne">
+		<field name="name">Personne</field>
+		<field name="res_model">f.p.personne</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer une personne</p>
+		</field>
+	</record>
+	
+	<!-- action for etablissement -->
+	<record model="ir.actions.act_window" id="aro_menu_action_t_etabliss">
+		<field name="name">Etablissement</field>
+		<field name="res_model">t.etabliss</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer un etablissement</p>
+		</field>
+	</record>
+	
+	<!-- action for societe -->
+	<record model="ir.actions.act_window" id="aro_menu_action_t_societe">
+		<field name="name">Societe</field>
+		<field name="res_model">t.societe</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre société</p>
+		</field>
+	</record>
+	
+	<!-- action for compagnies -->
+	<record model="ir.actions.act_window" id="aro_menu_action_f_compagnies">
+		<field name="name">Compagnie</field>
+		<field name="res_model">f.compagnies</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre compagnie</p>
+		</field>
+	</record>
+	
+	<!-- action for prime -->
+	<!--
+	<record model="ir.actions.act_window" id="aro_menu_action_f_prime">
+		<field name="name">Prime</field>
+		<field name="res_model">f.prime</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer votre prime</p>
+		</field>
+	</record>
+	-->
+	
+	<!-- action for client -->
+	<record model="ir.actions.act_window" id="aro_menu_action_client">
+		<field name="name">Client</field>
+		<field name="res_model">f.p.c.client</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer un client</p>
+		</field>
+	</record>
+	
+	<!-- f_police_version -->
+	<record model="ir.actions.act_window" id="aro_menu_action_f_version_police">
+		<field name="name">Version Police</field>
+		<field name="res_model">f.version.police</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer une version police</p>
+		</field>
+	</record>
+	
+	<!-- f_mouvement -->	
+	<record model="ir.actions.act_window" id="aro_menu_action_f_mouvement">
+		<field name="name">Mouvement</field>
+		<field name="res_model">f.mouvement</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer un mouvement</p>
+		</field>
+	</record>
+	
+	<!-- f_prime -->	
+	<record model="ir.actions.act_window" id="aro_menu_action_f_prime">
+		<field name="name">Prime</field>
+		<field name="res_model">f.prime</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>		
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer une prime</p>
+		</field>
+	</record>	
+	
+	
+	<!-- f_desc_stat_100 -->
+	<record model="ir.actions.act_window" id="aro_menu_action_f_desc_stat_100">
+		<field name="name">Desc Stat 100</field>
+		<field name="res_model">f.desc.stat.100</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>		
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Créer un Desc stat 100</p>
+		</field>
+	</record>
+	
+	<!-- end f_desc_stat_100 -->
+	
+	<!-- f_prime -->	
+	<record model="ir.actions.act_window" id="aro_menu_action_f_prime_ligne">
+		<field name="name">Prime Ligne</field>
+		<field name="res_model">f.prime.ligne</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('LPR_ASSCODCPT', '!=', '')]</field>
+		<field name="help" type="html">		
+			<p class="oe_view_nocontent_create">Créer une prime ligne</p>
+		</field>
+	</record>		
+	
+	<record id="view_res_partner_filter_inherit" model="ir.ui.view">
+			<field name="name">res.partner.select</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_res_partner_filter"/>
+			<field name="arch" type="xml">
+				 <xpath expr="//search/group" position="inside">   					 
+  					<filter string='Type' domain="[]" context="{'group_by' : 'partner_type'}"/>  					
+  				</xpath>
+			</field>
+	</record>
+     
+  	
+	<!-- Les menus -->	
+	<!-- Les menus -->
+	<!-- Le menu principal : Assurances -->
+	<menuitem id="gest_assurances_menu_root" name="Gestion Assurance" string="Gestion Assurance"/>
+	<!-- Les sous-menus de Assurances -->
+	<menuitem id="portefeuille_menu"   parent="gest_assurances_menu_root" name="Portefeuille" string="Portefeuille" sequence="10"/>
+	<menuitem id="personne_act_menu" parent="portefeuille_menu" name="Personne" action="aro_menu_action_f_p_personne" string="Personne" sequence="20"/>
+	<menuitem id="client_act_menu" parent="portefeuille_menu" name="Client" action="aro_menu_action_client" string="Client" sequence="30"/>
+	<!-- sous menu Police -->
+	<menuitem id="polices_menu"   parent="gest_assurances_menu_root" name="Gestion de contrat" string="Gestion de contrat" sequence="20"/>
+	<menuitem id="polices_act_menu" parent="polices_menu" name="Devis" action="aro_menu_action_police" string="Devis" sequence="30"/>
+	<menuitem id="polices_act_menu_contrat" parent="polices_menu" name="Contrat" action="aro_menu_action_police_contrat" string="Contrat" sequence="40"/>
+	<menuitem id="polices_act_menu_suspension" parent="polices_menu" name="Contrat en suspension" action="aro_menu_action_police_suspension" string="Contrat en suspension" sequence="50"/>	
+	<menuitem id="polices_act_menu_annule" parent="polices_menu" name="Contrat sans effet" action="aro_menu_action_police_annule" string="Contrat sans effet" sequence="60"/>
+	
+	<!-- sous menu Objet Risque -->
+	<!--
+	<menuitem id="f_sit_objet_risque_menu"   parent="gest_assurances_menu_root" name="Eléments du contrat" string="Polices" sequence="30"/>
+	<menuitem id="f_version_police_act_menu" parent="f_sit_objet_risque_menu" name="Version police" action="aro_menu_action_f_version_police" string="Version police" sequence="10"/>	
+	<menuitem id="f_mouvement_act_menu" parent="f_sit_objet_risque_menu" name="Mouvement" action="aro_menu_action_f_mouvement" string="Mouvement" sequence="20"/>	
+	<menuitem id="f_sit_objet_risque_act_menu" parent="f_sit_objet_risque_menu" name="Objet Risque" action="aro_menu_action_f_sit_objet_risque" string="Objet Risque" sequence="30"/>	
+	<menuitem id="garantie_act_menu" parent="f_sit_objet_risque_menu" name="Garantie" action="aro_menu_action_product_garantie" string="Garantie" sequence="40"/>    
+	-->
+	<!--
+	
+	<menuitem id="f_prime_menu"   parent="gest_assurances_menu_root" name="Prime" string="Prime" sequence="40"/>
+	<menuitem id="f_prime_act_menu" parent="f_prime_menu" name="Prime" action="aro_menu_action_f_prime" string="Prime" sequence="10"/>
+	-->
+	<!--	
+	<menuitem id="tva_assurance_action" parent="f_prime_menu" name="Tva assurance" action="aro_menu_action_tva_assurance" string="Tva assurance" sequence="20"/>
+	-->
+	
+	<!-- Elements du risque -->
+	<!--
+	<menuitem id="f_element_rique_menu"   parent="gest_assurances_menu_root" name="Eléments du risque" string="Eléments du risque" sequence="50"/>
+	<menuitem id="f_desc_stat_100_act_menu" parent="f_element_rique_menu" name="Desc Stat 100" action="aro_menu_action_f_desc_stat_100" string="Desc Stat 100" sequence="10"/>
+	-->
+	
+	
+	<menuitem id="f_prime_menu"   parent="gest_assurances_menu_root" name="Prime" string="Prime" sequence="50"/>
+	<menuitem id="f_prime_act_menu" parent="f_prime_menu" name="Prime" action="aro_menu_action_f_prime" string="Prime" sequence="10"/>
+	
+	<!-- produit assurance -->
+	
+	<menuitem id="f_produitass_menu"   parent="gest_assurances_menu_root" name="Produit Assurance" string="Produit Assurance" sequence="60"/>
+	<menuitem id="f_produit_ass_act_menu" parent="f_produitass_menu" name="Produit Assurance" action="aro_menu_action_f_produitass" string="Produit Assurance" sequence="10"/>    
+	<menuitem id="branches_act_menu" parent="f_produitass_menu" name="Branches" action="aro_menu_action_f_brancheass" string="Branches" sequence="50"/>
+	
+	<!-- Tiers -->
+	<!--
+	<menuitem id="f_apporteur_menu"   parent="gest_assurances_menu_root" name="Tiers" string="Tiers" sequence="70"/>
+	<menuitem id="f_apporteur_act_menu" parent="f_apporteur_menu" name="Apporteur" action="aro_menu_action_f_apporteur" string="Apporteur" sequence="10"/>
+	<menuitem id="f_intermediaire_act_menu" parent="f_apporteur_menu" name="Intermediaire" action="aro_menu_action_f_intermediaire" string="Intermediaire" sequence="20"/>
+	<menuitem id="f_p_personne_act_menu" parent="f_apporteur_menu" name="Personne" action="aro_menu_action_f_p_personne" string="Personne" sequence="30"/>
+	<menuitem id="t_etabliss_act_menu" parent="f_apporteur_menu" name="Etablissement" action="aro_menu_action_t_etabliss" string="Etablissement" sequence="40"/>
+	<menuitem id="t_societe_act_menu" parent="f_apporteur_menu" name="Société" action="aro_menu_action_t_societe" string="Société" sequence="50"/>
+	<menuitem id="f_compagnie_act_menu" parent="f_apporteur_menu" name="Compagnie" action="aro_menu_action_f_compagnies" string="Compagnie" sequence="60"/>
+	-->
+	<!-- prime -->
+
+	
+	
+    </data>
+</openerp>
+

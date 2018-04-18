@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Vue Form formation externe hr.employee.diplome -->
+
+        <record model="ir.ui.view" id="hr_employee_diplome_form">
+            <field name="name">hr_employee_diplome.form</field>
+            <field name="model">hr.employee.diplome</field>
+            <field name="arch" type="xml">
+                <form string="Qualification">
+                    <sheet>
+                        <h1>
+                            <label string="Formations diplomantes"/>
+                        </h1>
+                        <group col="2" colspan="4">
+                            <field name="employee_id"/>
+                            <field name="ordre"/>
+                            <field name="annee"/>
+                            <field name="diplome_id"/>
+                            <field name="branche_id"/>
+                            <field name="niveau" colspan="4"/>
+                            <field name="specialite"/>
+                            <field name="lieu"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree formation externe hr.employee.diplome -->
+        <record model='ir.ui.view' id='hr_employee_diplome_tree'>
+            <field name='name'>hr_employee_diplome.tree</field>
+            <field name='model'>hr.employee.diplome</field>
+            <field name='arch' type='xml'>
+                <tree string='Qualification'>
+                    <field name="employee_id"/>
+                    <field name="ordre"/>
+                    <field name="annee"/>
+                    <field name="diplome_id"/>
+                    <field name="branche_id"/>
+                    <field name="niveau" colspan="4"/>
+                    <field name="specialite"/>
+                    <field name="lieu"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action du menu hr.employee.diplome -->
+        <record id="action_formation_externe" model="ir.actions.act_window">
+            <field name="name">Formation diplomante</field>
+            <field name="res_model">hr.employee.diplome</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_action_formation_externe" name="Saisie formation" parent="menu_hr_diplome_root" action="action_formation_externe"/>
+    </data>
+</openerp>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <menuitem
+            id="menu_hr_employee_assiduite_root"
+            name="Gestion Assiduite"
+            parent="hr.menu_hr_root"/>
+
+<!--        <record id="hr_employee_assiduite_act" model="ir.actions.act_window">
+            <field name="name">Gestion Assiduite</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.assiduite</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+-->
+
+        <menuitem
+            id="sub_menu_hr_employee_assiduite_root"
+            name="Modification Assiduite"
+            action="hr_employee_assiduite_act"
+            parent="menu_hr_employee_assiduite_root"/>
+<!--
+        <record model="ir.ui.view" id="hr_employee_assiduite_form">
+            <field name="name">hr.employee.assiduite.form</field>
+            <field name="model">hr.employee.assiduite</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Assiduite">
+                    <group colspan="4">
+                        <field name="employee_id" />
+                        <field name="rate_id" />
+                        <field name="period_id" />
+                        <field name="motif" />
+                    </group>
+                </form>
+            </field>
+        </record>
+-->
+        <record id="hr_employee_assiduite_tree_view" model="ir.ui.view">
+            <field name="name">hr.employee.assiduite.tree</field>
+            <field name="model">hr.employee.assiduite</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Assiduite" editable="top">
+                    <field name="employee_id" />
+                    <field name="rate_id" />
+                    <field name="period_id" />
+                    <field name="motif" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_employee_assiduite_rate_form_view" model="ir.ui.view">
+            <field name="name">hr.employee.assiduite.rate.tree</field>
+            <field name="model">hr.employee.assiduite.rate</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Taux assiduite">
+                    <group> 
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+
+        <record id="hr_employee_assiduite_rate_act" model="ir.actions.act_window">
+            <field name="name">Taux de reduction assiduite</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.assiduite.rate</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="hr_employee_assiduite_rate_tree_view" model="ir.ui.view">
+            <field name="name">hr.employee.assiduite.rate.tree.view</field>
+            <field name="model">hr.employee.assiduite.rate</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Taux reduction assiduite" > 
+                    <!-- editable="top" -->
+                    <field name="name"/> 
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="id_hr_employee_assiduite_rate" parent="hr.menu_hr_configuration"
+            name="Taux de reduction assiduite" action="hr_employee_assiduite_rate_act"/>
+
+    </data>
+</openerp>

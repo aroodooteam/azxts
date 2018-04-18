@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_hr_job_form_inherit">
+            <field name="name">update.view.hr.job.form</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <field name="department_id" position="before">
+                    <field name="active"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_job_filter_inherit">
+            <field name="name">update.view.hr.view.job.filter</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_job_filter"/>
+            <field name="arch" type="xml">
+                <search string="Jobs">
+                    <filter name="filter_see_all" string="All" domain="['|',('active','=',True),('active','=',False)]"/>
+                    <filter name="filter_see_active" string="Active" domain="[('active','=',True)]"/>
+                    <filter name="filter_see_inactive" string="Inactive" domain="[('active','=',False)]"/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</openerp>

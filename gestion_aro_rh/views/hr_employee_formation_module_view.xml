@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Vue form module -->
+        <record id="view_module_2_form" model="ir.ui.view">
+            <field name="name">hr.module2.form</field>
+            <field name="model">hr.employee.formation.module</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <form string="Module">
+                    <group col="2" colspan="4">
+                        <field name="code"/>
+                        <field name="name"/>
+                        <field name="branche_id"/>
+                        <field name="specialite"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Vue tree module -->
+
+        <record id="view_module_2_tree" model="ir.ui.view">
+            <field name="name">hr.module2.tree</field>
+            <field name="model">hr.employee.formation.module</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <tree string="Module">
+                    <!--field name="code"/-->
+                    <field name="name"/>
+                    <field name="branche_id"/>
+                    <field name="specialite"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Action du menu module -->
+        <record model="ir.actions.act_window" id="action_gestion_module">
+            <field name="name">Module</field>
+            <field name="res_model">hr.employee.formation.module</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Créer un nouveau module
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_action_gestion_module" name="Gérer les modules" parent="menu_hr_formation_root" action="action_gestion_module"/>
+    </data>
+</openerp>

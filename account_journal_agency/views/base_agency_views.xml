@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_base_agency_tree">
+            <field name="name">base.agency.tree</field>
+            <field name="model">base.agency</field>
+            <field name="type">tree</field>
+            <field name="priority">0</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="parent_id"/>
+                    <field name="is_agency_parent"/>
+                    <field name="have_opening_journal"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="base_agency_action" model="ir.actions.act_window">
+            <field name="name">Base Agency Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">base.agency</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_base_agency_form_h0" model="ir.ui.view">
+            <field name="name">base.agency.form</field>
+            <field name="model">base.agency</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Label">
+                    <sheet>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group colspan="4" name="Code">
+                            <field name="code"/>
+                            <field name="active"/>
+                        </group>
+                        <group colspan="4" name="References">
+                            <field name="parent_id"/>
+                            <field name="partner_id"/>
+                            <field name="is_agency_parent"/>
+                            <field name="have_opening_journal"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_base_agency_search" model="ir.ui.view">
+            <field name="name">base.agency.search</field>
+            <field name="model">base.agency</field>
+            <field name="type">search</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            <search string="Agency Search">
+                <field name="name" select="True"/>
+                <field name="code" select="True"/>
+                <field name="parent_id"/>
+                <filter string="Agency parent" domain="[('is_agency_parent', '=', True)]"/>
+                <filter string="Agency with opening journal" domain="[('have_opening_journal', '=', True)]"/>
+                <group expand="0" string="Group by...">
+                    <filter string="Agency parent" domain="[]" context="{'group_by': 'parent_id'}"/>
+                </group>
+            </search>
+            </field>
+        </record>
+
+        <menuitem
+            id="base.agency"
+            name="Agences"
+            string="Agences"
+            action="base_agency_action"
+            parent="base.menu_res_company_global"/>
+    </data>
+</openerp>

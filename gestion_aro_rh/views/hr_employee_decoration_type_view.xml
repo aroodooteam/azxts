@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Vue form de hr.decoration.type-->
+        <record model="ir.ui.view" id="view_decoration_type_form">
+            <field name="name">view_decoration_type.form</field>
+            <field name="model">hr.employee.decoration.type</field>
+            <field name="arch" type="xml">
+                <form string="Type de décoration">
+                    <sheet>
+                        <h1>
+                            <label string="Type de décoration"/>
+                        </h1>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree de hr.decoration.type-->
+        <record model='ir.ui.view' id='view_decoration_type_tree'>
+            <field name='name'>view_decoration_type.tree</field>
+            <field name='model'>hr.employee.decoration.type</field>
+            <field name='arch' type='xml'>
+                <tree string='Type de décoration'>
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action du menu hr.decoration.type-->
+        <record id="action_gestion_decoration_type" model="ir.actions.act_window">
+            <field name="name">Type décoration</field>
+            <field name="res_model">hr.employee.decoration.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_action_decoration_type" name="Type de décoration" parent="hr.menu_hr_configuration" action="action_gestion_decoration_type"/>
+
+    </data>
+</openerp>

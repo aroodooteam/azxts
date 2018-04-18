@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- account.tax.template -->
+        <!-- TVA -->
+        <record model="account.tax.template" id="tva_exo">
+            <field name="name">Tva - 0</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_445709"/>
+            <field name="account_paid_id" ref="pcg_445709"/>
+            <field name="amount">0</field>
+            <field name="type">none</field>
+            <field name="description">Tva-0.0</field>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="tva_vt20">
+            <field name="name">Tva - 20</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_445709"/>
+            <field name="account_paid_id" ref="pcg_445709"/>
+            <field name="amount">0.2</field>
+            <field name="type">percent</field>
+            <field name="sequence">10</field>
+            <field name="description">Tva-20.0</field>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="tva_vt24">
+            <field name="name">Tva - 24</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_445709"/>
+            <field name="account_paid_id" ref="pcg_445709"/>
+            <field name="amount">0.24</field>
+            <field name="type">percent</field>
+            <field name="description">Tva-24.0</field>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="tva_vt22_9">
+            <field name="name">Tva - 22.9</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_445709"/>
+            <field name="account_paid_id" ref="pcg_445709"/>
+            <field name="amount">0.229</field>
+            <field name="type">percent</field>
+            <field name="description">Tva-22.9</field>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="tva_vt20_8">
+            <field name="name">Tva - 20.8</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_445709"/>
+            <field name="account_paid_id" ref="pcg_445709"/>
+            <field name="amount">0.208</field>
+            <field name="type">percent</field>
+            <field name="description">Tva-20.8</field>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="tva_vt20_9">
+            <field name="name">Tva - 20.9</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_445709"/>
+            <field name="account_paid_id" ref="pcg_445709"/>
+            <field name="amount">0.209</field>
+            <field name="type">percent</field>
+            <field name="description">Tva-20.9</field>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="tva_vt21_4">
+            <field name="name">Tva - 21.4</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_445709"/>
+            <field name="account_paid_id" ref="pcg_445709"/>
+            <field name="amount">0.214</field>
+            <field name="type">percent</field>
+            <field name="description">Tva-21.4</field>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="tva_vt21_9">
+            <field name="name">Tva - 21.9</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_445709"/>
+            <field name="account_paid_id" ref="pcg_445709"/>
+            <field name="amount">0.219</field>
+            <field name="type">percent</field>
+            <field name="description">Tva-21.9</field>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="tva_vt20_6">
+            <field name="name">Tva - 20.6</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_445709"/>
+            <field name="account_paid_id" ref="pcg_445709"/>
+            <field name="amount">0.206</field>
+            <field name="type">percent</field>
+            <field name="description">Tva-20.6</field>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <!-- TE -->
+        <record model="account.tax.template" id="te_3">
+            <field name="name">Te - 3</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_443201"/>
+            <field name="account_paid_id" ref="pcg_443201"/>
+            <field name="amount">0.03</field>
+            <field name="type">percent</field>
+            <field name="description">Te-3.0</field>
+            <field name="include_base_amount" eval="True"/>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="te_14_5">
+            <field name="name">Te - 14.5</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_443201"/>
+            <field name="account_paid_id" ref="pcg_443201"/>
+            <field name="amount">0.145</field>
+            <field name="type">percent</field>
+            <field name="description">Te-14.5</field>
+            <field name="include_base_amount" eval="True"/>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="te_4">
+            <field name="name">Te - 4</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_443201"/>
+            <field name="account_paid_id" ref="pcg_443201"/>
+            <field name="amount">0.04</field>
+            <field name="type">percent</field>
+            <field name="description">Te-4.0</field>
+            <field name="include_base_amount" eval="True"/>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="te_4_5">
+            <field name="name">Te - 4.5</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_443201"/>
+            <field name="account_paid_id" ref="pcg_443201"/>
+            <field name="amount">0.045</field>
+            <field name="type">percent</field>
+            <field name="description">Te-4.5</field>
+            <field name="include_base_amount" eval="True"/>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="te_7">
+            <field name="name">Te - 7</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_443201"/>
+            <field name="account_paid_id" ref="pcg_443201"/>
+            <field name="amount">0.07</field>
+            <field name="type">percent</field>
+            <field name="description">Te-7.0</field>
+            <field name="include_base_amount" eval="True"/>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="te_0">
+            <field name="name">Te - 0</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_443201"/>
+            <field name="account_paid_id" ref="pcg_443201"/>
+            <field name="amount">0.00</field>
+            <field name="type">percent</field>
+            <field name="description">Te-0.0</field>
+            <field name="include_base_amount" eval="True"/>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="te_20">
+            <field name="name">Te - 20</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_443201"/>
+            <field name="account_paid_id" ref="pcg_443201"/>
+            <field name="amount">0.2</field>
+            <field name="type">percent</field>
+            <field name="description">Te-20.0</field>
+            <field name="include_base_amount" eval="True"/>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="te_9">
+            <field name="name">Te - 9.0</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_443201"/>
+            <field name="account_paid_id" ref="pcg_443201"/>
+            <field name="amount">0.09</field>
+            <field name="type">percent</field>
+            <field name="description">Te-9.0</field>
+            <field name="include_base_amount" eval="True"/>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="te_18">
+            <field name="name">Te - 18.0</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_443201"/>
+            <field name="account_paid_id" ref="pcg_443201"/>
+            <field name="amount">0.18</field>
+            <field name="type">percent</field>
+            <field name="description">Te-18.0</field>
+            <field name="include_base_amount" eval="True"/>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record model="account.tax.template" id="te_33_1">
+            <field name="name">Te - 33.10</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_collected_id" ref="pcg_443201"/>
+            <field name="account_paid_id" ref="pcg_443201"/>
+            <field name="amount">0.3310</field>
+            <field name="type">percent</field>
+            <field name="description">Te-33.1</field>
+            <field name="include_base_amount" eval="True"/>
+            <field name="chart_template_id" ref="l10n_mg_aro_temp_chart"/>
+        </record>
+        <record id="tacava_10" model="account.tax.template">
+            <field name="sequence">2</field>
+            <field name="base_sign">1.0</field>
+            <field name="child_depend" eval="False"/>
+            <field name="include_base_amount" eval="True"/>
+            <field name="applicable_type">true</field>
+            <field name="name">TACAVA - 10.0</field>
+            <field name="python_compute_inv"># price_unit
+                # product: product.product object or False
+
+                result = price_unit * 0.10</field>
+            <field name="ref_tax_sign">1.0</field>
+            <field name="type">code</field>
+            <field name="ref_base_sign">1.0</field>
+            <field name="description">TACAVA-10.0</field>
+            <field name="type_tax_use">all</field>
+            <field name="account_paid_id" ref="l10n_mg_aro.pcg_443101"/>
+            <field name="account_collected_id" ref="l10n_mg_aro.pcg_443101"/>
+            <field name="chart_template_id" ref="l10n_mg_aro.l10n_mg_aro_temp_chart"/>
+            <field name="amount">0.1</field>
+            <field name="python_compute"># price_unit
+                # product: product.product object or None
+                # partner: res.partner object or None
+
+                result = (price_unit/1.045) * 0.10</field>
+            <field name="tax_sign">1.0</field>
+            <field name="price_include" eval="False"/>
+        </record>
+    </data>
+</openerp>

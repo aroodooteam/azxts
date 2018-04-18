@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="res_partner_kanban_ref" model="ir.ui.view">
+            <field name="name">res.partner.kanban.ref</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="arch" type="xml">
+                <ul position="inside">
+                    <li><field name="ref"/></li>
+                </ul>
+            </field>
+        </record>
+
+        <record id="res_partner_select_ref" model="ir.ui.view">
+            <field name="name">res.partner.select.ref</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="ref" />
+                </field>
+            </field>
+        </record>
+        <!--<record id="res_partner_v9_form" model="ir.ui.view">
+            <field name="name">res.partner.v9.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                        <field name="supplier" position="before">
+                        <field name="v_neuf"/>
+                        </field>
+                        </field>
+        </record>-->
+
+        <!--manda-->
+        <!--
+        <record model="ir.ui.view" id="view_partner_stat_form">
+        <field name="name">res.partner.stat.form.inherit4</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base_vat.view_partner_form"/>
+        <field name="arch" type="xml">
+                <field name="vat_subjected" position="after">
+                    <field name="stat" class="oe_inline"/>
+                    <field name="cif" class="oe_inline"/>
+        </field>
+        </field>
+    </record>
+        -->
+
+    </data>
+</openerp>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_account_entries_report_graph_h0" model="ir.ui.view">
+            <field name="name">account_entries_report.graph</field>
+            <field name="model">account.entries.report</field>
+            <field name="inherit_id" ref="account.view_account_entries_report_graph"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_type']" position="before">
+                    <field name="agency_id" type="row"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

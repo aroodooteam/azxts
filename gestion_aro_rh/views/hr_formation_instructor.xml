@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--Vue form formateur-->
+
+        <record id="view_instructor_form" model="ir.ui.view">
+            <field name="name">hr.formation.instructor.form</field>
+            <field name="model">hr.formation.instructor</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <form string="Formateur" colspan="2">
+                    <sheet>
+                        <group col="2" colspan="4">
+                            <field name="name"/>
+                            <field name="societe"/>
+                            <field name="function"/>
+                            <field name="phone"/>
+                            <field name="mobile"/>
+                            <field name="email"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree formateur -->
+
+        <record id="view_instructor_tree" model="ir.ui.view">
+            <field name="name">hr.formation.instructor.tree</field>
+            <field name="model">hr.formation.instructor</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <tree string="formateur">
+                    <field name="name"/>
+                    <field name="societe"/>
+                    <field name="function"/>
+                    <field name="phone"/>
+                    <field name="mobile"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action du menu saisie formateur -->
+
+        <record model="ir.actions.act_window" id="action_gestion_formateur">
+            <field name="name">Gérer les formateurs</field>
+            <field name="res_model">hr.formation.instructor</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Créer un nouveau formateur
+                </p>
+            </field>
+        </record>
+
+        <!--Menu saisie formateur -->
+        <menuitem id="menu_action_gestion_formateur" name="Gérer les formateurs" parent="menu_hr_foramtion_instructor_root" action="action_gestion_formateur"/>
+    </data>
+</openerp>

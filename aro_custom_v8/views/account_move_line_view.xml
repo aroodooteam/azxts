@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <!--<function name='update_move_line_from_invoice' model='account.move.line'/>-->
+    <!--<function name='update_move_line_from_invoice' model='account.invoice'/>-->
+    <record id="view_account_move_line_form_h0" model="ir.ui.view">
+        <field name="name">account.move.line.form</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Reference AS400">
+                    <group col="4">
+                        <field name="emp_police"/>
+                        <field name="emp_quittance"/>
+                        <field name="emp_effet"/>
+                        <field name="emp_datech"/>
+                    </group>
+                    <group col="4">
+                        <field name="emp_libana"/>
+                        <field name="emp_fluxtres"/>
+                        <field name="emp_as400_compte"/>
+                        <field name="emp_as400_ses"/>
+                        <field name="emp_as400_pie"/>
+                        <field name="emp_as400_lig"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_account_move_line_tree_inherit" model="ir.ui.view">
+        <field name="name">account.move.line.inherit</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_tree"/>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="emp_datfact"/>
+                <field name="emp_police"/>
+                <field name="emp_quittance"/>
+                <field name="emp_effet"/>
+                <field name="emp_datech"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_move_form_h0" model="ir.ui.view">
+        <field name="name">account_move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='line_id']/tree/field[@name='invoice']" position="after">
+                <field name="emp_datfact"/>
+                <field name="emp_police"/>
+                <field name="emp_quittance"/>
+                <field name="emp_effet"/>
+                <field name="emp_datech"/>
+            </xpath>
+        </field>
+    </record>
+    <!--  
+    <menuitem id="menu_res_agency_root" parent="base.menu_administration" name="Agences"/>	 
+    
+    <record id="res_agency_action" model="ir.actions.act_window">
+        <field name="name">Agences</field>
+        <field name="res_model">res.agency</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>  
+    
+    <menuitem id="menu_res_agency" parent="menu_res_agency_root" name="Agences" action="res_agency_action"/>	 
+    
+	<record id="res_agency_tree" model="ir.ui.view">
+		<field name="name">Agences</field>
+		<field name="model">res.agency</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Agences"> 
+				<field name="name"/>
+				<field name="code"/>
+			</tree>
+		</field>
+	</record>
+    -->
+
+</data>
+</openerp>

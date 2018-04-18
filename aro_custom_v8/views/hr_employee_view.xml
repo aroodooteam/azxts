@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <menuitem id="menu_hr_employee_advantage_root" parent="hr.menu_hr_root" name="Avantages" />
+
+        <record model="ir.actions.act_window" id="hr_employee_advantage_act">
+            <field name="name">Avantages</field>
+            <field name="res_model">hr.employee.advantage</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_group_employee':1,'search_default_group_type':1}</field>
+            <!-- <field name="domain">[('name.code','!=','R')]</field> -->
+        </record>
+
+        <record model="ir.actions.act_window" id="hr_employee_advantage_type_act">
+            <field name="name">Type d'avantages</field>
+            <field name="res_model">hr.employee.advantage.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="hr_employee_advantage_type_act" id="menu_hr_employee_advantage_type"
+                parent="hr.menu_hr_configuration" />
+
+        <!-- <menuitem action="hr_employee_advantage_type_act" id="menu_hr_employee_advantage_type"
+                 parent="menu_hr_employee_advantage_root" /> -->
+
+        <record id="hr_employee_advantage_type_tree" model="ir.ui.view">
+            <field name="name">hr.employee.advantage.type.tree</field>
+            <field name="model">hr.employee.advantage.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Types avantages">
+                    <field name="name" />
+                    <field name="code" />
+                    <field name="rate"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_employee_advantage_tree" model="ir.ui.view">
+            <field name="name">hr.employee.advantage.tree</field>
+            <field name="model">hr.employee.advantage</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Avantages">
+                    <field name="period_id" />
+                    <field name="employee_id" />
+                    <field name="name"/>
+                    <field name="amount" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_employee_advantage_search" model="ir.ui.view">
+            <field name="name">hr.employee.advantage.search</field>
+            <field name="model">hr.employee.advantage</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search >
+                    <field name="employee_id" />
+                    <field name="period_id" />
+                    <field name="name"/>
+                    <field name="amount" />
+                    <group string="Group By…">
+                        <filter string="Employe" name="group_employee" icon="terp-personal" domain="[]" 
+                            context="{'group_by':'employee_id'}"/>
+                        <filter string="Type" name="group_type" icon="terp-personal" domain="[]" 
+                            context="{'group_by':'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <menuitem action="hr_employee_advantage_act" id="menu_hr_employee_advantage" 
+            parent="menu_hr_employee_advantage_root" />
+
+        <record id="act_hr_employee_advantages_2" model="ir.actions.act_window">
+            <field name="res_model">hr.employee.advantage</field>
+            <field name="view_type">form</field>
+            <field name="name">Avantages</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="domain">[('parent.code','=','R')]</field> -->
+            <field name="context">{'search_default_group_type':1,'search_default_employee_id': [active_id], 'default_employee_id': active_id}</field>
+        </record>
+
+        <record id="view_employee_advantages_main_form" model="ir.ui.view">
+            <field name="name">Attribution advantage</field>
+            <field name="model">hr.employee.advantage</field>
+            <field name="arch" type="xml">
+                <form string="hr.employee.children">
+                    <group>
+                        <field name="employee_id" required="True" select="1"/>
+                        <field name="state" required="True" select="1"/>
+                        <field name="period_id" required="True" select="1"/>
+                        <field name="name" required="True" select="1"/>
+                        <field name="amount" required="True" select="1"/>
+                        <field name="ref" select="1"/>
+                    </group>
+               </form>
+            </field>
+        </record>
+
+        <record id="hr_hr_employee_view_form_adv" model="ir.ui.view">
+            <field name="name">hr.hr.employee.view.form_adv</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//div[@name='button_box']" position="inside">
+                        <button name="%(act_hr_employee_advantages_2)d" class="oe_stat_button" icon="fa-gift" string="Avantages" type="action" groups="base.group_hr_manager"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="view_employee_form_state_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.state.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="category_ids" position="after">
+                    <field name="state"/>
+                    <field name="date"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- <record id="view_employee_form_leave_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.leave.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='active_group']" position="before">
+                    <group string="Leaves">
+                        <label for="remaining_leaves"/>
+                        <div>
+                            <field name="remaining_leaves" class="oe_inline"/> days
+                        </div>
+                    </group>
+                </xpath> -->
+                <!-- deja commente -->
+                <!--<xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="%(hr_holidays.act_hr_employee_holiday_request)d" string="Leaves" type="action" groups="base.group_hr_user"/>
+                </xpath>-->
+                <!-- fin comment -->
+           <!--  </field>
+        </record> -->
+
+        <record model="ir.ui.view" id="hr_kanban_view_employees_kanban">
+            <field name="name">HR - Employees Kanban with leave status</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+            <field name="arch" type="xml">
+                <xpath expr="//templates" position="before">
+                    <field name="current_leave_id"/>
+                    <field name="current_leave_state"/>
+                    <field name="leave_date_from"/>
+                    <field name="leave_date_to"/>
+                </xpath>
+                <xpath expr="//div[@class='oe_employee_details']/ul/li[@id='last_login']" position="inside">
+                    <span t-if="record.current_leave_id.raw_value" style="font-size: 100%%"
+                            t-att-class="record.current_leave_state.raw_value=='validate'?'oe_kanban_button oe_kanban_color_3':'oe_kanban_button oe_kanban_color_2'"
+                            t-att-title="record.leave_date_from.raw_value.toString('ddd dS MMM') + ' - ' + record.leave_date_to.raw_value.toString('ddd dS MMM')">
+                        <field name="current_leave_id"/>
+                    </span>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="state_view_employee_filter" model="ir.ui.view">
+            <field name="name">Employees</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="matricule"/>
+                    <field name="state"/>
+                    <field name="department_id"/>
+                    <field name="groupe"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="aro_edit_holiday_new" model="ir.ui.view">
+            <field name="name">Leave Request</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays.edit_holiday_new"/>
+            <field name="arch" type="xml">
+                <field name="holiday_type" position="after">
+                    <field name="replacement_id"/>
+                    <field name="place"/>
+                </field>
+                <button name="reset" position="after">
+                    <button name="dap_validate" string="Validation DAP" groups="base.group_hr_manager" states="confirm,validate1,validate"/>
+                    <button name="dfp_validate" string="Validation DFP" groups="base.group_hr_manager" states="confirm,validate1,validate"/>
+                </button>
+            </field>
+        </record>
+
+    </data>
+</openerp>

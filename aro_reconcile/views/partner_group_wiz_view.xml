@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_partner_group_wiz_form" model="ir.ui.view">
+            <field name="name">partner.group.wiz.form</field>
+            <field name="model">partner.group.wiz</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Partner group">
+                    <separator string="Group partner" colspan="4"/>
+                    <label string="All selected partner will be grouped as one"/>
+                    <footer>
+                        <button string="Validate" icon="gtk-ok" type="object" name="group_selected_partner"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

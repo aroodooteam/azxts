@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_account_move_line_tree_inherit" model="ir.ui.view">
+            <field name="name">account.move.line.inherit</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="account.view_move_line_tree"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="agency_id"/>
+                </field>
+            </field>
+        </record>
+        <record id="view_account_move_line_inherit_search_r0" model="ir.ui.view">
+            <field name="name">account.move.line.search</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="account.view_account_move_line_filter"/>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <xpath expr="//group" position="inside">
+                    <filter string="Agency" icon="terp-partner" domain="[]" context="{'group_by':'agency_id'}"/>
+                    <filter string="Reconcile Ref" icon="terp-partner" domain="[]" context="{'group_by':'reconcile_id'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

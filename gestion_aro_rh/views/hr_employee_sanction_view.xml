@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!--Action du menu sanction-->
+        <record model="ir.actions.act_window" id="action_hr_employee_sanction_2">
+            <field name="name">Sanctions</field>
+            <field name="res_model">hr.employee.sanction</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_action_gestion_sanction" name="Saisir une sanction" parent="menu_hr_career_root" action="action_hr_employee_sanction_2"/>
+    </data>
+</openerp>

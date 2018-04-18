@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="status_devis" model="aro.status">
+            <field name="name">Devis</field>
+            <field name="code">0</field>
+        </record>
+        <record id="status_en_cours" model="aro.status">
+            <field name="name">En cours</field>
+            <field name="code">1</field>
+        </record>
+        <record id="status_suspendu" model="aro.status">
+            <field name="name">Suspendue</field>
+            <field name="code">3</field>
+        </record>
+        <record id="status_resilie" model="aro.status">
+            <field name="name">Résiliée</field>
+            <field name="code">6</field>
+        </record>
+        <record id="status_sans_effet" model="aro.status">
+            <field name="name">Sans éffet</field>
+            <field name="code">96</field>
+        </record>
+    </data>
+</openerp>

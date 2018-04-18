@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_aro_commission_tree" model="ir.ui.view">
+            <field name="name">aro.commission.tree</field>
+            <field name="model">aro.commission</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Type risk">
+                    <field name="com_date"/>
+                    <field name="com_police"/>
+                    <field name="aro_type_apporteur_id" placeholder="Type Apporteur"/>
+                    <field name="type_emission_id"/>
+                    <field name="com_taux"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_aro_commission_form" model="ir.ui.view">
+            <field name="name">aro.commission.form</field>
+            <field name="model">aro.commission</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Type risk">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_left">
+                            <div class="oe_left" name="options">
+                                <group colspan="4">
+                                    <field name="com_date" placeholder="Date"/>
+                                    <field name="com_police" placeholder="Police"/>
+                                    <field name="aro_type_apporteur_id" placeholder="Type Apporteur"/>
+                                    <field name="type_emission_id" placeholder="Emission"/>
+                                    <field name="com_taux" placeholder="Taux"/>
+                                </group>
+                            </div>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_aro_commission_view">
+            <field name="name">Commissions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">aro.commission</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+
+
+        <record model="ir.actions.act_window.view" id="act_open_aro_commission_view_form">
+            <field name="act_window_id" ref="act_open_aro_commission_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_aro_commission_form"/>
+        </record>
+
+
+        <record model="ir.actions.act_window.view" id="act_open_aro_commission_view_tree">
+            <field name="act_window_id" ref="act_open_aro_commission_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_aro_commission_tree"/>
+        </record>
+
+        <menuitem id="menu_aro_commission"
+            parent="aro_v9.menu_root_configuration_assurance"
+            sequence="90"
+            action="act_open_aro_commission_view"/>
+    </data>
+</openerp>

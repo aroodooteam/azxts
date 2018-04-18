@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+	<!--aro_payment-->
+	
+    <record id="aro_payment_view_tree" model="ir.ui.view">
+        <field name="name">aro_payement.view.tree</field>
+        <field name="model">aro_payment</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Payement tree" colors="">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+    
+    
+    <record id="aro_payment_view_form" model="ir.ui.view">
+        <field name="name">aro_payment.view.form</field>
+        <field name="model">aro_payment</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Payement form">
+				<group>
+					<field name="name"/>
+					<field name="code"/>
+					<field name="ref"/>
+                </group>
+            </form>
+        </field>
+    </record>
+	
+	<!--
+    <record id="_filter" model="ir.ui.view">
+        <field name="name"></field>
+        <field name="model"></field>
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+            <search string="">
+               <field name="name"/>
+           </search>
+        </field>
+    </record>
+	-->
+    <record model="ir.actions.act_window" id="action_modes_payement">
+        <field name="name">Modes Payements</field>
+        <field name="res_model">aro_payment</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Modes Payements" parent="hr.menu_hr_configuration" action="action_modes_payement" id="sous_menu_hr_configuration_type_payement"/>
+	
+</data>
+</openerp>

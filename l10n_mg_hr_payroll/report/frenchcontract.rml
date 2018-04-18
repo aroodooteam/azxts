@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(595.0,842.0)" title="Test" author="Martin Simon" allowSplitting="20">
+    <pageTemplate id="first">
+      <frame id="first" x1="57.0" y1="57.0" width="481" height="728"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockTopPadding value="0"/>
+      <blockBottomPadding value="0"/>
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table3">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="P1" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" textColor="#000000"/>
+    <paraStyle name="P2" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" textColor="#000000"/>
+    <paraStyle name="P3" fontName="Helvetica"/>
+    <paraStyle name="P4" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P5" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="CENTER"/>
+    <paraStyle name="P6" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P7" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P8" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P9" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P10" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P11" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P12" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" alignment="RIGHT"/>
+    <paraStyle name="P13" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY" textColor="#000000"/>
+    <paraStyle name="P14" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY" textColor="#000000"/>
+    <paraStyle name="P15" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" textColor="#000000"/>
+    <paraStyle name="P16" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" textColor="#000000"/>
+    <paraStyle name="P17" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="12.0" leading="15" alignment="JUSTIFY" textColor="#000000"/>
+    <paraStyle name="P18" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" alignment="JUSTIFY"/>
+    <paraStyle name="P19" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="14.0" spaceAfter="14.0" textColor="#000000"/>
+    <paraStyle name="P20" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="14.0" spaceAfter="14.0" textColor="#000000"/>
+    <paraStyle name="P21" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="14.0" spaceAfter="14.0" textColor="#000000"/>
+    <paraStyle name="P22" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="14.0" spaceAfter="14.0" textColor="#000000"/>
+    <paraStyle name="P23" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="14.0" spaceAfter="14.0"/>
+    <paraStyle name="P24" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="11.0" leading="14" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P25" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P26" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P27" fontName="Helvetica" fontSize="10.0" leading="13" alignment="LEFT"/>
+    <paraStyle name="P28" fontName="Helvetica" alignment="JUSTIFY"/>
+    <paraStyle name="P29" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY"/>
+    <paraStyle name="P30" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="12.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P31" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="14.0" spaceAfter="14.0"/>
+    <paraStyle name="P32" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P33" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica" fontSize="11.0" leading="14" alignment="JUSTIFY" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P34" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica-Bold" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P35" rightIndent="-5.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Standard" fontName="Helvetica"/>
+    <paraStyle name="Heading" fontName="Helvetica" fontSize="14.0" leading="17" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="Text body" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Caption" fontName="Helvetica" fontSize="12.0" leading="15" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Helvetica"/>
+    <paraStyle name="Heading 4" rightIndent="35.0" leftIndent="7.0" fontName="Helvetica" fontSize="12.0" leading="15" alignment="JUSTIFY" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Heading 1" rightIndent="0.0" leftIndent="35.0" fontName="Helvetica" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Normal centr&#xE9;" rightIndent="21.0" leftIndent="35.0" fontName="Helvetica" alignment="JUSTIFY" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Retrait corps de texte 3" rightIndent="21.0" leftIndent="0.0" fontName="Helvetica" alignment="JUSTIFY" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_header" fontName="Helvetica-Bold" fontSize="12.0" leading="15" alignment="LEFT" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_8" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Header" fontName="Helvetica"/>
+    <paraStyle name="Table Contents" fontName="Helvetica"/>
+  </stylesheet>
+  <story>
+    <para style="P35">[[repeatIn(objects,'o')]][[setLang('fr_FR')]]</para>
+    <blockTable colWidths="122.0,361.0" style="Table1">
+      <tr>
+        <td>
+          <illustration height="58.0" width="65.0">
+            <image x="0.5cm" y="1.5cm" height="66" width="84" >[[ company.logo or removeParentNode('image') ]]</image>
+          </illustration>
+        </td>
+        <td>
+          <para style="P5">
+            <font color="white"> </font>
+          </para>
+          <para style="P5">
+            <font color="white"> </font>
+          </para>
+          <para style="P5">CONTRAT DE TRAVAIL</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P24">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">ENTRE :</para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">La SOCIETE METALLURGIQUE DE L’OCEAN INDIEN, Société Anonyme au capital de Cinq cent millions Ariary ayant son siège social  au Lot II J 17 Ter Ivandry 101 Tanà RCS n° 2000 B 00152, n° d’identification statistique 24101 11 2000 0 10023, NIF n° 10 000 22 111, Société de droit commun à Madagascar, </para>
+    <blockTable colWidths="482.0" style="Table2">
+      <tr>
+        <td>
+          <para style="P28">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font face="Helvetica" size="11.0">ci-après dénommée </font>
+      <font face="Helvetica" size="11.0">Employeur</font>
+      <font face="Helvetica" size="11.0">,d’une part </font>
+    </para>
+    <para style="P32">ET</para>
+    <para style="P3">
+      <font color="white"> </font>
+    </para>
+    <para style="P33"><font face="Helvetica">[[o.employee_id.name]] </font>né(e) le <font face="Helvetica">[[formatLang(o.employee_id.birthday,date=True)]]</font> à <font face="Helvetica">[[o.employee_id.place_of_birth]]</font>, de nationalité Malagasy titulaire de la Carte d'Identité Nationale N°<font face="Helvetica">[[o.employee_id.cin]]</font> du <font face="Helvetica">[[o.employee_id.cin_date]]</font> à <font face="Helvetica">[[o.employee_id.cin_place]]</font>, domicilié(e) au <font face="Helvetica">[[o.employee_id.address_home]]</font></para>
+    <blockTable colWidths="482.0" style="Table3">
+      <tr>
+        <td>
+          <para style="P28">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P18">
+      <font color="white"> </font>
+    </para>
+    <para style="P34">
+      <font face="Helvetica" size="11.0">ci-après dénommé </font>
+      <font face="Helvetica" size="11.0">Travailleur,</font>
+      <font face="Helvetica" size="11.0"/>
+      <font face="Helvetica" size="11.0">d’autre part,</font>
+    </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">a été établi le présent contrat régi par les dispositions du Code du travail actuellement en vigueur à Madagascar (Loi N°2003-044 du 28 Juillet 2004 ).</para>
+    <para style="P19"> il a été convenu ce qui suit :</para>
+    <para style="P20">Article 1 : Engagement</para>
+    <para style="P15">La société SMOI engage <font face="Helvetica">[[o.employee_id.name]]</font> en tant que travailleur en son sein, sous réserve des résultats de la visite médicale d'embauche, et de visite médicale d’aptitude </para>
+    <para style="P15">Le Travailleur déclare formellement n’être lié à aucune autre entreprise. </para>
+    <para style="P15">
+      <font color="white"> </font>
+    </para>
+    <para style="P15">Le contrat est soumis aux dispositions du règlement intérieur et de la convention collective tant qu'elle sera applicable dans l’entreprise.</para>
+    <para style="P15">
+      <font color="white"> </font>
+    </para>
+    <para style="P13">Article 2 : Emploi et qualification</para>
+    <para style="P13">
+      <font color="white"> </font>
+    </para>
+    <para style="P15">Le travailleur sera employé(e) comme <font face="Helvetica">[[o.job_id.name]]</font> dans la catégorie professionnelle de <font face="Helvetica">[[o.employee_id.category_ids[0].name ]]</font><font face="Helvetica">, </font><font face="Helvetica">[[o.employee_id.category_ids[0].parent_id.name]]</font>à temps complet.</para>
+    <para style="P15">Le travailleur reconnaît et accepte que toute réalisation, création, production effectuées dans le cadre du contrat de travail et/ou dans les locaux de la société sont la propriété de la société.</para>
+    <para style="P15">Les attributions et les responsabilités du travailleur sont susceptibles d'évoluer en fonction de l'évolution de la société, ce qu’il accepte sous réserve que lui soit conservé le bénéfice de sa rémunération et de sa classification. </para>
+    <para style="P20">Article 3 : Horaires de travail</para>
+    <para style="P19">Les horaires du travail sont fixés par le règlement intérieur de la Société. </para>
+    <para style="P14">
+      <font color="white"> </font>
+    </para>
+    <para style="P14">Article 4 : Durée - Résiliation </para>
+    <para style="P1">Le présent contrat qui prend effet le <font face="Helvetica">[[formatLang(o.employee_id.date,date=True)]]</font><font face="Helvetica"/><font face="Helvetica"/>est conclu à l’essai pour une durée de <font face="Helvetica"/><font face="Helvetica">[[get_delay(o.trial_date_start,o.trial_date_end)]]</font><font face="Helvetica"> jours</font> pendant laquelle chacune des parties peut mettre fin au contrat à tout moment.</para>
+    <para style="P16">
+      <font color="white"> </font>
+    </para>
+    <para style="P4">A l’issue de la période de <font face="Helvetica">[[get_delay(o.trial_date_start,o.trial_date_end)]] jours </font><font face="Helvetica">renouvelable</font>, l’employeur décidera si l’essai est concluant ou non. Si l’essai n’est pas concluant, l’Employeur n’est pas tenu de motiver sa décision et l’Agent n’aura pas le droit de demander une quelconque indemnité pour quelque raison que ce soit pour non continuation du Contrat </para>
+    <para style="P4">
+      <font color="white"> </font>
+    </para>
+    <para style="P4">Si l’essai est concluant, <font face="Helvetica">le présent contrat se transformera automatiquement en Contrat à durée Indéterminé suivant les dispositions de la loi applicable en la matière</font></para>
+    <para style="P4">
+      <font color="white"> </font>
+    </para>
+    <para style="P4">Une fois le contrat transformé en Contrat à Durée Indéterminée, la résiliation sera faite sous réserve <font face="Helvetica">du respect d'un délai de préavis en application des dispositions légales et conventionnelles applicables dont le </font>décret n° 64.162 du 22.04.64<font face="Helvetica">.</font></para>
+    <para style="P10">
+      <font color="white"> </font>
+    </para>
+    <para style="P29">- Résiliation avec préavis</para>
+    <para style="P25">Chacune des deux parties a le droit, à tout moment de mettre fin à l’engagement en prévenant l’autre partie dans le délai légal de préavis, par lettre recommandée avec accusé de réception. </para>
+    <para style="P25">En cas de violation de cette disposition, une indemnité égale à la rémunération et aux avantages de toute nature dont l’agent aura bénéficié durant le délai du préavis non effectivement respecté sera versée à l’autre par la partie défaillante.</para>
+    <para style="P25">
+      <font color="white"> </font>
+    </para>
+    <para style="P29">- Résiliation sans préavis</para>
+    <para style="P29">Le contrat pourra être résilié sans préavis en cas de faute lourde du travailleur ou de l’employeur, sous réserve de l’appréciation éventuelle de la juridiction compétente en ce qui concerne la gravité de la faute et en application du règlement intérieur de la Société </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P29">- Résiliation pour cause maladie</para>
+    <para style="P29">Le contrat pourra être résilié sans préavis en cas d’accident ou de maladie étrangère au travail dûment constaté par un médecin agréé, et dans la mesure où le travailleur aura été remplacé, la résiliation du contrat pourra intervenir après un délai de trois mois à compter du jour de la cessation du travail du travailleur</para>
+    <para style="P15">
+      <font color="white"> </font>
+    </para>
+    <para style="P15"><font face="Helvetica"/>- Résiliation suite à une suspension du contrat de travail :</para>
+    <para style="P15">Le contrat peut être résilié par l'employeur dès que le délai de la suspension prévu par la loi est dépassé.</para>
+    <para style="P15">
+      <font color="white"> </font>
+    </para>
+    <para style="P2">Si des dispositions légales, conventionnelles ou réglementaires venaient à être modifiées ou supprimées, les dispositions contractuelles s'y rapportant seraient modifiées de plein droit. </para>
+    <para style="P20">Article 5 : Lieu de travail – Clause de mobilité </para>
+    <para style="P15">Le lieu de travail est situé à <font face="Helvetica">[[o.employee_id.work_location]]</font>. En fonction des nécessités du service, la société se réserve le droit de demander au Travailleur d’effectuer des déplacements temporaires n'entraînant pas de changement de résidence.</para>
+    <para style="P15">Parallèlement, pour des raisons liées à l'organisation et/ou au bon fonctionnement de l’entreprise, l’Employeur peut modifier le lieu de travail actuel du Travailleur. Celui-ci (<font face="Helvetica">celle-ci</font>) pourra ainsi être amené à exercer son activité à titre temporaire ou permanent, en tout lieu du territoire national </para>
+    <para style="P15">
+      <font color="white"> </font>
+    </para>
+    <para style="P15">Le Travailleur peut être muté de son poste et/ou être affilié à une autre Société du Groupe. Toutefois, l’Employé conservera le bénéfice des droits qu’il a acquis en vertu du travail qu’il aura fourni pour le compte du Groupe</para>
+    <para style="P15">
+      <font color="white"> </font>
+    </para>
+    <para style="P13">Article 6 : Rémunération</para>
+    <para style="P17">
+      <font color="white"> </font>
+    </para>
+    <para style="P30">Le travailleur bénéficiera d'un salaire de <font face="Helvetica">[[total_text(o.wage)]]</font><font face="Helvetica">( [[o.wage]] AR ) brut. [[o.salary_clause]]</font></para>
+    <para style="P30">
+      <font color="white"> </font>
+    </para>
+    <para style="P30">
+      <font face="Helvetica">[[o.employee_id.contract_ids[1] and 'A la fin de la période probatoire le salaire sera de ']]</font>
+      <font face="Helvetica">[[total_text( o.employee_id.contract_ids[1].wage)]] [[o.employee_id.contract_ids[1] and '(']] [[ o.employee_id.contract_ids[1].wage]] [[o.employee_id.contract_ids[1] and 'AR ) brut. ']][[o.employee_id.contract_ids[1].salary_clause]]</font>
+    </para>
+    <para style="P31">
+      <font face="Helvetica">Article 7 : Congés payés</font>
+    </para>
+    <para style="P26"><font face="Helvetica">Le Travailleur bénéficiera des congés payés institués conformément à la loi et à la convention collective en faveur des salariés, soit actuellement 30 jours par an (30 jours calendaire selon la loi).</font>Le congé ne pourra être remplacé par une indemnité compensatrice. Toutefois, en cas de rupture du contrat avant que le travailleur ait acquis droit jouissance de congé, il lui sera alloué par l’employeur à la place du congé une indemnité calculée d’après la durée du congé auquel il pourra prétendre proportionnellement au temps de service qu’il aura effectué chez l’employeur. </para>
+    <para style="P26">
+      <font color="white"> </font>
+    </para>
+    <para style="P13">Article 8 : Clause de confidentialité</para>
+    <para style="P15">
+      <font color="white"> </font>
+    </para>
+    <para style="P15">Le Travailleur s'engage, tant pendant la durée du présent contrat, qu'après sa cessation, à observer la discrétion la plus absolue sur les informations de toute nature concernant le fonctionnement et les activités de l’Employeur d'une part, et les clients de cette société d'autre part.</para>
+    <para style="P15">Il s'engage à ne communiquer à des tiers aucune indication sur les travaux, inventions, procédés, méthodes de l’Employeur qui seront portés à sa connaissance et à ne divulguer, en aucune façon, les indications qu'il pourrait recueillir du fait de ses fonctions sur tout ce qui touche à l'organisation de la société et à ses relations commerciales.</para>
+    <para style="P15">Il s'engage à ne sortir aucun document de la société, disquette C.D ou tout autre support qui ne lui soit pas personnel, sauf autorisation expresse de l’employeur.</para>
+    <para style="P20">Article 9 : Clause de non concurrence</para>
+    <para style="P15">En cas de rupture  du présent contrat pour quelque cause que se soit, le Travailleur s'engage à ne pas exercer personnellement une activité concurrente de celle de la société Employeur, ou à ne pas s'intéresser directement ou indirectement à toutes  activités pouvant concurrencer les activités de la Société </para>
+    <para style="P15">Les activités susmentionnées ne pourront être exercées pendant une durée de un (1) an à compter de la cessation du contrat, sur le territoire de la République de Madagascar </para>
+    <para style="P15">
+      <font color="white"> </font>
+    </para>
+    <para style="P15">La Société se réserve le droit de libérer le Travailleur de l'interdiction de concurrence, en notifiant sa décision dans le délai de quatorze (14) jours suivant la rupture effective du contrat.</para>
+    <para style="P13">
+      <font color="white"> </font>
+    </para>
+    <para style="P13">
+      <font color="white"> </font>
+    </para>
+    <para style="P13">Article 11 : Retraite complémentaire, prévoyance</para>
+    <para style="P19">Le Travailleur sera affilié auprès des caisses de retraite et de prévoyance CNAPS </para>
+    <para style="P19">Le Travailleur accepte que soient prélevées sur sa rémunération les cotisations salariales afférentes à ces régimes ainsi qu'à toute autre cotisation qui pourrait éventuellement leur être substitué où ajouté à l’avenir.</para>
+    <para style="P6">Article 12 : Accident de travail maladies professionnelles</para>
+    <para style="P10"/>
+    <para style="P26">Pendant la durée du contrat, tous les frais imputables aux accidents du travail et maladies professionnelles sont à la charge de l’employeur dans les conditions de la réglementation en vigueur.</para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P6">Article 13 : Soins médicaux</para>
+    <para style="P23">Le travailleur bénéficiera des soins et médicaments nécessaires au traitement de la maladie, dans la limite que comporte l’organisation médicale et l’équipement sanitaire de l’Entreprise. Il<font face="Helvetica"/><font face="Helvetica">sera également affilié auprès de </font><font face="Helvetica">la FUNHECE.</font></para>
+    <para style="P23">
+      <font face="Helvetica">De ce fait, il</font>
+      <font face="Helvetica"> accepte que soient prélevées sur sa rémunération les cotisations salariales afférentes à ce régime ainsi qu'à tout autre qui pourrait éventuellement lui être substitué ou ajouté à l’avenir.</font>
+    </para>
+    <para style="P7">Article 14 : <font face="Helvetica">Passation de service</font></para>
+    <para style="P11">
+      <font color="white"> </font>
+    </para>
+    <para style="P9">Le travailleur sera responsable, hors le cas de force majeure, de toutes les valeurs de marchandises ou autres effets qui lui seront confiées. Le travailleur ne pourra quitter le poste où il est affecté, qu’après remise à la personne qui lui sera désignée par la Société, d’un rapport écrit de passation de service. </para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">Article 15 : Litiges</para>
+    <para style="P10">
+      <font color="white"> </font>
+    </para>
+    <para style="P25">Le tribunal du lieu de travail est seul compétent pour connaître des litiges nés à l’occasion du présent contrat de travail.</para>
+    <para style="P8">
+      <font color="white"> </font>
+    </para>
+    <para style="P7">Article 16 : Élection de domicile</para>
+    <para style="P10">
+      <font color="white"> </font>
+    </para>
+    <para style="P25">Les parties élisent domicile aux adresses sus indiquées.</para>
+    <para style="P21"><font face="Helvetica">Fait en deux exemplaires, à</font><font face="Helvetica"> Antananarivo</font><font face="Helvetica">, </font>le <font face="Helvetica">[[formatLang(o.employee_id.date,date=True)]]</font>.</para>
+    <para style="P22">Signatur<font face="Helvetica">es : </font></para>
+    <para style="P16">Pour la Société*, <font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font><font color="white"> .........</font>Pour l’Employé*,</para>
+    <para style="P16">
+      <font color="white"> </font>
+    </para>
+    <para style="P16">
+      <font color="white"> </font>
+    </para>
+    <para style="P16">
+      <font color="white"> </font>
+    </para>
+    <para style="P16">
+      <font color="white"> </font>
+    </para>
+    <para>
+      <seqReset id="WW8Num2"/>
+    </para>
+    <para>
+      <seqReset id="WW8Num2"/>
+    </para>
+    <para>
+      <seqReset id="WW8Num2"/>
+    </para>
+  </story>
+</document>

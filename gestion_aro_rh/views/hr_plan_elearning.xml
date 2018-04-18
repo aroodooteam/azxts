@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Vue form elearning -->
+
+        <record id="view_plan_elearning_form" model="ir.ui.view">
+            <field name="name">hr.plan.elearning.form</field>
+            <field name="model">hr.plan.elearning</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <form string="Plan de formation">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for ="name" class="oe_edit_only"/>
+                                <h1>
+                                    <field name="name"/>
+                                </h1>
+                        </div>
+                        <group>
+                            <separator string="Général" colspan="2"/>
+                                <field name="objectif_id"/>
+                                <field name="branche"/>
+                                <field name="module_id"/>
+                                <field name="intervenant"/>
+                        </group>
+                        <group col="4" colspan="2">
+                            <separator string ="Prévision" colspan="4"/>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                        </group>
+                        <group col="6" colspan="4">
+                            <separator string ="Ressources" colspan="6"/>
+                                <field name="total_besoin"/>
+                                <field name="besoin_accorde"/>
+                                <field name="beneficiaire"/>
+                                <field name="taken_seats" widget="progressbar"/>
+                        </group>
+                        <group col="4" colspan="2">
+                            <separator string ="Budget" colspan="4"/>
+                                <field name="budget_euro"/>
+                                <field name="budget_ariary"/>
+                                <field name="cout"/>
+                        </group>
+                            <field name="session_elearning_2_ids" colspan="4" nolabel="1" context="{'default_plan_formation_id': active_id}">
+                                        <tree string="Planification">
+                                            <field name="date_debut_session"/>
+                                            <field name="date_fin_session"/>
+                                            <field name="cout_session"/>
+                                        </tree>
+                                        <form>
+                                            <group col="2" colspan="4">
+                                                <field name="plan_formation_id"/>
+                                                <field name="plan_formation_objectif_id"/>
+                                                <field name="branche"/>
+                                                <field name="plan_formation_module_id"/>
+                                                <field name="date_debut_session"/>
+                                                <field name="date_fin_session"/>
+                                                <field name="cout_session"/>
+                                            </group>
+                                        </form>
+                            </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree elearning -->
+
+        <record id="view_plan_elearning_tree" model="ir.ui.view">
+            <field name="name">hr.plan.elearning.tree</field>
+            <field name="model">hr.plan.elearning</field>
+            <field name="priority" eval="30"/>
+            <field name="arch" type="xml">
+                <tree string="Module">
+                    <field name="name"/>
+                    <field name="objectif_id"/>
+                    <field name="branche"/>
+                    <field name="module_id"/>
+                    <field name="total_besoin"/>
+                    <field name="budget_ariary"/>
+                    <field name="budget_euro"/>
+                    <field name="beneficiaire"/>
+                    <field name="taken_seats"/>
+                    <field name="cout"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Action du menu elearning -->
+
+        <record model="ir.actions.act_window" id="action_gestion_elearning_2">
+            <field name="name">Elearning</field>
+            <field name="res_model">hr.plan.elearning</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Créer un nouveau plan de formation
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu Plan Elearning -->
+
+        <menuitem id="menu_action_gestion_elearning_2" name="e-learning" parent="menu_hr_elearning_root" action="action_gestion_elearning_2"/>
+
+    </data>
+</openerp>

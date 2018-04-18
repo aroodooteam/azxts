@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="base_agency_1" model="base.agency">
+            <field name="code">11</field>
+            <field name="name">Antsahavola</field>
+            <!--<field name="parent_id" ref="base_agency_1"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_17" model="base.agency">
+            <field name="code">03</field>
+            <field name="name">Grands Comptes</field>
+            <!--<field name="parent_id" ref="base_agency_17"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_18" model="base.agency">
+            <field name="code">14</field>
+            <field name="name">Ambatondrazaka</field>
+            <!--<field name="parent_id" ref="base_agency_18"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_19" model="base.agency">
+            <field name="code">16</field>
+            <field name="name">Independance</field>
+            <!--<field name="parent_id" ref="base_agency_19"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_20" model="base.agency">
+            <field name="code">18</field>
+            <field name="name">Ampefiloha</field>
+            <!--<field name="parent_id" ref="base_agency_20"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_21" model="base.agency">
+            <field name="code">20</field>
+            <field name="name">Fianarantsoa</field>
+            <!--<field name="parent_id" ref="base_agency_21"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_22" model="base.agency">
+            <field name="code">32</field>
+            <field name="name">Toliary</field>
+            <!--<field name="parent_id" ref="base_agency_22"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_23" model="base.agency">
+            <field name="code">35</field>
+            <field name="name">Taolagnaro</field>
+            <!--<field name="parent_id" ref="base_agency_23"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_24" model="base.agency">
+            <field name="code">36</field>
+            <field name="name">Morondava</field>
+            <!--<field name="parent_id" ref="base_agency_24"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_25" model="base.agency">
+            <field name="code">40</field>
+            <field name="name">Mahajanga</field>
+            <!--<field name="parent_id" ref="base_agency_25"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_26" model="base.agency">
+            <field name="code">50</field>
+            <field name="name">Antsiranana</field>
+            <!--<field name="parent_id" ref="base_agency_26"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_27" model="base.agency">
+            <field name="code">53</field>
+            <field name="name">Sambava</field>
+            <!--<field name="parent_id" ref="base_agency_27"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_28" model="base.agency">
+            <field name="code">61</field>
+            <field name="name">Toamasina</field>
+            <!--<field name="parent_id" ref="base_agency_28"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_29" model="base.agency">
+            <field name="code">70</field>
+            <field name="name">Antsirabe</field>
+            <!--<field name="parent_id" ref="base_agency_29"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_30" model="base.agency">
+            <field name="code">81</field>
+            <field name="name">Ankorondrano</field>
+            <!--<field name="parent_id" ref="base_agency_30"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_31" model="base.agency">
+            <field name="code">99</field>
+            <field name="name">Siège</field>
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_57" model="base.agency">
+            <field name="code">02</field>
+            <field name="name">A.F.M</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_58" model="base.agency">
+            <field name="code">07</field>
+            <field name="name">ASCOMA</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+            <!--<field name="partner_id" ref="res_partner_37531"/>-->
+        </record>
+        <record id="base_agency_59" model="base.agency">
+            <field name="code">19</field>
+            <field name="name">Société AUXIMAD</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_60" model="base.agency">
+            <field name="code">21</field>
+            <field name="name">Ambositra</field>
+            <field name="parent_id" ref="base_agency_21"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="False"/>
+        </record>
+        <record id="base_agency_61" model="base.agency">
+            <field name="code">22</field>
+            <field name="name">Ambohimahasoa</field>
+            <field name="parent_id" ref="base_agency_21"/>
+            <field name="is_agency_parent" eval="False"/>
+        </record>
+        <record id="base_agency_62" model="base.agency">
+            <field name="code">26</field>
+            <field name="name">Société SCEPAG</field>
+            <field name="parent_id" ref="base_agency_21"/>
+            <field name="is_agency_parent" eval="False"/>
+        </record>
+        <record id="base_agency_63" model="base.agency">
+            <field name="code">27</field>
+            <field name="name">Sté H. FRAISE Fils</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_64" model="base.agency">
+            <field name="code">28</field>
+            <field name="name">Cabinet MITSINJO</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_65" model="base.agency">
+            <field name="code">30</field>
+            <field name="name">H. DE BRUGADA</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_66" model="base.agency">
+            <field name="code">39</field>
+            <field name="name">Farafangana</field>
+            <field name="parent_id" ref="base_agency_21"/>
+            <field name="is_agency_parent" eval="False"/>
+        </record>
+        <record id="base_agency_67" model="base.agency">
+            <field name="code">41</field>
+            <field name="name">BR Manakara</field>
+            <field name="parent_id" ref="base_agency_21"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_69" model="base.agency">
+            <field name="code">58</field>
+            <field name="name">BR Ambanja</field>
+            <field name="parent_id" ref="base_agency_26"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_70" model="base.agency">
+            <field name="code">59</field>
+            <field name="name">BR Nosy Be</field>
+            <field name="parent_id" ref="base_agency_26"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_71" model="base.agency">
+            <field name="code">62</field>
+            <field name="name">Maroantsetra</field>
+            <field name="parent_id" ref="base_agency_28"/>
+            <field name="is_agency_parent" eval="False"/>
+        </record>
+        <record id="base_agency_72" model="base.agency">
+            <field name="code">65</field>
+            <field name="name">SCA</field>
+            <field name="parent_id" ref="base_agency_20"/>
+            <field name="is_agency_parent" eval="False"/>
+        </record>
+        <record id="base_agency_73" model="base.agency">
+            <field name="code">66</field>
+            <field name="name">BR Antalaha</field>
+            <field name="parent_id" ref="base_agency_27"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_74" model="base.agency">
+            <field name="code">74</field>
+            <field name="name">RAMA EXPORT</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_75" model="base.agency">
+            <field name="code">80</field>
+            <field name="name">BSA</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_76" model="base.agency">
+            <field name="code">82</field>
+            <field name="name">SOMIDA</field>
+            <field name="parent_id" ref="base_agency_1"/>
+            <field name="is_agency_parent" eval="False"/>
+        </record>
+        <record id="base_agency_77" model="base.agency">
+            <field name="code">83</field>
+            <field name="name">Ambohimahasoa</field>
+            <field name="parent_id" ref="base_agency_21"/>
+            <field name="is_agency_parent" eval="False"/>
+        </record>
+        <record id="base_agency_78" model="base.agency">
+            <field name="code">86</field>
+            <field name="name">ADEMA</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_79" model="base.agency">
+            <field name="code">88</field>
+            <field name="name">Redressement pool</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+        </record>
+        <record id="base_agency_80" model="base.agency">
+            <field name="code">93</field>
+            <field name="name">ARORIAKA</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_82" model="base.agency">
+            <field name="code">10</field>
+            <field name="name">Siège 10</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_42" model="base.agency">
+            <field name="code">31</field>
+            <field name="name">AGRIKA AMBATOLAMPY</field>
+            <field name="parent_id" ref="base_agency_1"/>
+            <field name="is_agency_parent" eval="False"/>
+        </record>
+        <record id="base_agency_43" model="base.agency">
+            <field name="code">85</field>
+            <field name="name">ACTUARIA</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+        </record>
+        <record id="base_agency_anosizato" model="base.agency">
+            <field name="code">94</field>
+            <field name="name">ANOSIZATO</field>
+            <!--<field name="parent_id" ref="base_agency_anosizato"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_athis" model="base.agency">
+            <field name="code">96</field>
+            <field name="name">ATHIS</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_miaro" model="base.agency">
+            <field name="code">77</field>
+            <field name="name">MIARO</field>
+            <field name="parent_id" ref="base_agency_31"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_antsohihy" model="base.agency">
+            <field name="code">95</field>
+            <field name="name">ANTSOHIHY</field>
+            <field name="parent_id" ref="account_journal_agency.base_agency_25"/>
+            <field name="is_agency_parent" eval="False"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+        <record id="base_agency_paositra_malagasy" model="base.agency">
+            <field name="code">92</field>
+            <field name="name">PAOSITRA MALAGASY</field>
+            <!--<field name="parent_id" ref="account_journal_agency.base_agency_paositra_malagasy"/>-->
+            <field name="is_agency_parent" eval="True"/>
+            <field name="have_opening_journal" eval="True"/>
+        </record>
+    </data>
+</openerp>

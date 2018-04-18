@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="group_journal_restricted" model="res.groups">
+            <field name="name">Restricted Journal</field>
+            <field name="category_id" ref="base.module_category_aro"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="group_journal_unlimited" model="res.groups">
+            <field name="name">Unlimited Journal</field>
+            <field name="category_id" ref="base.module_category_aro"/>
+            <field name="implied_ids" eval="[(4, ref('account_journal_agency.group_journal_restricted'))]"/>
+        </record>
+        <!--access record journal-->
+        <record id="ir_rule_journal_agency_user" model="ir.rule">
+            <field name="name">Journals: See only own agency journals</field>
+            <field name="model_id" ref="model_account_journal"/>
+            <!--<field name="groups" eval="[(4, ref('base.group_user'))]"/>-->
+            <field name="groups" eval="[(4, ref('account_journal_agency.group_journal_restricted'))]"/>
+            <field name="domain_force">[('agency_id', 'in', (user.agency_id.id,))]</field>
+        </record>
+        <record id="ir_rule_journal_agency_unlimited" model="ir.rule">
+            <field name="name">Journals: See all agency journals</field>
+            <field name="model_id" ref="model_account_journal"/>
+            <field name="groups" eval="[(4, ref('account_journal_agency.group_journal_unlimited'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
+        <!--access record move-->
+        <record id="ir_rule_move_agency_user" model="ir.rule">
+            <field name="name">Moves: See only own agency moves</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <!--<field name="groups" eval="[(4, ref('base.group_user'))]"/>-->
+            <field name="groups" eval="[(4, ref('account_journal_agency.group_journal_restricted'))]"/>
+            <field name="domain_force">[('journal_id.agency_id', 'in', (user.agency_id.id,))]</field>
+        </record>
+        <record id="ir_rule_move_agency_unlimited" model="ir.rule">
+            <field name="name">Moves: See all agency moves</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="groups" eval="[(4, ref('account_journal_agency.group_journal_unlimited'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
+        <!--access record move_line-->
+        <record id="ir_rule_move_line_agency_user" model="ir.rule">
+            <field name="name">Moves Lines: See only own agency moves lines</field>
+            <field name="model_id" ref="account.model_account_move_line"/>
+            <!--<field name="groups" eval="[(4, ref('base.group_user'))]"/>-->
+            <field name="groups" eval="[(4, ref('account_journal_agency.group_journal_restricted'))]"/>
+            <field name="domain_force">[('journal_id.agency_id', 'in', (user.agency_id.id,))]</field>
+        </record>
+        <record id="ir_rule_move_line_agency_unlimited" model="ir.rule">
+            <field name="name">Moves Lines: See all agency moves lines</field>
+            <field name="model_id" ref="account.model_account_move_line"/>
+            <field name="groups" eval="[(4, ref('account_journal_agency.group_journal_unlimited'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
+        <!--access record invoice-->
+        <record id="ir_rule_invoice_agency_user" model="ir.rule">
+            <field name="name">Invoices: See only own agency invoices</field>
+            <field name="model_id" ref="model_account_invoice"/>
+            <!--<field name="groups" eval="[(4, ref('base.group_user'))]"/>-->
+            <field name="groups" eval="[(4, ref('account_journal_agency.group_journal_restricted'))]"/>
+            <field name="domain_force">[('journal_id.agency_id', 'in', (user.agency_id.id,))]</field>
+        </record>
+        <record id="ir_rule_invoice_agency_unlimited" model="ir.rule">
+            <field name="name">Invoices: See all agency invoice</field>
+            <field name="model_id" ref="model_account_invoice"/>
+            <field name="groups" eval="[(4, ref('account_journal_agency.group_journal_unlimited'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
+    </data>
+</openerp>

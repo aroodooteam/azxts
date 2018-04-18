@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Action du menu type sanction -->
+        <record model="ir.actions.act_window" id="action_gestion_sanction_type">
+            <field name="name">Type de Sanction</field>
+            <field name="res_model">sanction.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Créer un nouveau type de sanction.
+                </p>
+            </field>
+        </record>
+
+        <!--menuitem id="menu_action_gestion_sanction_type" name="Type de Sanctions" parent="menu_hr_career_root" action="action_gestion_sanction_type"/-->
+
+    </data>
+</openerp>

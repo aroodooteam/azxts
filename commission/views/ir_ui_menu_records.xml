@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+      <menuitem id="ir_ui_menu_commissions_r0" name="Commissions" 
+          parent="account.menu_finance_receivables" sequence="150" 
+          action="ir_actions_act_window_commissions_r0"
+          groups="account.group_account_manager"/>
+  </data>
+</openerp>
