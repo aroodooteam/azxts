@@ -8021,6 +8021,22 @@
             <field name="reconcile" eval="False"/>
             <field name="type">liquidity</field>
         </record>
+        <record id="pcg_52209401" model="account.account.template">
+            <field name="code">52209401</field>
+            <field name="name">BANQUE BFV</field>
+            <field name="user_type" ref="account.data_account_type_bank"/>
+            <field name="parent_id" ref="l10n_mg_aro.pcg_52200"/>
+            <field name="reconcile" eval="False"/>
+            <field name="type">liquidity</field>
+        </record>
+        <record id="pcg_52209402" model="account.account.template">
+            <field name="code">52209402</field>
+            <field name="name">BANQUE BOA</field>
+            <field name="user_type" ref="account.data_account_type_bank"/>
+            <field name="parent_id" ref="l10n_mg_aro.pcg_52200"/>
+            <field name="reconcile" eval="False"/>
+            <field name="type">liquidity</field>
+        </record>
         <record id="pcg_52209901" model="account.account.template">
             <field name="code">52209901</field>
             <field name="name">BNI Siege (Ag Centrale)</field>
@@ -8480,6 +8496,14 @@
         <record id="pcg_53003501" model="account.account.template">
             <field name="code">53003501</field>
             <field name="name">CAISSE Taolagnaro</field>
+            <field name="user_type" ref="account.data_account_type_cash"/>
+            <field name="parent_id" ref="l10n_mg_aro.pcg_53"/>
+            <field name="reconcile" eval="False"/>
+            <field name="type">liquidity</field>
+        </record>
+        <record id="pcg_53009401" model="account.account.template">
+            <field name="code">53009401</field>
+            <field name="name">CAISSE ANOSIZATO</field>
             <field name="user_type" ref="account.data_account_type_cash"/>
             <field name="parent_id" ref="l10n_mg_aro.pcg_53"/>
             <field name="reconcile" eval="False"/>
