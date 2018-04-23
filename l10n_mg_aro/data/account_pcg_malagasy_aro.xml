@@ -7821,7 +7821,7 @@
         </record>
         <record id="pcg_52204001" model="account.account.template">
             <field name="code">52204001</field>
-            <field name="name">Banque Mahajanga</field>
+            <field name="name">BNI Mahajanga (Antsohihy)</field>
             <field name="user_type" ref="account.data_account_type_bank"/>
             <field name="parent_id" ref="l10n_mg_aro.pcg_52200"/>
             <field name="reconcile" eval="False"/>
