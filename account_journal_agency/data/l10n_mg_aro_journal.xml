@@ -229,6 +229,21 @@
             <field name="entry_posted" eval="False"/>
             <field name="group_invoice_lines" eval="False"/>
         </record>
+        <record id="caisse_anosizato" model="account.journal">
+            <field name="code">CA94</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">cash</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_anosizato"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Caisse Anosizato</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
         <!-- Journal de Banque -->
         <record id="banque_toamasina" model="account.journal">
             <field name="code">BQ61</field>
@@ -455,6 +470,21 @@
             <field name="entry_posted" eval="False"/>
             <field name="group_invoice_lines" eval="False"/>
         </record>
+        <record id="banque_anosizato" model="account.journal">
+            <field name="code">BQ94</field>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="centralisation" eval="False"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="type">bank</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_anosizato"/>
+            <field name="allow_date" eval="False"/>
+            <field name="update_posted" eval="False"/>
+            <field name="name">Banque Anosizato</field>
+            <field name="cash_control" eval="False"/>
+            <field name="entry_posted" eval="False"/>
+            <field name="group_invoice_lines" eval="False"/>
+        </record>
         <!-- Journal des Operations Diverses -->
         <record id="operations_diverse_toamasina" model="account.journal">
             <field name="name">Operations Diverse Toamasina</field>
@@ -573,6 +603,14 @@
             <field name="code">OD14</field>
             <field name="type">general</field>
             <field name="agency_id" ref="account_journal_agency.base_agency_18"/>
+            <field name="with_last_closing_balance" eval="True"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+        <record id="operations_diverse_anosizato" model="account.journal">
+            <field name="name">Operations Diverse Anosizato</field>
+            <field name="code">OD94</field>
+            <field name="type">general</field>
+            <field name="agency_id" ref="account_journal_agency.base_agency_anosizato"/>
             <field name="with_last_closing_balance" eval="True"/>
             <field name="user_id" ref="base.user_root"/>
         </record>
