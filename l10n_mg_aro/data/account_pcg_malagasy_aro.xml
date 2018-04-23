@@ -8006,7 +8006,7 @@
         <!-- compte a verifier -->
         <record id="pcg_52208101" model="account.account.template">
             <field name="code">52208101</field>
-            <field name="name">Banque Inconnue</field>
+            <field name="name">MCB Ankorondrano (Ankrondrano)</field>
             <field name="user_type" ref="account.data_account_type_bank"/>
             <field name="parent_id" ref="l10n_mg_aro.pcg_52200"/>
             <field name="reconcile" eval="False"/>
