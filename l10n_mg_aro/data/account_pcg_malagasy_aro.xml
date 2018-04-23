@@ -8023,7 +8023,7 @@
         </record>
         <record id="pcg_52209401" model="account.account.template">
             <field name="code">52209401</field>
-            <field name="name">BANQUE BFV</field>
+            <field name="name">BOA ANOSIZATO</field>
             <field name="user_type" ref="account.data_account_type_bank"/>
             <field name="parent_id" ref="l10n_mg_aro.pcg_52200"/>
             <field name="reconcile" eval="False"/>
@@ -8031,7 +8031,7 @@
         </record>
         <record id="pcg_52209402" model="account.account.template">
             <field name="code">52209402</field>
-            <field name="name">BANQUE BOA</field>
+            <field name="name">BFV ANOSIZATO</field>
             <field name="user_type" ref="account.data_account_type_bank"/>
             <field name="parent_id" ref="l10n_mg_aro.pcg_52200"/>
             <field name="reconcile" eval="False"/>
