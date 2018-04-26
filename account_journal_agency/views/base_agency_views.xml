@@ -37,6 +37,7 @@
                         </h1>
                         <group colspan="4" name="Code">
                             <field name="code"/>
+                            <field name="agency_type"/>
                             <field name="active"/>
                         </group>
                         <group colspan="4" name="References">

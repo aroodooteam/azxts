@@ -19,3 +19,4 @@ class base_agency(models.Model):
                                       help='Check if parent of another')
     have_opening_journal = fields.Boolean(string='Have opening journal', help='Check if this agency should get an opening journal')
     active = fields.Boolean(string='Active', default=True)
+    agency_type = fields.Selection(selection=[('NOR', 'Normal'),('GRA','General')], string='Type', default='NOR')
