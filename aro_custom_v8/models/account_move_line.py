@@ -34,6 +34,7 @@ class account_move_line(models.Model):
     emp_as400_ses = fields.Char(string='AS400 ses')
     emp_as400_pie = fields.Char(string='AS400 pie')
     emp_as400_lig = fields.Char(string='AS400 lig')
+    emp_as400_ref = fields.Char(string='AS400 Ref')
 
     @api.model
     def update_move_line_from_invoice(self):
