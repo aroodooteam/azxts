@@ -13,9 +13,12 @@
                 <page string="Reference AS400">
                     <group col="4">
                         <field name="emp_police"/>
+                        <field name="emp_as400_ref"/>
                         <field name="emp_quittance"/>
                         <field name="emp_effet"/>
                         <field name="emp_datech"/>
+                        <field name="check_number"/>
+                        <field name="emp_contrat"/>
                     </group>
                     <group col="4">
                         <field name="emp_libana"/>
